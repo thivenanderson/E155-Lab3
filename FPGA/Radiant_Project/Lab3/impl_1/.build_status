@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BuildStatus>
     <Strategy name="Strategy1">
-        <Milestone name="Export" build_result="1" build_time="1789867301">
-            <Task name="Bitgen" build_result="1" update_result="2" update_time="1789867301"/>
+        <Milestone name="Export" build_result="1" build_time="1789867573">
+            <Task name="Bitgen" build_result="1" update_result="2" update_time="1789867573"/>
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
         </Milestone>

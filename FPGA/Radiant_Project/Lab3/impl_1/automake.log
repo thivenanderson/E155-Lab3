@@ -2,7 +2,7 @@
 tmcheck -par "Lab3_impl_1.par"  
 
 pnmainc -log pnmain "Lab3_impl_1_bit.tcl"
-**** CMD bit_generate - CPU/Elapsed: 0 secs / 0 secs , MEM/Increased: 59.564 Mb/ 0.152 Mb, DATE: 18:21:41 09/19/26
+**** CMD bit_generate - CPU/Elapsed: 0 secs / 0 secs , MEM/Increased: 59.638 Mb/ 0.156 Mb, DATE: 18:26:13 09/19/26
 Error: the command bit_generate failed.
 
 Thank you for using Radiant. Total CPU/Elapsed time: 0 secs /0 secs 

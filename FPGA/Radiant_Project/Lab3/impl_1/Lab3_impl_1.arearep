@@ -1,0 +1,108 @@
+----------------------------------------------------------------------
+Report for cell lab3_ta.TECH
+Register bits:  94 of 5280 (1.780%)
+I/O cells:      19
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        29          100.0
+                            FD1P3XZ        94          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         6          100.0
+                              IOL_B         4          100.0
+                               LUT4       245          100.0
+                                 OB        13          100.0
+SUB MODULES
+            lab1_ta_hex_seg_decoder         1
+lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)         1
+lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)         1
+lab2_ta_counter(WIDTH=18,MAX_COUNT=239999)         1
+                 lab3_ta_controller         1
+                   lab3_ta_digit_sr         1
+             lab3_ta_keypad_builder         1
+             lab3_ta_keypad_decoder         1
+                    lab3_ta_scanner         1
+                       lab3_ta_sync         1
+                              TOTAL       402
+----------------------------------------------------------------------
+Report for cell lab3_ta_keypad_decoder.v1
+Instance Path : i_KEYPAD_DECODER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        38           15.5
+                              TOTAL        38
+----------------------------------------------------------------------
+Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=239999).v1
+Instance Path : i_DB_COUNTER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        10           34.5
+                            FD1P3XZ        18           19.1
+                               LUT4        19            7.8
+                              TOTAL        47
+----------------------------------------------------------------------
+Report for cell lab3_ta_scanner.v1
+Instance Path : i_SCANNER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         9           31.0
+                            FD1P3XZ        17           18.1
+                               LUT4        49           20.0
+SUB MODULES
+lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)         1
+                              TOTAL        76
+----------------------------------------------------------------------
+Report for cell lab2_ta_counter(WIDTH=17,MAX_COUNT=95999).v1
+Instance Path : i_SCANNER.i_SCAN_COUNTER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         9           31.0
+                            FD1P3XZ        17           18.1
+                               LUT4        29           11.8
+                              TOTAL        55
+----------------------------------------------------------------------
+Report for cell lab3_ta_keypad_builder.v1
+Instance Path : i_KEYPAD_BUILDER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        16           17.0
+                               LUT4        21            8.6
+                              TOTAL        37
+----------------------------------------------------------------------
+Report for cell lab3_ta_digit_sr.v1
+Instance Path : i_DIGIT_SR
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         8            8.5
+                              TOTAL         8
+----------------------------------------------------------------------
+Report for cell lab1_ta_hex_seg_decoder.v1
+Instance Path : decoder
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7            2.9
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=200000).v1
+Instance Path : i_HEX_COUNTER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        10           34.5
+                            FD1P3XZ        18           19.1
+                               LUT4        25           10.2
+                              TOTAL        53
+----------------------------------------------------------------------
+Report for cell lab3_ta_sync.v1
+Instance Path : i_SYNC
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         4            4.3
+                              IOL_B         4          100.0
+                              TOTAL         8
+----------------------------------------------------------------------
+Report for cell lab3_ta_controller.v1
+Instance Path : i_CONTROLLER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        13           13.8
+                               LUT4        38           15.5
+                              TOTAL        51

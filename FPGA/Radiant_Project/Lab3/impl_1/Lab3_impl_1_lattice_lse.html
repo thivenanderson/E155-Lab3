@@ -1,0 +1,464 @@
+<HTML>
+<HEAD>
+<TITLE>Synthesis Report</TITLE>
+<link href="file:///C:/lscc/radiant/2026.1/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/lscc/radiant/2026.1/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+synthesis:  version Radiant Software (64-bit) 2026.1.0.37.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
+Sat Sep 19 18:04:10 2026
+
+
+Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/Lab3_impl_1_lattice.synproj -logfile Lab3_impl_1_lattice.srp -gui -msgset C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/promote.xml 
+
+Lattice Synthesis Engine launched.
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+
+###################### Device Information ######################
+----------------------------------------------------------------
+Lattice Family        | iCE40UP
+----------------------------------------------------------------
+Device                | iCE40UP5K
+----------------------------------------------------------------
+Package               | SG48
+----------------------------------------------------------------
+Performance Grade     | High-Performance_1.2V
+----------------------------------------------------------------
+################################################################
+
+####################### Device Resources #######################
+----------------------------------------------------------------
+Logic Cells           | 5280
+----------------------------------------------------------------
+RAM Blocks            | 30
+----------------------------------------------------------------
+DSP Blocks            | 8
+----------------------------------------------------------------
+PLLs                  | 1
+----------------------------------------------------------------
+I/O Pins              | 56
+----------------------------------------------------------------
+################################################################
+
+Resolving user-selected strategy settings...
+
+INFO <35001797> - synthesis: Use DCC Insertion disabled by default.
+
+###################### Strategy Settings #######################
+----------------------------------------------------------------
+Optimization Goal     | Area
+----------------------------------------------------------------
+Top-level Module Name | lab3_ta
+----------------------------------------------------------------
+Target Frequency      | 200.000 MHz
+----------------------------------------------------------------
+Maximum Fanout        | 1000
+----------------------------------------------------------------
+Timing Path Count     | 3
+----------------------------------------------------------------
+RAM Read/Write Check  | False
+----------------------------------------------------------------
+BRAM Utilization      | 100.0%
+----------------------------------------------------------------
+DSP Usage             | True
+----------------------------------------------------------------
+DSP Utilization       | 100.0%
+----------------------------------------------------------------
+FSM Encoding Style    | Auto
+----------------------------------------------------------------
+Resolve Mixed Drivers | False
+----------------------------------------------------------------
+Fix Gated Clocks      | True
+----------------------------------------------------------------
+Mux Style             | Auto
+----------------------------------------------------------------
+Use Carry Chain       | True
+----------------------------------------------------------------
+Carry Chain Length    | Infinite
+----------------------------------------------------------------
+Loop Limit            | 1950
+----------------------------------------------------------------
+Use I/O Insertion     | True
+----------------------------------------------------------------
+Use I/O Registers     | True
+----------------------------------------------------------------
+Resource Sharing      | True
+----------------------------------------------------------------
+Propagate Constants   | True
+----------------------------------------------------------------
+Remove Duplicate Reg  | True
+----------------------------------------------------------------
+Force GSR             | False
+----------------------------------------------------------------
+ROM Style             | Auto
+----------------------------------------------------------------
+RAM Style             | Auto
+----------------------------------------------------------------
+Remove LOC Properties | False
+----------------------------------------------------------------
+Partition Flow        | False
+----------------------------------------------------------------
+Use DCC Insertion     | None
+----------------------------------------------------------------
+################################################################
+
+
+The -comp option is FALSE.
+The -syn option is FALSE.
+
+Output HDL filename: Lab3_impl_1.vm
+-sdc option: SDC file input is Lab3_impl_1_cpe.ldc.
+-path . (searchpath added)
+-path .. (searchpath added)
+-path ../source/impl_1 (searchpath added)
+-path C:/lscc/radiant/2026.1/ispfpga/ice40tp/data (searchpath added)
+Mixed language design
+Verilog design file: C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v
+Verilog design file: ../source/impl_1/lab3_ta.sv
+Verilog design file: ../source/impl_1/lab1_ta_hex_seg_decoder.sv
+Verilog design file: ../source/impl_1/lab2_ta_counter.sv
+Verilog design file: ../source/impl_1/lab3_ta_scanner.sv
+Verilog design file: ../source/impl_1/lab3_ta_sync.sv
+Verilog design file: ../source/impl_1/lab3_ta_keypad_decoder.sv
+Verilog design file: ../source/impl_1/lab3_ta_keypad_builder.sv
+Verilog design file: ../source/impl_1/lab3_ta_digit_sr.sv
+Verilog design file: ../source/impl_1/lab3_ta_controller.sv
+VHDL library: pmi
+VHDL design file: C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.vhd
+
+Compiling design...
+
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\generic.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\simulation\verilog\iCE40UP\iCE40UP_sp.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab3_ta.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab1_ta_hex_seg_decoder.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab2_ta_counter.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab3_ta_scanner.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab3_ta_sync.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab3_ta_keypad_decoder.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab3_ta_keypad_builder.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab3_ta_digit_sr.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab3_ta_controller.sv. VERI-1482
+Top module name (Verilog): lab3_ta
+INFO <35901018> - synthesis: ../source/impl_1/lab3_ta.sv(5): compiling module lab3_ta. VERI-1018
+INFO <35901018> - synthesis: C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab3_ta_sync.sv(6): compiling module lab3_ta_sync. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab3_ta_scanner.sv(6): compiling module lab3_ta_scanner. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab2_ta_counter.sv(5): compiling module lab2_ta_counter(WIDTH=17,MAX_COUNT=95999). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab3_ta_keypad_builder.sv(6): compiling module lab3_ta_keypad_builder. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab3_ta_keypad_decoder.sv(6): compiling module lab3_ta_keypad_decoder. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab2_ta_counter.sv(5): compiling module lab2_ta_counter(WIDTH=18,MAX_COUNT=239999). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab3_ta_controller.sv(5): compiling module lab3_ta_controller. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab3_ta_digit_sr.sv(6): compiling module lab3_ta_digit_sr. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab2_ta_counter.sv(5): compiling module lab2_ta_counter(WIDTH=18,MAX_COUNT=200000). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/lab1_ta_hex_seg_decoder.sv(5): compiling module lab1_ta_hex_seg_decoder. VERI-1018
+
+<A name="lse_parameter"></A><B><U><big>Parameter Setting</big></U></B>
+
+[Parameter Setting Section Start]
+
+	[Parameter Settings for Instance(s): hf_osc]
+	(Module: HSOSC)
+		CLKHF_DIV                 2'b01
+
+	[Parameter Settings for Instance(s): i_SCANNER]
+	(Module: lab3_ta_scanner)
+		SCAN_WIDTH                17
+		SCAN_MAX_COUNT            95999
+
+	[Parameter Settings for Instance(s): i_DB_COUNTER]
+	(Module: lab2_ta_counter)
+		WIDTH                     18
+		MAX_COUNT                 239999
+
+	[Parameter Settings for Instance(s): i_HEX_COUNTER]
+	(Module: lab2_ta_counter)
+		WIDTH                     18
+		MAX_COUNT                 200000
+
+	[Parameter Settings for Instance(s): i_SCAN_COUNTER]
+	(Module: lab2_ta_counter)
+		WIDTH                     17
+		MAX_COUNT                 95999
+
+[Parameter Setting Section End]
+INFO <35001774> - synthesis: Extracted state machine for register '\i_CONTROLLER/state' with one-hot encoding
+State machine has 7 reachable states with original encodings of:
+
+ 000 
+
+ 001 
+
+ 010 
+
+ 011 
+
+ 100 
+
+ 101 
+
+ 110 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 000 -> 0000001
+
+ 001 -> 0000010
+
+ 010 -> 0000100
+
+ 011 -> 0001000
+
+ 100 -> 0010000
+
+ 101 -> 0100000
+
+ 110 -> 1000000
+
+
+
+
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: reset
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: enable
+INFO <35002061> - synthesis: Port accepted for I/O register mapping: col_raw[3]
+INFO <35002061> - synthesis: Port accepted for I/O register mapping: col_raw[2]
+INFO <35002061> - synthesis: Port accepted for I/O register mapping: col_raw[1]
+INFO <35002061> - synthesis: Port accepted for I/O register mapping: col_raw[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row_out[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row_out[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row_out[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: row_out[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: anode[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: anode[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[6]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[5]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[4]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg[0]
+INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
+
+
+<A name="lse_area"></A><B><U><big>Area Report</big></U></B>
+
+################### Begin Area Report (lab3_ta)######################
+Number of register bits => 94 of 5280 (1 % )
+CCU2 => 29
+FD1P3XZ => 94
+HSOSC_CORE => 1
+IB => 6
+IOL_B => 4
+LUT4 => 245
+OB => 13
+################### End Area Report ##################
+Number of odd-length carry chains : 1
+Number of even-length carry chains : 2
+
+
+<A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : int_osc, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : i_HEX_COUNTER/hex_counter_5__N_120, loads : 34
+  Net : db_done_N_177, loads : 26
+  Net : reset_c, loads : 24
+  Net : i_CONTROLLER/scan_enable, loads : 23
+  Net : i_SCANNER/i_SCAN_COUNTER/n33, loads : 23
+  Net : i_HEX_COUNTER/n35, loads : 23
+  Net : i_CONTROLLER/db_reset, loads : 21
+  Net : enable_c, loads : 18
+  Net : s[3], loads : 18
+  Net : s[2], loads : 18
+################### End Clock Report ##################
+
+
+<A name="lse_constraint"></A><B><U><big>Constraint Report</big></U></B>
+
+################### Begin Constraint Report ######################
+Constraint Summary:
+  Total number of constraints: 0
+  Total number of constraints dropped: 0
+###################  End Constraint Report  ######################
+
+Peak Memory Usage: 91 MB
+
+--------------------------------------------------------------
+Total CPU Time: 1 secs 
+Total REAL Time: 4 secs 
+--------------------------------------------------------------
+Checksum -- synthesis -- netlist: d2f65b3a24972ac57aba161fdfc792b4c510b32
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#Syn>Top</A></LI>
+<LI><A href=#lse_parameter>Parameter Setting</A></LI>
+<LI><A href=#lse_area>Area Report</A></LI>
+<LI><A href=#lse_clock>Clock Report</A></LI>
+<LI><A href=#lse_constraint>Constraint Report</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

@@ -1,0 +1,355 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb
+vlab1_ta_hex_seg_decoder
+Z2 2C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr.sv|C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv
+Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z4 !s110 1790033616
+!i10b 1
+!s100 EAe1V1VZ=]SJ>lRJ=oUin1
+IJc9KMQH[=Yn4NQL3KLfiW0
+S1
+R1
+Z5 w1789943748
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv
+!i122 0
+L0 5 27
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2025.2;82
+r1
+!s85 0
+31
+!i113 0
+Z8 o-L work -sv -L pmi_work -L ovi_ice40up -work qrun.out/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 tCvgOpt 0 defaultOptions 1085333592
+vlab2_ta_counter
+R2
+R3
+R4
+!i10b 1
+!s100 4>O3TjAP_IG3FC1?T:WNf0
+IlaYcem4NNok=4iVLN?;TW3
+S1
+R1
+R5
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv
+!i122 0
+L0 5 22
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta
+R2
+R3
+R4
+!i10b 1
+!s100 f;a51J?2I2f:=89o2Jl@;1
+I2EYX0f;A?^fHHM]XToR?I0
+S1
+R1
+w1790032528
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv
+!i122 0
+L0 5 159
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_controller
+R2
+R3
+R4
+!i10b 1
+!s100 NXBN1hf:c[B;Ij71Jo^9B0
+I`d@9bO`bE?R9<PJMkERBn1
+S1
+R1
+w1790032864
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv
+!i122 0
+L0 5 149
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_digit_sr
+R2
+R3
+R4
+!i10b 1
+!s100 OcPZPL6cTg5XFKLICAbnL2
+I^^mC@a6TCK;`7UL@R`oP11
+S1
+R1
+R5
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv
+!i122 0
+L0 6 20
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_digit_sr_tb
+R2
+R3
+R4
+!i10b 1
+!s100 k0D?mB1<K`V8hVfaA<:_@3
+ISmVT@X[6XW4Q;M2zh4A[z1
+S1
+R1
+w1790033572
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv
+!i122 0
+L0 3 100
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_keypad_builder
+R2
+R3
+R4
+!i10b 1
+!s100 DN82?bHXU4_aDWidC<<aF2
+I>MRDOINN_QgIS[737=HcG2
+S1
+R1
+w1789949332
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv
+!i122 0
+L0 6 25
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_keypad_builder_tb
+R2
+R3
+R4
+!i10b 1
+!s100 2X907kR5<H^A]ODa^LjMh1
+IPWdWW>8_kEH7HMeAU0[Fg0
+S1
+R1
+w1789952638
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv
+!i122 0
+L0 3 182
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_keypad_decoder
+R2
+R3
+R4
+!i10b 1
+!s100 :7?]Ah>`fR>Qc:T6HLkPh1
+IJ@m>^gz9ZQQkK10DPLl[81
+S1
+R1
+w1789947808
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv
+!i122 0
+L0 6 97
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_keypad_decoder_tb
+R2
+R3
+R4
+!i10b 1
+!s100 lR@W<4QXb0[[NM^od8lk;0
+I1P:K^=h[9=hUdANZ<GBX12
+S1
+R1
+w1789952772
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv
+!i122 0
+L0 3 88
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_savedkey_sr
+R2
+R3
+R4
+!i10b 1
+!s100 I;H8a56i5]Ob47650Mo5k1
+IVV3YTKdcKKbEEjNXfTmk=3
+S1
+R1
+w1790032378
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr.sv
+!i122 0
+L0 5 18
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_savedkey_sr_tb
+R2
+R3
+R4
+!i10b 1
+!s100 jfSnPK2^0HLzmUooWnC:`1
+IASOn]mn_@Y9N1]6g;iH1g3
+S1
+R1
+w1790033567
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv
+!i122 0
+L0 3 108
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_scanner
+R2
+R3
+R4
+!i10b 1
+!s100 g<blY@[c>HfHz<M5WcDRn3
+IV]WokMQ?Xnd;1LOF?1B<l2
+S1
+R1
+R5
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv
+!i122 0
+L0 6 39
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_scanner_tb
+R2
+R3
+R4
+!i10b 1
+!s100 [mac9T5YCKAaMo:NK8Ghz0
+IAIZhBYQM;TJeaWg=nS:PM3
+S1
+R1
+w1789950014
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv
+!i122 0
+L0 2 158
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_sync
+R2
+R3
+R4
+!i10b 1
+!s100 HXRXm;C46`n^=Em9[dYIG0
+IF6zHhzc:0NfJi@D2o@D@]3
+S1
+R1
+R5
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv
+!i122 0
+L0 6 12
+R6
+R7
+r1
+!s85 0
+31
+!i113 0
+R8
+R9
+vlab3_ta_sync_tb
+R2
+R3
+R4
+!i10b 1
+!s100 SnEk:Qe^1hTOnV13aVHIj1
+IG=>DP9bkX@KTkJ6_o@`CQ0
+S1
+R1
+w1789950995
+8C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv
+FC:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv
+!

@@ -4,8 +4,8 @@ Report for cell lab3_ta
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                  IOLGC	       4.00        100.0
-                                  LUT4	        313        100.0
-                               LUTGATE	        255        100.0
+                                  LUT4	        316        100.0
+                               LUTGATE	        258        100.0
                                 LUTCCU	         58        100.0
                                  IOREG	          4        100.0
                                  IOBUF	         19        100.0
@@ -13,28 +13,35 @@ Report for cell lab3_ta
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                lab1_ta_hex_seg_decoder	          1         2.2
-lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)	          1        14.4
-lab2_ta_counter(WIDTH=18,MAX_COUNT=239999)	          1        12.5
-                    lab3_ta_controller	          1        11.8
+lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)	          1        14.2
+lab2_ta_counter(WIDTH=18,MAX_COUNT=239999)	          1        12.3
+                    lab3_ta_controller	          1        11.1
                       lab3_ta_digit_sr	          1         0.0
-                lab3_ta_keypad_builder	          1         6.7
-                lab3_ta_keypad_decoder	          1        11.8
-                       lab3_ta_scanner	          1        21.1
+                lab3_ta_keypad_builder	          1         6.6
+                lab3_ta_keypad_decoder	          1        11.7
+                   lab3_ta_savedkey_sr	          1         0.0
+                       lab3_ta_scanner	          1        22.5
                           lab3_ta_sync	          1         0.0
+---------------------------------------------------
+Report for cell lab3_ta_savedkey_sr
+   Instance path: lab3_ta/i_SAVEDKEY_SR
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          6         6.4
 ---------------------------------------------------
 Report for cell lab3_ta_keypad_decoder
    Instance path: lab3_ta/i_KEYPAD_DECODER
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         37        11.8
-                               LUTGATE	         37        14.5
+                                  LUT4	         37        11.7
+                               LUTGATE	         37        14.3
 ---------------------------------------------------
 Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=239999)
    Instance path: lab3_ta/i_DB_COUNTER
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         39        12.5
-                               LUTGATE	         19         7.5
+                                  LUT4	         39        12.3
+                               LUTGATE	         19         7.4
                                 LUTCCU	         20        34.5
                                 PFUREG	         18        19.1
 ---------------------------------------------------
@@ -42,20 +49,20 @@ Report for cell lab3_ta_scanner
    Instance path: lab3_ta/i_SCANNER
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         66        21.1
-                               LUTGATE	         48        18.8
+                                  LUT4	         71        22.5
+                               LUTGATE	         53        20.5
                                 LUTCCU	         18        31.0
                                 PFUREG	         17        18.1
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
-lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)	          1        15.0
+lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)	          1        13.9
 ---------------------------------------------------
 Report for cell lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)
    Instance path: lab3_ta/i_SCANNER/i_SCAN_COUNTER
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         47        15.0
-                               LUTGATE	         29        11.4
+                                  LUT4	         44        13.9
+                               LUTGATE	         26        10.1
                                 LUTCCU	         18        31.0
                                 PFUREG	         17        18.1
 ---------------------------------------------------
@@ -63,18 +70,10 @@ Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)
    Instance path: lab3_ta/i_HEX_COUNTER
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         45        14.4
-                               LUTGATE	         25         9.8
+                                  LUT4	         45        14.2
+                               LUTGATE	         25         9.7
                                 LUTCCU	         20        34.5
                                 PFUREG	         18        19.1
----------------------------------------------------
-Report for cell lab3_ta_keypad_builder
-   Instance path: lab3_ta/i_KEYPAD_BUILDER
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         21         6.7
-                               LUTGATE	         21         8.2
-                                PFUREG	         16        17.0
 ---------------------------------------------------
 Report for cell lab3_ta_digit_sr
    Instance path: lab3_ta/i_DIGIT_SR
@@ -89,6 +88,14 @@ Report for cell lab1_ta_hex_seg_decoder
                                   LUT4	          7         2.2
                                LUTGATE	          7         2.7
 ---------------------------------------------------
+Report for cell lab3_ta_keypad_builder
+   Instance path: lab3_ta/i_KEYPAD_BUILDER
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         21         6.6
+                               LUTGATE	         21         8.1
+                                PFUREG	         16        17.0
+---------------------------------------------------
 Report for cell lab3_ta_sync
    Instance path: lab3_ta/i_SYNC
                      Cell usage:
@@ -101,6 +108,6 @@ Report for cell lab3_ta_controller
    Instance path: lab3_ta/i_CONTROLLER
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         37        11.8
-                               LUTGATE	         37        14.5
-                                PFUREG	         13        13.8
+                                  LUT4	         35        11.1
+                               LUTGATE	         35        13.6
+                                PFUREG	          7         7.4

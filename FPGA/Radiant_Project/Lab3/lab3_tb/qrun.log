@@ -246,3 +246,40 @@ run -all
 # ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv(86)
 #    Time: 17 ns  Iteration: 0  Instance: /lab3_ta_keypad_decoder_tb
 # Break in Module lab3_ta_keypad_decoder_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv line 86
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   5
+#   Totals: Errors:   0, Warnings:   5
+# Error 31: Unable to unlink file "qrun.out/work/qrun_opt/_lib.qdb".
+# Error 133: Unable to remove directory "qrun.out/work/qrun_opt".
+# Error 133: Unable to remove directory "qrun.out/work".
+# Error 133: Unable to remove directory "qrun.out".
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 16:33:39 on Sep 21,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_savedkey_sr_tb(fast)
+# Loading work.lab3_ta_savedkey_sr(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: thanderson  Hostname: HGMZ0R3  ProcessID: 2916
+#           Attempting to use alternate WLF file "./wlftj541ed".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftj541ed
+# run -all
+# Passed reset test at time 16.
+# Passed first key load at time 26.
+# Passed second saved kye shift at time 36.
+# Passed enable hold test at time 66.
+# Passed third digit shift at time 76.
+# Digit shift register testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv(106)
+#    Time: 76 ns  Iteration: 0  Instance: /lab3_ta_savedkey_sr_tb
+# Break in Module lab3_ta_savedkey_sr_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv line 106
+# End time: 16:34:02 on Sep 21,2026, Elapsed time: 22:27:03
+# Errors: 0, Warnings: 0
+# End time: 16:35:40 on Sep 21,2026, Elapsed time: 0:02:01
+# Errors: 0, Warnings: 2

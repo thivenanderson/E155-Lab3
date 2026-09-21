@@ -49,6 +49,12 @@
 -sver "../source/impl_1/lab3_ta_keypad_builder.sv"
 -sver "../source/impl_1/lab3_ta_digit_sr.sv"
 -sver "../source/impl_1/lab3_ta_controller.sv"
+-sver "../source/impl_1/lab3_ta_scanner_tb.sv"
+-sver "../source/impl_1/lab3_ta_sync_tb.sv"
+-sver "../source/impl_1/lab3_ta_digit_sr_tb.sv"
+-sver "../source/impl_1/lab3_ta_keypad_builder_tb.sv"
+-sver "../source/impl_1/lab3_ta_keypad_decoder_tb.sv"
+-sver "../source/impl_1/lab3_ta_savedkey_sr.sv"
 -path ".."
 -top lab3_ta
 # Output Configuration

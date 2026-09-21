@@ -35,6 +35,7 @@ module lab3_ta (
 	logic db_done;
 
 	logic shift_enable;
+	logic save_enable;
 	
 	localparam DB_WIDTH = 18;
 	localparam DB_MAX_COUNT = 239_999;
@@ -109,15 +110,16 @@ module lab3_ta (
 		.db_done(db_done),
 		.row_decoded(row_decoded),
 		.col_decoded(col_decoded),
+		.saved_col(saved_col),
 		.scan_enable(scan_enable),
 		.scan_reset(scan_reset),
 		.db_reset(db_reset),
 		.db_enable(db_enable),
 		.shift_enable(shift_enable),
-		.saved_row(saved_row),
-		.saved_col(saved_col)
+		.save_enable(save_enable)
 	);
-	//Shift register
+	//Shift registers
+	//Hex display
 	lab3_ta_digit_sr i_DIGIT_SR(
 		.clk(int_osc),
 		.reset(reset),
@@ -126,8 +128,18 @@ module lab3_ta (
 		.digit1(dig1),
 		.digit2(dig2)
 		);
+	//Saved key
+	lab3_ta_savedkey_sr i_SAVEDKEY_SR(
+		.clk(int_osc),
+		.reset(reset),
+		.enable(save_enable),
+		.col_decoded(col_decoded),
+		.row_decoded(row_decoded),
+		.saved_col(saved_col),
+		.saved_row(saved_row)
+		);
 	//Dual display mux logic
-		//generic counter
+	//generic counter
 	lab2_ta_counter #(
     .WIDTH(HEX_WIDTH),
     .MAX_COUNT(HEX_MAX_COUNT) 	 	
@@ -137,6 +149,7 @@ module lab3_ta (
 		.enable(enable),
 		.counter(hex_counter)
     );
+	//time mux assign logic
 	assign dig_s = (hex_counter >= HEX_MAX_COUNT/2);
 	assign s = dig_s ? dig2 : dig1;
 	assign anode = dig_s ? 2'b01 : 2'b10;

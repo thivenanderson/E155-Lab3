@@ -13,13 +13,12 @@ module lab3_ta_controller (
 
     input  logic [3:0]  row_decoded,
     input  logic [1:0]  col_decoded,
+	input logic [1:0]  saved_col,
 
     output logic        scan_enable, scan_reset,
     output logic        db_reset, db_enable,
     output logic        shift_enable,
-
-    output logic [3:0]  saved_row,
-    output logic [1:0]  saved_col
+	output logic save_enable
 );
 //Define states
 typedef enum logic [2:0] {
@@ -88,46 +87,69 @@ state_t state, next_state;
 //State control outputs
 	always_comb begin
 		scan_enable  = 0;
-		scan_reset = 0;
+		scan_reset   = 0;
 		db_reset     = 0;
 		db_enable    = 0;
 		shift_enable = 0;
+		save_enable  = 0;
 
 		case (state)
 
 			SCAN: begin
-				scan_enable = 1;
-				scan_reset = 1;
+				scan_enable  = 1;
+				scan_reset   = 1;
+				db_reset     = 0;
+				db_enable    = 0;
+				shift_enable = 0;
+				save_enable  = 0;					
 			end
 			CHECK: begin
-				scan_enable = 0;
+				scan_enable  = 0;
+				scan_reset   = 0;
+				db_reset     = 0;
+				db_enable    = 0;
+				shift_enable = 0;
+				if ($onehot(keypad)) 
+					save_enable = 1;
 			end
 			WAIT: begin
-				db_reset  = 1;
-				db_enable = 1;
+				scan_enable  = 0;
+				scan_reset   = 0;
+				db_reset     = 1;
+				db_enable    = 1;
+				shift_enable = 0;
+				save_enable  = 0;
 			end
 			PULSE: begin
+				scan_enable  = 0;
+				scan_reset   = 0;
+				db_reset     = 0;
+				db_enable    = 0;
 				shift_enable = 1;
+				save_enable  = 0;
 			end
 			PRESSED: begin
+				scan_enable  = 0;
+				scan_reset   = 0;
+				db_reset     = 0;
+				db_enable    = 0;
 				shift_enable = 0;
-				db_reset  = 0;
-				db_enable = 0;
+				save_enable  = 0;
 			end
 
 		endcase
 	end
 //Saved key register
-	always_ff @(posedge clk) begin
-		if (!reset) begin
-			saved_row <= 4'b0;
-			saved_col <= 2'b0;
-		end
-		else if (state == CHECK && $onehot(keypad)) begin
-			saved_row <= row_decoded;
-			saved_col <= col_decoded;
-		end
-	end
+	//always_ff @(posedge clk) begin
+		//if (!reset) begin
+			//saved_row <= 4'b0;
+			//saved_col <= 2'b0;
+		//end
+		//else if (state == CHECK && $onehot(keypad)) begin
+			//saved_row <= row_decoded;
+			//saved_col <= col_decoded;
+		//end
+	//end
 endmodule
 		
 				

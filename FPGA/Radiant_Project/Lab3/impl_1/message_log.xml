@@ -849,6 +849,14 @@
         <Message>
             <ID>35901018</ID>
             <Severity>1</Severity>
+            <Dynamic>C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr.sv(5): </Dynamic>
+            <Dynamic>lab3_ta_savedkey_sr</Dynamic>
+            <Navigation>C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr.sv</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
             <Dynamic>C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv(5): </Dynamic>
             <Dynamic>lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)</Dynamic>
             <Navigation>C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv</Navigation>
@@ -945,6 +953,14 @@
             <Dynamic>lab3_ta_digit_sr</Dynamic>
             <Navigation>../source/impl_1/lab3_ta_digit_sr.sv</Navigation>
             <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>1</Severity>
+            <Dynamic>../source/impl_1/lab3_ta_savedkey_sr.sv(5): </Dynamic>
+            <Dynamic>lab3_ta_savedkey_sr</Dynamic>
+            <Navigation>../source/impl_1/lab3_ta_savedkey_sr.sv</Navigation>
+            <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>

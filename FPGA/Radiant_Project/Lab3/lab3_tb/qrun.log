@@ -1,0 +1,248 @@
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:21:15 on Sep 20,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_scanner_tb(fast)
+# Loading work.lab3_ta_scanner(fast)
+# Loading work.lab2_ta_counter(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Passed row 0 start at time: 21.
+# Passed no tick at count 1.
+# Passed row 0 scan tick at time: 36.
+# Passed row 1 start at time: 46.
+# Passed row 1 scan tick at time: 66.
+# Passed row 2 start at time: 76.
+# Passed row 2 scan tick at time: 96.
+# Passed row 3 start at time: 106.
+# Passed row 3 scan tick at time: 126.
+# Passed scanner wraparound at time: 136.
+# Passed scanner enable freeze at time: 166.
+# Scanner testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv(155)
+#    Time: 166 ns  Iteration: 0  Instance: /lab3_ta_scanner_tb
+# Break in Module lab3_ta_scanner_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv line 155
+add wave -position end  sim:/lab3_ta_scanner_tb/dut/scan_counter
+restart -f
+# Loading work.lab3_ta_scanner_tb(fast)
+# Loading work.lab3_ta_scanner(fast)
+# Loading work.lab2_ta_counter(fast)
+run -all
+# Passed row 0 start at time: 21.
+# Passed no tick at count 1.
+# Passed row 0 scan tick at time: 36.
+# Passed row 1 start at time: 46.
+# Passed row 1 scan tick at time: 66.
+# Passed row 2 start at time: 76.
+# Passed row 2 scan tick at time: 96.
+# Passed row 3 start at time: 106.
+# Passed row 3 scan tick at time: 126.
+# Passed scanner wraparound at time: 136.
+# Passed scanner enable freeze at time: 166.
+# Scanner testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv(155)
+#    Time: 166 ns  Iteration: 0  Instance: /lab3_ta_scanner_tb
+# Break in Module lab3_ta_scanner_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv line 155
+# End time: 17:24:55 on Sep 20,2026, Elapsed time: 0:03:40
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:32:56 on Sep 20,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_sync_tb(fast)
+# Loading work.lab3_ta_sync(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Passed initial synchronization at time 16.
+# Passed first-stage delay at time 26.
+# Passed second-stage synchronization at time 36.
+# Passed second input first-stage delay.
+# Passed second input synchronization.
+# Synchronizer testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv(82)
+#    Time: 56 ns  Iteration: 0  Instance: /lab3_ta_sync_tb
+# Break in Module lab3_ta_sync_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv line 82
+# Causality operation skipped due to absence of debug database file
+add wave -position end  sim:/lab3_ta_sync_tb/dut/n1
+restart -f
+# Loading work.lab3_ta_sync_tb(fast)
+# Loading work.lab3_ta_sync(fast)
+run
+# Passed initial synchronization at time 16.
+# Passed first-stage delay at time 26.
+# Passed second-stage synchronization at time 36.
+# Passed second input first-stage delay.
+# Passed second input synchronization.
+# Synchronizer testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv(82)
+#    Time: 56 ns  Iteration: 0  Instance: /lab3_ta_sync_tb
+# Break in Module lab3_ta_sync_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv line 82
+add wave -position end  sim:/lab3_ta_sync_tb/dut/n1
+# End time: 17:36:09 on Sep 20,2026, Elapsed time: 0:03:13
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:36:48 on Sep 20,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_scanner_tb(fast)
+# Loading work.lab3_ta_scanner(fast)
+# Loading work.lab2_ta_counter(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Passed row 0 start at time: 21.
+# Passed no tick at count 1.
+# Passed row 0 scan tick at time: 36.
+# Passed row 1 start at time: 46.
+# Passed row 1 scan tick at time: 66.
+# Passed row 2 start at time: 76.
+# Passed row 2 scan tick at time: 96.
+# Passed row 3 start at time: 106.
+# Passed row 3 scan tick at time: 126.
+# Passed scanner wraparound at time: 136.
+# Passed scanner enable freeze at time: 166.
+# Scanner testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv(155)
+#    Time: 166 ns  Iteration: 0  Instance: /lab3_ta_scanner_tb
+# Break in Module lab3_ta_scanner_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv line 155
+add wave -position end  sim:/lab3_ta_scanner_tb/dut/scan_counter
+restart -f
+# Loading work.lab3_ta_scanner_tb(fast)
+# Loading work.lab3_ta_scanner(fast)
+# Loading work.lab2_ta_counter(fast)
+run -all
+# Passed row 0 start at time: 21.
+# Passed no tick at count 1.
+# Passed row 0 scan tick at time: 36.
+# Passed row 1 start at time: 46.
+# Passed row 1 scan tick at time: 66.
+# Passed row 2 start at time: 76.
+# Passed row 2 scan tick at time: 96.
+# Passed row 3 start at time: 106.
+# Passed row 3 scan tick at time: 126.
+# Passed scanner wraparound at time: 136.
+# Passed scanner enable freeze at time: 166.
+# Scanner testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv(155)
+#    Time: 166 ns  Iteration: 0  Instance: /lab3_ta_scanner_tb
+# Break in Module lab3_ta_scanner_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv line 155
+# End time: 17:39:42 on Sep 20,2026, Elapsed time: 0:02:54
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:41:42 on Sep 20,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_digit_sr_tb(fast)
+# Loading work.lab3_ta_digit_sr(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Passed reset test at time 16.
+# Passed first digit load at time 26.
+# Passed second digit shift at time 36.
+# Passed enable hold test at time 66.
+# Passed third digit shift at time 76.
+# Digit shift register testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv(98)
+#    Time: 76 ns  Iteration: 0  Instance: /lab3_ta_digit_sr_tb
+# Break in Module lab3_ta_digit_sr_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv line 98
+# End time: 17:44:10 on Sep 20,2026, Elapsed time: 0:02:28
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:48:11 on Sep 20,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_keypad_builder_tb(fast)
+# Loading work.lab3_ta_keypad_builder(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Passed keypad reset.
+# Passed row 0 capture.
+# Passed scan_done low on row 0.
+# Passed row 1 capture.
+# Passed scan_done low on row 1.
+# Passed row 2 capture.
+# Passed scan_done low on row 2.
+# Passed scan_done assertion.
+# Passed complete keypad build.
+# Passed scan_done deassertion.
+# Passed no-update-without-tick test.
+# Keypad builder testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv(177)
+#    Time: 66 ns  Iteration: 0  Instance: /lab3_ta_keypad_builder_tb
+# Break in Module lab3_ta_keypad_builder_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv line 177
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   5
+#   Totals: Errors:   0, Warnings:   5
+# Error 31: Unable to unlink file "qrun.out/work/qrun_opt/_lib.qdb".
+# Error 133: Unable to remove directory "qrun.out/work/qrun_opt".
+# Error 133: Unable to remove directory "qrun.out/work".
+# Error 133: Unable to remove directory "qrun.out".
+# End time: 18:07:07 on Sep 20,2026, Elapsed time: 0:18:56
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 18:06:59 on Sep 20,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_keypad_decoder_tb(fast)
+# Loading work.lab3_ta_keypad_decoder(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Passed keypad 1000000000000000 -> row 1000, col 3, hex 1
+# Passed keypad 0100000000000000 -> row 1000, col 2, hex 2
+# Passed keypad 0010000000000000 -> row 1000, col 1, hex 3
+# Passed keypad 0001000000000000 -> row 1000, col 0, hex a
+# Passed keypad 0000100000000000 -> row 0100, col 3, hex 4
+# Passed keypad 0000010000000000 -> row 0100, col 2, hex 5
+# Passed keypad 0000001000000000 -> row 0100, col 1, hex 6
+# Passed keypad 0000000100000000 -> row 0100, col 0, hex b
+# Passed keypad 0000000010000000 -> row 0010, col 3, hex 7
+# Passed keypad 0000000001000000 -> row 0010, col 2, hex 8
+# Passed keypad 0000000000100000 -> row 0010, col 1, hex 9
+# Passed keypad 0000000000010000 -> row 0010, col 0, hex c
+# Passed keypad 0000000000001000 -> row 0001, col 3, hex e
+# Passed keypad 0000000000000100 -> row 0001, col 2, hex 0
+# Passed keypad 0000000000000010 -> row 0001, col 1, hex f
+# Passed keypad 0000000000000001 -> row 0001, col 0, hex d
+# Passed decoder default case.
+# Keypad decoder testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv(86)
+#    Time: 17 ns  Iteration: 0  Instance: /lab3_ta_keypad_decoder_tb
+# Break in Module lab3_ta_keypad_decoder_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv line 86

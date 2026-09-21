@@ -1,7 +1,7 @@
 //Name: Thiven Anderson
 //Email: thanderson@g.hmc.edu
 //Date: 9/19/2026
-//Description: Keypad "matrix" decoder
+//Description: Keypad "matrix" decoder that determines which key was pressed
 
 module lab3_ta_keypad_decoder(
 	input  logic [15:0] keypad,

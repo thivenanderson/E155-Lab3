@@ -1,0 +1,37 @@
+-L work
+-reflib pmi_work
+-reflib ovi_ice40up
+
+
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv" 
+"C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv" 
+-sv
+-optionset VOPTDEBUG
++noacc+pmi_work.*
++noacc+ovi_ice40up.*
+
+-vopt.options
+  -suppress vopt-7033
+-end
+
+-gui
+-top lab3_ta_keypad_decoder_tb
+-vsim.options
+  -suppress vsim-7033,vsim-8630,3009,3389
+-end
+
+-do "view wave"
+-do "add wave /*"
+-do "run -all"

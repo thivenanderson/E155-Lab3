@@ -1,0 +1,1 @@
+C:/lscc/radiant/2026.1/bin/nt64/moduleparser.exe -PROJ lab3_tb -pf C:/lscc/radiant/2026.1/cae_library/synthesis/verilog/iCE40UP.v -lib iCE40UP -sort -lst C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/source_files.lst

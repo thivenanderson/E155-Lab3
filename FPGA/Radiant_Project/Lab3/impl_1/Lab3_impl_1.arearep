@@ -60,6 +60,15 @@ Instance Path : i_SCANNER.i_SCAN_COUNTER
                                LUT4        29           11.8
                               TOTAL        55
 ----------------------------------------------------------------------
+Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=200000).v1
+Instance Path : i_HEX_COUNTER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        10           34.5
+                            FD1P3XZ        18           19.1
+                               LUT4        25           10.2
+                              TOTAL        53
+----------------------------------------------------------------------
 Report for cell lab3_ta_keypad_builder.v1
 Instance Path : i_KEYPAD_BUILDER
                                   Cell usage:
@@ -76,20 +85,11 @@ Instance Path : i_DIGIT_SR
                               TOTAL         8
 ----------------------------------------------------------------------
 Report for cell lab1_ta_hex_seg_decoder.v1
-Instance Path : decoder
+Instance Path : i_HEX_DECODER
                                   Cell usage:
                                cell     count   Res Usage(%)
                                LUT4         7            2.9
                               TOTAL         7
-----------------------------------------------------------------------
-Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=200000).v1
-Instance Path : i_HEX_COUNTER
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                                FA2        10           34.5
-                            FD1P3XZ        18           19.1
-                               LUT4        25           10.2
-                              TOTAL        53
 ----------------------------------------------------------------------
 Report for cell lab3_ta_sync.v1
 Instance Path : i_SYNC

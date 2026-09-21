@@ -23,6 +23,9 @@ if {[file exists {C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Pr
   file copy -force -- {C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/Lab3_impl_1_syn.udb} {C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/incr/postsyn.udb}
   file copy -force -- {C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/Lab3_impl_1_map.udb} {C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/incr/postmap.udb}
   file copy -force -- {C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/Lab3_impl_1.udb} {C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/incr/postpar.udb}
+  if [file exists {C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_final.pdc}] {
+    file copy -force -- {C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_final.pdc} {C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/incr/lastrun.pdc}
+  }
 }
 
 } out]} {

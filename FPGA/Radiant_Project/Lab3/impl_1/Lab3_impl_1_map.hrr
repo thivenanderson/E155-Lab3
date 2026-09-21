@@ -59,6 +59,15 @@ Report for cell lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)
                                 LUTCCU	         18        31.0
                                 PFUREG	         17        18.1
 ---------------------------------------------------
+Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)
+   Instance path: lab3_ta/i_HEX_COUNTER
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         45        14.4
+                               LUTGATE	         25         9.8
+                                LUTCCU	         20        34.5
+                                PFUREG	         18        19.1
+---------------------------------------------------
 Report for cell lab3_ta_keypad_builder
    Instance path: lab3_ta/i_KEYPAD_BUILDER
                      Cell usage:
@@ -74,20 +83,11 @@ Report for cell lab3_ta_digit_sr
                                 PFUREG	          8         8.5
 ---------------------------------------------------
 Report for cell lab1_ta_hex_seg_decoder
-   Instance path: lab3_ta/decoder
+   Instance path: lab3_ta/i_HEX_DECODER
                      Cell usage:
                                   cell	      count    Res Usage(%)
                                   LUT4	          7         2.2
                                LUTGATE	          7         2.7
----------------------------------------------------
-Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)
-   Instance path: lab3_ta/i_HEX_COUNTER
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  LUT4	         45        14.4
-                               LUTGATE	         25         9.8
-                                LUTCCU	         20        34.5
-                                PFUREG	         18        19.1
 ---------------------------------------------------
 Report for cell lab3_ta_sync
    Instance path: lab3_ta/i_SYNC

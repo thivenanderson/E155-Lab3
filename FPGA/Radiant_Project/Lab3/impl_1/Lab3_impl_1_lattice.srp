@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Sep 19 18:04:10 2026
+Sun Sep 20 17:09:07 2026
 
 
 Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/Lab3_impl_1_lattice.synproj -logfile Lab3_impl_1_lattice.srp -gui -msgset C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/promote.xml 
@@ -286,6 +286,6 @@ Peak Memory Usage: 91 MB
 
 --------------------------------------------------------------
 Total CPU Time: 1 secs 
-Total REAL Time: 4 secs 
+Total REAL Time: 3 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: d2f65b3a24972ac57aba161fdfc792b4c510b32
+Checksum -- synthesis -- netlist: 640862f6a82f51e996bbad6dc7a9db9cb4c02e7

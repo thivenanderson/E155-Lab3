@@ -1,7 +1,7 @@
 //Name: Thiven Anderson
 //Email: thanderson@g.hmc.edu
 //Date: 9/19/2026
-//Description: Top level module for lab 3 of E155
+//Description: Top level module for lab 3 of E155 that allows a 4x4 keypad to drive a dual seven segment display
 module lab3_ta (
 	input logic reset, enable,
 	input logic [3:0] col_raw,
@@ -141,7 +141,7 @@ module lab3_ta (
 	assign s = dig_s ? dig2 : dig1;
 	assign anode = dig_s ? 2'b01 : 2'b10;
 		// 7-segment decoder
-    lab1_ta_hex_seg_decoder decoder (
+    lab1_ta_hex_seg_decoder i_HEX_DECODER (
         .s(s),
         .seg(seg)
     );

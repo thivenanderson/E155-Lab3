@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2026.1.0.37.0
-// Netlist written on Sat Sep 19 18:04:14 2026
+// Netlist written on Sun Sep 20 17:09:10 2026
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv"
@@ -218,17 +218,17 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
     (* lut_function="(A (B (C (D))))" *) LUT4 i7_4_lut (.A(n13_adj_185), .B(scan_counter[3]), 
             .C(n12), .D(scan_counter[1]), .Z(scan_done_N_173));
     defparam i7_4_lut.INIT = "0x8000";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=83, LSE_RLINE=88 *) lab3_ta_keypad_decoder i_KEYPAD_DECODER (n21, 
-            n1025, {keypad}, n23_adj_191, row_decoded_2__N_29, n22, 
-            {hex_decoded}, n30, col_decoded[0], n3117, n1028, n23, 
-            n193, row_decoded[1], row_decoded[2], row_decoded[0], n19, 
-            n13, n25, n27, n26);
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=83, LSE_RLINE=88 *) lab3_ta_keypad_decoder i_KEYPAD_DECODER (n25, 
+            {keypad}, n1025, col_decoded[0], n3117, n19, n26, {hex_decoded}, 
+            n1028, n193, n23_adj_191, row_decoded[2], n30, row_decoded_2__N_29, 
+            n22, n23, row_decoded[1], row_decoded[0], n13, n27, 
+            n21);
     OB \row_out_pad[1]  (.I(row_out_c[1]), .O(row_out[1]));
     OB \row_out_pad[0]  (.I(row_out_c[0]), .O(row_out[0]));
     OB \anode_pad[1]  (.I(anode_c_N_171), .O(anode[1]));
     OB \anode_pad[0]  (.I(anode_c), .O(anode[0]));
     (* LSE_LINE_FILE_ID=32, LSE_LCOL=4, LSE_RCOL=6, LSE_LLINE=94, LSE_RLINE=99 *) \lab2_ta_counter(WIDTH=18,MAX_COUNT=239999)  i_DB_COUNTER ({db_counter}, 
-            db_reset, db_done_N_177, int_osc);
+            db_done_N_177, db_reset, int_osc);
     OB \seg_pad[6]  (.I(seg_c[6]), .O(seg[6]));
     OB \seg_pad[5]  (.I(seg_c[5]), .O(seg[5]));
     OB \seg_pad[4]  (.I(seg_c[4]), .O(seg[4]));
@@ -239,12 +239,12 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
     (* lut_function="(!(A+(B (C (D))+!B (C+!(D)))))" *) LUT4 i1_4_lut_adj_33 (.A(scan_counter[16]), 
             .B(n2291), .C(n30_adj_190), .D(scan_counter[15]), .Z(row_scan[2]));
     defparam i1_4_lut_adj_33.INIT = "0x0544";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=18, LSE_RCOL=5, LSE_LLINE=64, LSE_RLINE=71 *) lab3_ta_scanner i_SCANNER (n2299, 
-            n3742, reset_c, scan_counter[15], n2291, n3741, row_scan[0], 
-            int_osc, row_scan[2], row_scan[1], scan_counter[3], {row_scan_idx}, 
-            scan_counter[12], n30_adj_190, scan_counter[16], scan_enable, 
-            scan_counter[2], scan_counter[0], scan_counter[1], scan_counter[4], 
-            scan_counter[5]);
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=18, LSE_RCOL=5, LSE_LLINE=64, LSE_RLINE=71 *) lab3_ta_scanner i_SCANNER (scan_counter[0], 
+            n2299, n2291, scan_counter[3], {row_scan_idx}, scan_counter[15], 
+            n3742, scan_counter[12], n3741, row_scan[0], row_scan[2], 
+            row_scan[1], scan_enable, scan_counter[5], n30_adj_190, 
+            scan_counter[16], scan_counter[2], scan_counter[1], int_osc, 
+            scan_counter[4], reset_c);
     (* lut_function="(A+!(B))" *) LUT4 i909_2_lut (.A(shift_enable), .B(reset_c), 
             .Z(n1092));
     defparam i909_2_lut.INIT = "0xbbbb";
@@ -260,12 +260,11 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
     (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 dig1_1__I_0_3_lut (.A(dig1[1]), 
             .B(dig2[1]), .C(anode_c), .Z(s[1]));
     defparam dig1_1__I_0_3_lut.INIT = "0xcaca";
-    (* syn_instantiated=1 *) HSOSC_CORE hf_osc (.CLKHFPU(VCC_net), .CLKHFEN(VCC_net), 
-            .TRIM9(GND_net), .TRIM8(GND_net), .TRIM7(GND_net), .TRIM6(GND_net), 
-            .TRIM5(GND_net), .TRIM4(GND_net), .TRIM3(GND_net), .TRIM2(GND_net), 
-            .TRIM1(GND_net), .TRIM0(GND_net), .CLKHF(int_osc));
-    defparam hf_osc.CLKHF_DIV = "0b01";
-    defparam hf_osc.FABRIC_TRIME = "DISABLE";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=4, LSE_RCOL=6, LSE_LLINE=134, LSE_RLINE=139 *) \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  i_HEX_COUNTER (int_osc, 
+            enable_c, hex_counter_5__N_120, n915, hex_counter[14], hex_counter[13], 
+            hex_counter[11], hex_counter[12], hex_counter[10], hex_counter[7], 
+            hex_counter[9], hex_counter[15], hex_counter[17], hex_counter[16], 
+            hex_counter[8], hex_counter[5], hex_counter[6], reset_c);
     (* lut_function="(A+(B))" *) LUT4 i252_2_lut (.A(hex_counter[5]), .B(hex_counter[6]), 
             .Z(n14));
     defparam i252_2_lut.INIT = "0xeeee";
@@ -307,8 +306,8 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
     (* lut_function="(A+(B+(C+(D))))" *) LUT4 i2073_3_lut_4_lut (.A(keypad[1]), 
             .B(keypad[0]), .C(keypad[4]), .D(keypad[2]), .Z(n2249));
     defparam i2073_3_lut_4_lut.INIT = "0xfffe";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) lab3_ta_keypad_builder i_KEYPAD_BUILDER ({keypad}, 
-            reset_c, int_osc, {col_sync}, scan_done_N_173, {row_scan_idx}, 
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) lab3_ta_keypad_builder i_KEYPAD_BUILDER (int_osc, 
+            {keypad}, reset_c, {col_sync}, scan_done_N_173, {row_scan_idx}, 
             scan_done);
     (* lut_function="(!(A (B+(C+(D)))+!A (B (C+(D))+!B (C (D)+!C !(D)))))" *) LUT4 i1_4_lut_4_lut_adj_37 (.A(keypad[8]), 
             .B(keypad[9]), .C(keypad[10]), .D(keypad[11]), .Z(n219_adj_186));
@@ -316,26 +315,28 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
     (* lut_function="(!(A (B+(C+(D)))+!A (B (C+(D))+!B (C (D)+!C !(D)))))" *) LUT4 i1_4_lut_4_lut_adj_38 (.A(keypad[0]), 
             .B(keypad[1]), .C(keypad[2]), .D(keypad[3]), .Z(n213_adj_189));
     defparam i1_4_lut_4_lut_adj_38.INIT = "0x0116";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) lab3_ta_digit_sr i_DIGIT_SR ({hex_decoded}, 
-            {dig1}, {dig2}, n1092, int_osc, hex_counter_5__N_120);
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) lab3_ta_digit_sr i_DIGIT_SR (hex_counter_5__N_120, 
+            {dig2}, {dig1}, n1092, {hex_decoded}, int_osc);
     (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1966_3_lut_4_lut (.A(keypad[1]), 
             .B(keypad[0]), .C(keypad[3]), .D(keypad[2]), .Z(n2140));
     defparam i1966_3_lut_4_lut.INIT = "0xfffe";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=29, LSE_RCOL=6, LSE_LLINE=144, LSE_RLINE=147 *) lab1_ta_hex_seg_decoder decoder ({s}, 
+    (* syn_instantiated=1 *) HSOSC_CORE hf_osc (.CLKHFPU(VCC_net), .CLKHFEN(VCC_net), 
+            .TRIM9(GND_net), .TRIM8(GND_net), .TRIM7(GND_net), .TRIM6(GND_net), 
+            .TRIM5(GND_net), .TRIM4(GND_net), .TRIM3(GND_net), .TRIM2(GND_net), 
+            .TRIM1(GND_net), .TRIM0(GND_net), .CLKHF(int_osc));
+    defparam hf_osc.CLKHF_DIV = "0b01";
+    defparam hf_osc.FABRIC_TRIME = "DISABLE";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=29, LSE_RCOL=6, LSE_LLINE=144, LSE_RLINE=147 *) lab1_ta_hex_seg_decoder i_HEX_DECODER ({s}, 
             {seg_c});
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=4, LSE_RCOL=6, LSE_LLINE=134, LSE_RLINE=139 *) \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  i_HEX_COUNTER (hex_counter_5__N_120, 
-            enable_c, hex_counter[14], hex_counter[13], int_osc, hex_counter[12], 
-            hex_counter[7], hex_counter[11], reset_c, n915, hex_counter[10], 
-            hex_counter[9], hex_counter[17], hex_counter[15], hex_counter[8], 
-            hex_counter[16], hex_counter[5], hex_counter[6]);
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=56, LSE_RLINE=60 *) lab3_ta_sync i_SYNC ({col_raw_c}, 
-            int_osc, {col_sync});
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=56, LSE_RLINE=60 *) lab3_ta_sync i_SYNC ({col_sync}, 
+            {col_raw_c}, int_osc);
     (* LSE_LINE_FILE_ID=32, LSE_LCOL=21, LSE_RCOL=3, LSE_LLINE=103, LSE_RLINE=119 *) lab3_ta_controller i_CONTROLLER ({keypad}, 
-            {col_sync}, n1025, n21, n23, n1028, row_decoded_2__N_29, 
-            n23_adj_191, n3117, {saved_row}, db_reset, n13, db_done_N_177, 
-            row_decoded[0], n19, n27, n150, n1086, int_osc, hex_counter_5__N_120, 
-            n25, scan_enable, col_decoded[0], n26, n30, n58, shift_enable, 
-            n22, row_decoded[2], row_decoded[1], scan_done, reset_c);
+            n21, hex_counter_5__N_120, n23, n30, n27, n19, n1086, 
+            n26, n13, n25, n58, row_decoded[0], {saved_row}, int_osc, 
+            shift_enable, row_decoded[1], scan_enable, col_decoded[0], 
+            row_decoded[2], n23_adj_191, db_done_N_177, db_reset, {col_sync}, 
+            n150, n22, row_decoded_2__N_29, n1028, n1025, scan_done, 
+            reset_c, n3117);
     
 endmodule
 
@@ -343,18 +344,18 @@ endmodule
 // Verilog Description of module lab3_ta_keypad_decoder
 //
 
-module lab3_ta_keypad_decoder (input n21, input n1025, input [15:0]keypad, 
-            input n23, input row_decoded_2__N_29, input n22, output [3:0]hex_decoded, 
-            input n30, output \col_decoded[0] , output n3117, input n1028, 
-            input n23_adj_2, input n193, output \row_decoded[1] , output \row_decoded[2] , 
-            output \row_decoded[0] , input n19, input n13, input n25, 
-            input n27, input n26);
+module lab3_ta_keypad_decoder (input n25, input [15:0]keypad, input n1025, 
+            output \col_decoded[0] , output n3117, input n19, input n26, 
+            output [3:0]hex_decoded, input n1028, input n193, input n23, 
+            output \row_decoded[2] , input n30, input row_decoded_2__N_29, 
+            input n22, input n23_adj_2, output \row_decoded[1] , output \row_decoded[0] , 
+            input n13, input n27, input n21);
     
     
-    wire n7, n1026, n4, n1027, n2116, n1011, n1029, n2237, n1019, 
-        n1024, n8, n1018, n1021, n2048, n1990, n1016, n7_adj_182, 
-        n1001, n1014, n2118, n1030, n1013, n6, n1012, n2253, 
-        n995, n4_adj_183, n3394, n1023;
+    wire n1024, n1013, n1011, n2048, n1027, n2116, n4, n1029, 
+        n2237, n1019, n1021, n1990, n1016, n2253, n7, n1014, 
+        n1030, n3394, n1018, n6, n1012, n1001, n1026, n995, 
+        n2118, n4_adj_182, n7_adj_183, n1023, n8;
     
     (* lut_function="((B+(C))+!A)" *) LUT4 i2_3_lut (.A(keypad[5]), .B(n1025), 
             .C(keypad[4]), .Z(n1027));
@@ -366,10 +367,10 @@ module lab3_ta_keypad_decoder (input n21, input n1025, input [15:0]keypad,
             .B(n1019), .C(keypad[12]), .Z(n1021));
     defparam i2_3_lut_adj_8.INIT = "0xefef";
     (* lut_function="(A ((C+(D))+!B))" *) LUT4 i2_4_lut_adj_9 (.A(n2048), 
-            .B(keypad[15]), .C(n1016), .D(keypad[14]), .Z(n7_adj_182));
+            .B(keypad[15]), .C(n1016), .D(keypad[14]), .Z(n7));
     defparam i2_4_lut_adj_9.INIT = "0xaaa2";
-    (* lut_function="(!(A (B (C (D)))))" *) LUT4 i3508_4_lut (.A(n7_adj_182), 
-            .B(n2237), .C(n1014), .D(n1027), .Z(hex_decoded[0]));
+    (* lut_function="(!(A (B (C (D)))))" *) LUT4 i3508_4_lut (.A(n7), .B(n2237), 
+            .C(n1014), .D(n1027), .Z(hex_decoded[0]));
     defparam i3508_4_lut.INIT = "0x7fff";
     (* lut_function="(A+(B+!(C)))" *) LUT4 i2_3_lut_adj_10 (.A(keypad[7]), 
             .B(n1028), .C(keypad[6]), .Z(n1030));
@@ -387,10 +388,10 @@ module lab3_ta_keypad_decoder (input n21, input n1025, input [15:0]keypad,
             .B(n1025), .C(keypad[4]), .Z(n1026));
     defparam i2_3_lut_adj_12.INIT = "0xefef";
     (* lut_function="(A (B)+!A (B ((D)+!C)))" *) LUT4 i1_4_lut (.A(n995), 
-            .B(n1990), .C(keypad[0]), .D(keypad[1]), .Z(n4_adj_183));
+            .B(n1990), .C(keypad[0]), .D(keypad[1]), .Z(n4_adj_182));
     defparam i1_4_lut.INIT = "0xcc8c";
     (* lut_function="(A (B (C (D))+!B ((D)+!C))+!A !(B+(C)))" *) LUT4 col_decoded_0__I_0_4_lut (.A(n1026), 
-            .B(n193), .C(n3117), .D(n4_adj_183), .Z(\col_decoded[0] ));
+            .B(n193), .C(n3117), .D(n4_adj_182), .Z(\col_decoded[0] ));
     defparam col_decoded_0__I_0_4_lut.INIT = "0xa303";
     (* lut_function="((B+(C))+!A)" *) LUT4 i2_3_lut_adj_13 (.A(keypad[7]), 
             .B(n1028), .C(keypad[6]), .Z(n1029));
@@ -431,9 +432,9 @@ module lab3_ta_keypad_decoder (input n21, input n1025, input [15:0]keypad,
             .B(n1024), .C(keypad[0]), .D(keypad[1]), .Z(n8));
     defparam i2_4_lut_adj_17.INIT = "0xc8cc";
     (* lut_function="(A (B))" *) LUT4 i1_2_lut_adj_18 (.A(n1012), .B(n1018), 
-            .Z(n7));
+            .Z(n7_adj_183));
     defparam i1_2_lut_adj_18.INIT = "0x8888";
-    (* lut_function="(!(A (B (C (D)))))" *) LUT4 i3514_4_lut (.A(n1021), .B(n7), 
+    (* lut_function="(!(A (B (C (D)))))" *) LUT4 i3514_4_lut (.A(n1021), .B(n7_adj_183), 
             .C(n2237), .D(n8), .Z(hex_decoded[1]));
     defparam i3514_4_lut.INIT = "0x7fff";
     (* lut_function="(!(A (B (C))))" *) LUT4 i3518_3_lut (.A(n1029), .B(n2253), 
@@ -477,17 +478,17 @@ endmodule
 //
 
 module \lab2_ta_counter(WIDTH=18,MAX_COUNT=239999)  (output [17:0]db_counter, 
-            input db_reset, input db_done_N_177, input int_osc);
+            input db_done_N_177, input db_reset, input int_osc);
     
     (* is_clock=1 *) wire int_osc;
     
     wire GND_net, VCC_net;
-    wire [17:0]n97;
     wire [17:0]n77;
+    wire [17:0]n97;
     
-    wire n4278, n4263, n2894, n2896, db_counter_0__N_94, n2886, 
-        n4266, n2892, n2882, n4275, n2890, n4272, n4269, n2888, 
-        n2884, n4260, n2880, n4257, n4254, n4281;
+    wire n2880, n2894, n4278, n4275, n2886, n2896, db_counter_0__N_94, 
+        n2892, n2890, n4272, n4254, n2888, n4269, n4266, n4257, 
+        n2884, n4263, n2882, n4260, n4281;
     
     (* lut_function="(A (B))" *) LUT4 i1911_2_lut (.A(n77[15]), .B(db_done_N_177), 
             .Z(n97[15]));
@@ -684,19 +685,19 @@ endmodule
 // Verilog Description of module lab3_ta_scanner
 //
 
-module lab3_ta_scanner (output n2299, output n3742, input reset_c, output \scan_counter[15] , 
-            output n2291, output n3741, output \row_scan[0] , input int_osc, 
-            input \row_scan[2] , output \row_scan[1] , output \scan_counter[3] , 
-            output [1:0]row_scan_idx, output \scan_counter[12] , output n30, 
-            output \scan_counter[16] , input scan_enable, output \scan_counter[2] , 
-            output \scan_counter[0] , output \scan_counter[1] , output \scan_counter[4] , 
-            output \scan_counter[5] );
+module lab3_ta_scanner (output \scan_counter[0] , output n2299, output n2291, 
+            output \scan_counter[3] , output [1:0]row_scan_idx, output \scan_counter[15] , 
+            output n3742, output \scan_counter[12] , output n3741, output \row_scan[0] , 
+            input \row_scan[2] , output \row_scan[1] , input scan_enable, 
+            output \scan_counter[5] , output n30, output \scan_counter[16] , 
+            output \scan_counter[2] , output \scan_counter[1] , input int_osc, 
+            output \scan_counter[4] , input reset_c);
     
     wire [16:0]scan_counter;
     (* is_clock=1 *) wire int_osc;
     
-    wire n3743, n957, n990, n2064, n942, n2211, n4094, n3145, 
-        n954, n3739, n3738, n3744, n3541, n974, n3144, n2189;
+    wire n2064, n3743, n957, n974, n2189, n3738, n4094, n3145, 
+        n954, n3739, n3744, n3144, n942, n3541, n2211, n990;
     
     (* lut_function="(A (B (C)))" *) LUT4 i2_3_lut (.A(scan_counter[6]), .B(scan_counter[9]), 
             .C(scan_counter[13]), .Z(n957));
@@ -763,7 +764,7 @@ module lab3_ta_scanner (output n2299, output n3742, input reset_c, output \scan_
             \scan_counter[15] , scan_counter[14:13], \scan_counter[12] , 
             scan_counter[11:6], \scan_counter[5] , \scan_counter[4] , 
             \scan_counter[3] , \scan_counter[2] , \scan_counter[1] , \scan_counter[0] }, 
-            n2211, int_osc, reset_c, scan_enable, n3541, n954, n3145, 
+            scan_enable, int_osc, reset_c, n954, n3145, n3541, n2211, 
             n2189);
     
 endmodule
@@ -773,21 +774,21 @@ endmodule
 //
 
 module \lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)  (output [16:0]scan_counter, 
-            output n2211, input int_osc, input reset_c, input scan_enable, 
-            output n3541, output n954, output n3145, output n2189);
+            input scan_enable, input int_osc, input reset_c, output n954, 
+            output n3145, output n3541, output n2211, output n2189);
     
-    wire scan_reset_master;
     (* is_clock=1 *) wire int_osc;
+    wire scan_reset_master;
     
-    wire GND_net, VCC_net, n4284;
-    wire [16:0]n92;
-    
-    wire n2874, n4302;
+    wire GND_net, VCC_net, n2876;
     wire [16:0]n73;
     
-    wire n2876, n2872, n4299, n2864, n3615, n3621, n3619, n3382, 
-        n2866, n3625, n33, n4290, n4305, n4287, n2862, n4251, 
-        n2870, n4296, n2868, n4293;
+    wire n3615, n2874;
+    wire [16:0]n92;
+    
+    wire n4302, n4251, n3621, n2872, n4299, n3619, n4290, n4305, 
+        n2864, n4284, n3382, n3625, n33, n2868, n4296, n2870, 
+        n2862, n4293, n2866, n4287;
     
     FA2 counter_276_add_4_15 (.A0(GND_net), .B0(GND_net), .C0(scan_counter[13]), 
         .D0(n2874), .CI0(n2874), .A1(GND_net), .B1(GND_net), .C1(scan_counter[14]), 
@@ -1005,248 +1006,28 @@ module \lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)  (output [16:0]scan_counter,
 endmodule
 
 //
-// Verilog Description of module lab3_ta_keypad_builder
-//
-
-module lab3_ta_keypad_builder (output [15:0]keypad, input reset_c, input int_osc, 
-            input [3:0]col_sync, input scan_done_N_173, input [1:0]row_scan_idx, 
-            output scan_done);
-    
-    (* is_clock=1 *) wire int_osc;
-    
-    wire VCC_net, n1065, n1073, n777, n1057, n1055, n1063, n1067, 
-        n1069, n1038, n3131, n820, n819, n1061, n1059, n1045, 
-        n1053, n1051, n1047, n1049, n1071, GND_net;
-    
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i6 (.D(n1063), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[6]));
-    defparam keypad__i6.REGSET = "RESET";
-    defparam keypad__i6.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i880_4_lut (.A(reset_c), 
-            .B(keypad[6]), .C(col_sync[2]), .D(n777), .Z(n1063));
-    defparam i880_4_lut.INIT = "0x0a88";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i7 (.D(n1061), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[7]));
-    defparam keypad__i7.REGSET = "RESET";
-    defparam keypad__i7.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(((C)+!B)+!A)" *) LUT4 i2_3_lut (.A(scan_done_N_173), 
-            .B(row_scan_idx[1]), .C(row_scan_idx[0]), .Z(n3131));
-    defparam i2_3_lut.INIT = "0xf7f7";
-    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i882_4_lut (.A(reset_c), 
-            .B(keypad[5]), .C(col_sync[1]), .D(n3131), .Z(n1065));
-    defparam i882_4_lut.INIT = "0x880a";
-    (* lut_function="(A+((C)+!B))" *) LUT4 i1_2_lut_3_lut (.A(row_scan_idx[1]), 
-            .B(scan_done_N_173), .C(row_scan_idx[0]), .Z(n820));
-    defparam i1_2_lut_3_lut.INIT = "0xfbfb";
-    (* lut_function="(A+!(B (C)))" *) LUT4 i1_2_lut_3_lut_adj_2 (.A(row_scan_idx[1]), 
-            .B(scan_done_N_173), .C(row_scan_idx[0]), .Z(n819));
-    defparam i1_2_lut_3_lut_adj_2.INIT = "0xbfbf";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i8 (.D(n1059), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[8]));
-    defparam keypad__i8.REGSET = "RESET";
-    defparam keypad__i8.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i9 (.D(n1057), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[9]));
-    defparam keypad__i9.REGSET = "RESET";
-    defparam keypad__i9.SRMODE = "CE_OVER_LSR";
-    (* lut_function="(!(((C)+!B)+!A))" *) LUT4 i1_2_lut_3_lut_adj_3 (.A(row_scan_idx[1]), 
-            .B(scan_done_N_173), .C(row_scan_idx[0]), .Z(n777));
-    defparam i1_2_lut_3_lut_adj_3.INIT = "0x0808";
-    (* lut_function="(A (B (C)))" *) LUT4 i1_2_lut_3_lut_adj_4 (.A(row_scan_idx[1]), 
-            .B(scan_done_N_173), .C(row_scan_idx[0]), .Z(scan_done));
-    defparam i1_2_lut_3_lut_adj_4.INIT = "0x8080";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i10 (.D(n1055), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[10]));
-    defparam keypad__i10.REGSET = "RESET";
-    defparam keypad__i10.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i0 (.D(n1038), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[0]));
-    defparam keypad__i0.REGSET = "RESET";
-    defparam keypad__i0.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i15 (.D(n1045), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[15]));
-    defparam keypad__i15.REGSET = "RESET";
-    defparam keypad__i15.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i11 (.D(n1053), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[11]));
-    defparam keypad__i11.REGSET = "RESET";
-    defparam keypad__i11.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i12 (.D(n1051), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[12]));
-    defparam keypad__i12.REGSET = "RESET";
-    defparam keypad__i12.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i14 (.D(n1047), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[14]));
-    defparam keypad__i14.REGSET = "RESET";
-    defparam keypad__i14.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i13 (.D(n1049), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[13]));
-    defparam keypad__i13.REGSET = "RESET";
-    defparam keypad__i13.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i4 (.D(n1067), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[4]));
-    defparam keypad__i4.REGSET = "RESET";
-    defparam keypad__i4.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i1 (.D(n1073), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[1]));
-    defparam keypad__i1.REGSET = "RESET";
-    defparam keypad__i1.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i2 (.D(n1071), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[2]));
-    defparam keypad__i2.REGSET = "RESET";
-    defparam keypad__i2.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i3 (.D(n1069), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[3]));
-    defparam keypad__i3.REGSET = "RESET";
-    defparam keypad__i3.SRMODE = "CE_OVER_LSR";
-    VLO i2 (.Z(GND_net));
-    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i886_4_lut (.A(reset_c), 
-            .B(keypad[3]), .C(col_sync[3]), .D(scan_done), .Z(n1069));
-    defparam i886_4_lut.INIT = "0x0a88";
-    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i888_4_lut (.A(reset_c), 
-            .B(keypad[2]), .C(col_sync[2]), .D(scan_done), .Z(n1071));
-    defparam i888_4_lut.INIT = "0x0a88";
-    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i890_4_lut (.A(reset_c), 
-            .B(keypad[1]), .C(col_sync[1]), .D(scan_done), .Z(n1073));
-    defparam i890_4_lut.INIT = "0x0a88";
-    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i884_4_lut (.A(reset_c), 
-            .B(keypad[4]), .C(col_sync[0]), .D(n3131), .Z(n1067));
-    defparam i884_4_lut.INIT = "0x880a";
-    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i866_4_lut (.A(reset_c), 
-            .B(keypad[13]), .C(col_sync[1]), .D(n820), .Z(n1049));
-    defparam i866_4_lut.INIT = "0x880a";
-    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i864_4_lut (.A(reset_c), 
-            .B(keypad[14]), .C(col_sync[2]), .D(n820), .Z(n1047));
-    defparam i864_4_lut.INIT = "0x880a";
-    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i868_4_lut (.A(reset_c), 
-            .B(keypad[12]), .C(col_sync[0]), .D(n820), .Z(n1051));
-    defparam i868_4_lut.INIT = "0x880a";
-    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i870_4_lut (.A(reset_c), 
-            .B(keypad[11]), .C(col_sync[3]), .D(n819), .Z(n1053));
-    defparam i870_4_lut.INIT = "0x880a";
-    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i862_4_lut (.A(reset_c), 
-            .B(keypad[15]), .C(col_sync[3]), .D(n820), .Z(n1045));
-    defparam i862_4_lut.INIT = "0x880a";
-    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i855_4_lut (.A(reset_c), 
-            .B(keypad[0]), .C(col_sync[0]), .D(scan_done), .Z(n1038));
-    defparam i855_4_lut.INIT = "0x0a88";
-    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i872_4_lut (.A(reset_c), 
-            .B(keypad[10]), .C(col_sync[2]), .D(n819), .Z(n1055));
-    defparam i872_4_lut.INIT = "0x880a";
-    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i874_4_lut (.A(reset_c), 
-            .B(keypad[9]), .C(col_sync[1]), .D(n819), .Z(n1057));
-    defparam i874_4_lut.INIT = "0x880a";
-    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i876_4_lut (.A(reset_c), 
-            .B(keypad[8]), .C(col_sync[0]), .D(n819), .Z(n1059));
-    defparam i876_4_lut.INIT = "0x880a";
-    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i878_4_lut (.A(reset_c), 
-            .B(keypad[7]), .C(col_sync[3]), .D(n777), .Z(n1061));
-    defparam i878_4_lut.INIT = "0x0a88";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i5 (.D(n1065), 
-            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[5]));
-    defparam keypad__i5.REGSET = "RESET";
-    defparam keypad__i5.SRMODE = "CE_OVER_LSR";
-    VHI i1 (.Z(VCC_net));
-    
-endmodule
-
-//
-// Verilog Description of module lab3_ta_digit_sr
-//
-
-module lab3_ta_digit_sr (input [3:0]hex_decoded, output [3:0]dig1, output [3:0]dig2, 
-            input n1092, input int_osc, input hex_counter_5__N_120);
-    
-    (* is_clock=1 *) wire int_osc;
-    
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1__i0 (.D(hex_decoded[0]), 
-            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig1[0]));
-    defparam digit1__i0.REGSET = "RESET";
-    defparam digit1__i0.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1__i3 (.D(hex_decoded[3]), 
-            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig1[3]));
-    defparam digit1__i3.REGSET = "RESET";
-    defparam digit1__i3.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1__i2 (.D(hex_decoded[2]), 
-            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig1[2]));
-    defparam digit1__i2.REGSET = "RESET";
-    defparam digit1__i2.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1__i1 (.D(hex_decoded[1]), 
-            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig1[1]));
-    defparam digit1__i1.REGSET = "RESET";
-    defparam digit1__i1.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2__i3 (.D(dig1[3]), 
-            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig2[3]));
-    defparam digit2__i3.REGSET = "RESET";
-    defparam digit2__i3.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2__i2 (.D(dig1[2]), 
-            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig2[2]));
-    defparam digit2__i2.REGSET = "RESET";
-    defparam digit2__i2.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2__i1 (.D(dig1[1]), 
-            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig2[1]));
-    defparam digit2__i1.REGSET = "RESET";
-    defparam digit2__i1.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2__i0 (.D(dig1[0]), 
-            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig2[0]));
-    defparam digit2__i0.REGSET = "RESET";
-    defparam digit2__i0.SRMODE = "CE_OVER_LSR";
-    
-endmodule
-
-//
-// Verilog Description of module lab1_ta_hex_seg_decoder
-//
-
-module lab1_ta_hex_seg_decoder (input [3:0]s, output [6:0]seg_c);
-    
-    
-    (* lut_function="(A (B (C)+!B !(C+(D)))+!A !(B (C)+!B !(C (D))))" *) LUT4 n3979_bdd_4_lut_4_lut_4_lut_4_lut (.A(s[2]), 
-            .B(s[0]), .C(s[1]), .D(s[3]), .Z(seg_c[3]));
-    defparam n3979_bdd_4_lut_4_lut_4_lut_4_lut.INIT = "0x9486";
-    (* lut_function="(!(A (B+!(C (D)+!C !(D)))+!A !(B (C (D))+!B !(C+!(D)))))" *) LUT4 s_3__I_0_4_lut (.A(s[2]), 
-            .B(s[1]), .C(s[3]), .D(s[0]), .Z(seg_c[0]));
-    defparam s_3__I_0_4_lut.INIT = "0x6102";
-    (* lut_function="(A (B (D)+!B !((D)+!C))+!A (B (C)+!B (C (D))))" *) LUT4 seg_c_1__I_0_4_lut (.A(s[0]), 
-            .B(s[3]), .C(s[2]), .D(s[1]), .Z(seg_c[1]));
-    defparam seg_c_1__I_0_4_lut.INIT = "0xd860";
-    (* lut_function="(A (B (C (D)))+!A (B (D)+!B !((D)+!C)))" *) LUT4 seg_c_2__I_0_4_lut (.A(s[0]), 
-            .B(s[3]), .C(s[1]), .D(s[2]), .Z(seg_c[2]));
-    defparam seg_c_2__I_0_4_lut.INIT = "0xc410";
-    (* lut_function="(!(A (B+!(C))+!A (B ((D)+!C)+!B !(C+(D)))))" *) LUT4 seg_c_4__I_0_4_lut (.A(s[1]), 
-            .B(s[3]), .C(s[0]), .D(s[2]), .Z(seg_c[4]));
-    defparam seg_c_4__I_0_4_lut.INIT = "0x3170";
-    (* lut_function="(!(A (B+!((D)+!C))+!A !(B (C (D))+!B !(C+!(D)))))" *) LUT4 seg_c_5__I_0_4_lut (.A(s[1]), 
-            .B(s[3]), .C(s[2]), .D(s[0]), .Z(seg_c[5]));
-    defparam seg_c_5__I_0_4_lut.INIT = "0x6302";
-    (* lut_function="(!(A ((C+!(D))+!B)+!A (B (C+(D))+!B !(C (D)+!C !(D)))))" *) LUT4 seg_c_6__I_0_4_lut (.A(s[1]), 
-            .B(s[0]), .C(s[3]), .D(s[2]), .Z(seg_c[6]));
-    defparam seg_c_6__I_0_4_lut.INIT = "0x1805";
-    
-endmodule
-
-//
 // Verilog Description of module \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000) 
 //
 
-module \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  (output hex_counter_5__N_120, 
-            input enable_c, output \hex_counter[14] , output \hex_counter[13] , 
-            input int_osc, output \hex_counter[12] , output \hex_counter[7] , 
-            output \hex_counter[11] , input reset_c, input n915, output \hex_counter[10] , 
-            output \hex_counter[9] , output \hex_counter[17] , output \hex_counter[15] , 
-            output \hex_counter[8] , output \hex_counter[16] , output \hex_counter[5] , 
-            output \hex_counter[6] );
+module \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  (input int_osc, input enable_c, 
+            output hex_counter_5__N_120, input n915, output \hex_counter[14] , 
+            output \hex_counter[13] , output \hex_counter[11] , output \hex_counter[12] , 
+            output \hex_counter[10] , output \hex_counter[7] , output \hex_counter[9] , 
+            output \hex_counter[15] , output \hex_counter[17] , output \hex_counter[16] , 
+            output \hex_counter[8] , output \hex_counter[5] , output \hex_counter[6] , 
+            input reset_c);
     
     (* is_clock=1 *) wire int_osc;
     
     wire GND_net, VCC_net;
-    wire [17:0]n59;
     wire [17:0]n78;
     
-    wire n4245, n4239, n2913, n4308, n4242, n18, n3611, n2907, 
-        n2915, n4311, n17, n15_adj_180, n16, n14, n35, n16_adj_181, 
-        n10, n2899, n2911, n4248, n2909, n3613, n15, n4230, 
-        n2905, n2903, n4236, n2901, n4233, n4227;
+    wire n17, n4239, n2905, n2913, n4230, n15_adj_180, n18;
+    wire [17:0]n59;
+    
+    wire n2915, n4311, n4308, n4236, n15, n35, n16_adj_181, n4245, 
+        n4242, n2911, n4248, n16, n14, n2909, n10, n2907, n4227, 
+        n3611, n3613, n2903, n2901, n4233, n2899;
     
     (* syn_use_carry_chain=1 *) FD1P3XZ counter_275__i14 (.D(n78[13]), .SP(enable_c), 
             .CK(int_osc), .SR(hex_counter_5__N_120), .Q(\hex_counter[13] ));
@@ -1458,10 +1239,231 @@ module \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  (output hex_counter_5__N_120
 endmodule
 
 //
+// Verilog Description of module lab3_ta_keypad_builder
+//
+
+module lab3_ta_keypad_builder (input int_osc, output [15:0]keypad, input reset_c, 
+            input [3:0]col_sync, input scan_done_N_173, input [1:0]row_scan_idx, 
+            output scan_done);
+    
+    (* is_clock=1 *) wire int_osc;
+    
+    wire VCC_net, n1065, n1067, n777, n1061, n1071, n1063, n1038, 
+        n3131, n820, n819, n1059, n1069, n1057, n1055, n1045, 
+        n1053, n1051, n1047, n1049, n1073, GND_net;
+    
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i6 (.D(n1063), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[6]));
+    defparam keypad__i6.REGSET = "RESET";
+    defparam keypad__i6.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i880_4_lut (.A(reset_c), 
+            .B(keypad[6]), .C(col_sync[2]), .D(n777), .Z(n1063));
+    defparam i880_4_lut.INIT = "0x0a88";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i7 (.D(n1061), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[7]));
+    defparam keypad__i7.REGSET = "RESET";
+    defparam keypad__i7.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(((C)+!B)+!A)" *) LUT4 i2_3_lut (.A(scan_done_N_173), 
+            .B(row_scan_idx[1]), .C(row_scan_idx[0]), .Z(n3131));
+    defparam i2_3_lut.INIT = "0xf7f7";
+    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i882_4_lut (.A(reset_c), 
+            .B(keypad[5]), .C(col_sync[1]), .D(n3131), .Z(n1065));
+    defparam i882_4_lut.INIT = "0x880a";
+    (* lut_function="(A+((C)+!B))" *) LUT4 i1_2_lut_3_lut (.A(row_scan_idx[1]), 
+            .B(scan_done_N_173), .C(row_scan_idx[0]), .Z(n820));
+    defparam i1_2_lut_3_lut.INIT = "0xfbfb";
+    (* lut_function="(A+!(B (C)))" *) LUT4 i1_2_lut_3_lut_adj_2 (.A(row_scan_idx[1]), 
+            .B(scan_done_N_173), .C(row_scan_idx[0]), .Z(n819));
+    defparam i1_2_lut_3_lut_adj_2.INIT = "0xbfbf";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i8 (.D(n1059), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[8]));
+    defparam keypad__i8.REGSET = "RESET";
+    defparam keypad__i8.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i9 (.D(n1057), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[9]));
+    defparam keypad__i9.REGSET = "RESET";
+    defparam keypad__i9.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(!(((C)+!B)+!A))" *) LUT4 i1_2_lut_3_lut_adj_3 (.A(row_scan_idx[1]), 
+            .B(scan_done_N_173), .C(row_scan_idx[0]), .Z(n777));
+    defparam i1_2_lut_3_lut_adj_3.INIT = "0x0808";
+    (* lut_function="(A (B (C)))" *) LUT4 i1_2_lut_3_lut_adj_4 (.A(row_scan_idx[1]), 
+            .B(scan_done_N_173), .C(row_scan_idx[0]), .Z(scan_done));
+    defparam i1_2_lut_3_lut_adj_4.INIT = "0x8080";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i10 (.D(n1055), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[10]));
+    defparam keypad__i10.REGSET = "RESET";
+    defparam keypad__i10.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i0 (.D(n1038), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[0]));
+    defparam keypad__i0.REGSET = "RESET";
+    defparam keypad__i0.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i15 (.D(n1045), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[15]));
+    defparam keypad__i15.REGSET = "RESET";
+    defparam keypad__i15.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i11 (.D(n1053), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[11]));
+    defparam keypad__i11.REGSET = "RESET";
+    defparam keypad__i11.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i12 (.D(n1051), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[12]));
+    defparam keypad__i12.REGSET = "RESET";
+    defparam keypad__i12.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i14 (.D(n1047), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[14]));
+    defparam keypad__i14.REGSET = "RESET";
+    defparam keypad__i14.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i13 (.D(n1049), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[13]));
+    defparam keypad__i13.REGSET = "RESET";
+    defparam keypad__i13.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i4 (.D(n1067), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[4]));
+    defparam keypad__i4.REGSET = "RESET";
+    defparam keypad__i4.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i1 (.D(n1073), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[1]));
+    defparam keypad__i1.REGSET = "RESET";
+    defparam keypad__i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i2 (.D(n1071), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[2]));
+    defparam keypad__i2.REGSET = "RESET";
+    defparam keypad__i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i3 (.D(n1069), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[3]));
+    defparam keypad__i3.REGSET = "RESET";
+    defparam keypad__i3.SRMODE = "CE_OVER_LSR";
+    VLO i2 (.Z(GND_net));
+    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i886_4_lut (.A(reset_c), 
+            .B(keypad[3]), .C(col_sync[3]), .D(scan_done), .Z(n1069));
+    defparam i886_4_lut.INIT = "0x0a88";
+    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i888_4_lut (.A(reset_c), 
+            .B(keypad[2]), .C(col_sync[2]), .D(scan_done), .Z(n1071));
+    defparam i888_4_lut.INIT = "0x0a88";
+    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i890_4_lut (.A(reset_c), 
+            .B(keypad[1]), .C(col_sync[1]), .D(scan_done), .Z(n1073));
+    defparam i890_4_lut.INIT = "0x0a88";
+    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i884_4_lut (.A(reset_c), 
+            .B(keypad[4]), .C(col_sync[0]), .D(n3131), .Z(n1067));
+    defparam i884_4_lut.INIT = "0x880a";
+    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i866_4_lut (.A(reset_c), 
+            .B(keypad[13]), .C(col_sync[1]), .D(n820), .Z(n1049));
+    defparam i866_4_lut.INIT = "0x880a";
+    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i864_4_lut (.A(reset_c), 
+            .B(keypad[14]), .C(col_sync[2]), .D(n820), .Z(n1047));
+    defparam i864_4_lut.INIT = "0x880a";
+    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i868_4_lut (.A(reset_c), 
+            .B(keypad[12]), .C(col_sync[0]), .D(n820), .Z(n1051));
+    defparam i868_4_lut.INIT = "0x880a";
+    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i870_4_lut (.A(reset_c), 
+            .B(keypad[11]), .C(col_sync[3]), .D(n819), .Z(n1053));
+    defparam i870_4_lut.INIT = "0x880a";
+    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i862_4_lut (.A(reset_c), 
+            .B(keypad[15]), .C(col_sync[3]), .D(n820), .Z(n1045));
+    defparam i862_4_lut.INIT = "0x880a";
+    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i855_4_lut (.A(reset_c), 
+            .B(keypad[0]), .C(col_sync[0]), .D(scan_done), .Z(n1038));
+    defparam i855_4_lut.INIT = "0x0a88";
+    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i872_4_lut (.A(reset_c), 
+            .B(keypad[10]), .C(col_sync[2]), .D(n819), .Z(n1055));
+    defparam i872_4_lut.INIT = "0x880a";
+    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i874_4_lut (.A(reset_c), 
+            .B(keypad[9]), .C(col_sync[1]), .D(n819), .Z(n1057));
+    defparam i874_4_lut.INIT = "0x880a";
+    (* lut_function="(A (B ((D)+!C)+!B !(C+(D))))" *) LUT4 i876_4_lut (.A(reset_c), 
+            .B(keypad[8]), .C(col_sync[0]), .D(n819), .Z(n1059));
+    defparam i876_4_lut.INIT = "0x880a";
+    (* lut_function="(!((B (C (D))+!B (C+!(D)))+!A))" *) LUT4 i878_4_lut (.A(reset_c), 
+            .B(keypad[7]), .C(col_sync[3]), .D(n777), .Z(n1061));
+    defparam i878_4_lut.INIT = "0x0a88";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=73, LSE_RLINE=81 *) FD1P3XZ keypad__i5 (.D(n1065), 
+            .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(keypad[5]));
+    defparam keypad__i5.REGSET = "RESET";
+    defparam keypad__i5.SRMODE = "CE_OVER_LSR";
+    VHI i1 (.Z(VCC_net));
+    
+endmodule
+
+//
+// Verilog Description of module lab3_ta_digit_sr
+//
+
+module lab3_ta_digit_sr (input hex_counter_5__N_120, output [3:0]dig2, output [3:0]dig1, 
+            input n1092, input [3:0]hex_decoded, input int_osc);
+    
+    (* is_clock=1 *) wire int_osc;
+    
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1__i0 (.D(hex_decoded[0]), 
+            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig1[0]));
+    defparam digit1__i0.REGSET = "RESET";
+    defparam digit1__i0.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1__i3 (.D(hex_decoded[3]), 
+            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig1[3]));
+    defparam digit1__i3.REGSET = "RESET";
+    defparam digit1__i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1__i2 (.D(hex_decoded[2]), 
+            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig1[2]));
+    defparam digit1__i2.REGSET = "RESET";
+    defparam digit1__i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1__i1 (.D(hex_decoded[1]), 
+            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig1[1]));
+    defparam digit1__i1.REGSET = "RESET";
+    defparam digit1__i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2__i3 (.D(dig1[3]), 
+            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig2[3]));
+    defparam digit2__i3.REGSET = "RESET";
+    defparam digit2__i3.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2__i2 (.D(dig1[2]), 
+            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig2[2]));
+    defparam digit2__i2.REGSET = "RESET";
+    defparam digit2__i2.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2__i1 (.D(dig1[1]), 
+            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig2[1]));
+    defparam digit2__i1.REGSET = "RESET";
+    defparam digit2__i1.SRMODE = "CE_OVER_LSR";
+    (* LSE_LINE_FILE_ID=32, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2__i0 (.D(dig1[0]), 
+            .SP(n1092), .CK(int_osc), .SR(hex_counter_5__N_120), .Q(dig2[0]));
+    defparam digit2__i0.REGSET = "RESET";
+    defparam digit2__i0.SRMODE = "CE_OVER_LSR";
+    
+endmodule
+
+//
+// Verilog Description of module lab1_ta_hex_seg_decoder
+//
+
+module lab1_ta_hex_seg_decoder (input [3:0]s, output [6:0]seg_c);
+    
+    
+    (* lut_function="(A (B (C)+!B !(C+(D)))+!A !(B (C)+!B !(C (D))))" *) LUT4 n3979_bdd_4_lut_4_lut_4_lut_4_lut (.A(s[2]), 
+            .B(s[0]), .C(s[1]), .D(s[3]), .Z(seg_c[3]));
+    defparam n3979_bdd_4_lut_4_lut_4_lut_4_lut.INIT = "0x9486";
+    (* lut_function="(!(A (B+!(C (D)+!C !(D)))+!A !(B (C (D))+!B !(C+!(D)))))" *) LUT4 s_3__I_0_4_lut (.A(s[2]), 
+            .B(s[1]), .C(s[3]), .D(s[0]), .Z(seg_c[0]));
+    defparam s_3__I_0_4_lut.INIT = "0x6102";
+    (* lut_function="(A (B (D)+!B !((D)+!C))+!A (B (C)+!B (C (D))))" *) LUT4 seg_c_1__I_0_4_lut (.A(s[0]), 
+            .B(s[3]), .C(s[2]), .D(s[1]), .Z(seg_c[1]));
+    defparam seg_c_1__I_0_4_lut.INIT = "0xd860";
+    (* lut_function="(A (B (C (D)))+!A (B (D)+!B !((D)+!C)))" *) LUT4 seg_c_2__I_0_4_lut (.A(s[0]), 
+            .B(s[3]), .C(s[1]), .D(s[2]), .Z(seg_c[2]));
+    defparam seg_c_2__I_0_4_lut.INIT = "0xc410";
+    (* lut_function="(!(A (B+!(C))+!A (B ((D)+!C)+!B !(C+(D)))))" *) LUT4 seg_c_4__I_0_4_lut (.A(s[1]), 
+            .B(s[3]), .C(s[0]), .D(s[2]), .Z(seg_c[4]));
+    defparam seg_c_4__I_0_4_lut.INIT = "0x3170";
+    (* lut_function="(!(A (B+!((D)+!C))+!A !(B (C (D))+!B !(C+!(D)))))" *) LUT4 seg_c_5__I_0_4_lut (.A(s[1]), 
+            .B(s[3]), .C(s[2]), .D(s[0]), .Z(seg_c[5]));
+    defparam seg_c_5__I_0_4_lut.INIT = "0x6302";
+    (* lut_function="(!(A ((C+!(D))+!B)+!A (B (C+(D))+!B !(C (D)+!C !(D)))))" *) LUT4 seg_c_6__I_0_4_lut (.A(s[1]), 
+            .B(s[0]), .C(s[3]), .D(s[2]), .Z(seg_c[6]));
+    defparam seg_c_6__I_0_4_lut.INIT = "0x1805";
+    
+endmodule
+
+//
 // Verilog Description of module lab3_ta_sync
 //
 
-module lab3_ta_sync (input [3:0]col_raw_c, input int_osc, output [3:0]col_sync);
+module lab3_ta_sync (output [3:0]col_sync, input [3:0]col_raw_c, input int_osc);
     
     wire [3:0]n1;
     (* is_clock=1 *) wire int_osc;
@@ -1513,23 +1515,25 @@ endmodule
 // Verilog Description of module lab3_ta_controller
 //
 
-module lab3_ta_controller (input [15:0]keypad, input [3:0]col_sync, output n1025, 
-            output n21, output n23, output n1028, input row_decoded_2__N_29, 
-            output n23_adj_1, input n3117, output [3:0]saved_row, output db_reset, 
-            output n13, input db_done_N_177, input \row_decoded[0] , output n19, 
-            output n27, output n150, input n1086, input int_osc, input hex_counter_5__N_120, 
-            output n25, output scan_enable, input \col_decoded[0] , output n26, 
-            output n30, output n58, output shift_enable, output n22, 
-            input \row_decoded[2] , input \row_decoded[1] , input scan_done, 
-            input reset_c);
+module lab3_ta_controller (input [15:0]keypad, output n21, input hex_counter_5__N_120, 
+            output n23, output n30, output n27, output n19, input n1086, 
+            output n26, output n13, output n25, output n58, input \row_decoded[0] , 
+            output [3:0]saved_row, input int_osc, output shift_enable, 
+            input \row_decoded[1] , output scan_enable, input \col_decoded[0] , 
+            input \row_decoded[2] , output n23_adj_1, input db_done_N_177, 
+            output db_reset, input [3:0]col_sync, output n150, output n22, 
+            input row_decoded_2__N_29, output n1028, output n1025, input scan_done, 
+            input reset_c, input n3117);
     
     wire [1:0]saved_col;
     (* is_clock=1 *) wire int_osc;
+    
+    wire n1031, n3641, n602, n3627, n29, n3595, n6, n15, n3631, 
+        n3515;
     wire [7:0]n143;
     
-    wire n3985, n1040, n3627, n4077, n3595, n1031, n3629, n940, 
-        n3597, n3631, n15, n3515, n17, n3641, n3643, n29, n3531, 
-        n62, n602, n169, n133, n604, n1043, n1041, n6, VCC_net, 
+    wire n3597, n1043, n62, n1040, n3629, n3643, n4077, n604, 
+        n17, n3531, n133, n940, n169, n1041, n3985, VCC_net, 
         GND_net;
     
     (* lut_function="(A (B (C+(D))+!B (C))+!A (B (D)))" *) LUT4 i3315_4_lut (.A(n21), 

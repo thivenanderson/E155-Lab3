@@ -31,7 +31,7 @@
 -end
 
 -gui
--top lab3_ta_top_tb
+-top lab3_ta_controller_tb
 -vsim.options
   -suppress vsim-7033,vsim-8630,3009,3389
 -end

@@ -344,3 +344,400 @@ run -all
 # ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv(355)
 #    Time: 149 ns  Iteration: 0  Instance: /lab3_ta_controller_tb
 # Break in Module lab3_ta_controller_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv line 355
+# End time: 21:45:07 on Sep 21,2026, Elapsed time: 4:12:10
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   2
+#   Totals: Errors:   0, Warnings:   2
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 21:46:39 on Sep 21,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_top_tb(fast)
+# Loading work.lab3_ta(fast)
+# Loading ovi_ice40up.HSOSC(fast)
+# Loading work.lab3_ta_sync(fast)
+# Loading work.lab3_ta_scanner(fast)
+# Loading work.lab2_ta_counter(fast)
+# Loading work.lab3_ta_keypad_builder(fast)
+# Loading work.lab3_ta_keypad_decoder(fast)
+# Loading work.lab2_ta_counter(fast__1)
+# Loading work.lab3_ta_controller(fast)
+# Loading work.lab3_ta_digit_sr(fast)
+# Loading work.lab3_ta_savedkey_sr(fast)
+# Loading work.lab1_ta_hex_seg_decoder(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Passed top-level asynchronous reset.
+# Passed CHECK -> SAVE / saved-row selection.
+# Passed SAVE -> SETTLE synchronizer stage 1.
+# Passed SETTLE -> WAIT synchronizer stage 2.
+# Passed digits: newest=1 previous=0 at time 824000.
+# Passed long-hold single-registration test.
+# ** Error: FAILED digits: expected 1 5, got 5 1.
+#    Time: 7760920 ps  Scope: lab3_ta_top_tb.wait_for_digits File: C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv Line: 113
+# Passed digits: newest=2 previous=5 at time 8386000.
+# Passed first-key priority test.
+# Passed digits: newest=9 previous=2 at time 9532000.
+# Passed multi-key roll off test #1.
+# Passed simultaneous multi-key hold test.
+# Passed digits: newest=c previous=9 at time 11511000.
+# Passed multi-key roll off test #2.
+# Passed newest-digit display connection.
+# Passed previous-digit display connection.
+# TOP LEVEL TESTBENCH COMPLETE.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv(428)
+#    Time: 11531512 ps  Iteration: 0  Instance: /lab3_ta_top_tb
+# Break in Module lab3_ta_top_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv line 428
+# End time: 21:49:39 on Sep 21,2026, Elapsed time: 0:03:00
+# Errors: 1, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   2
+#   Totals: Errors:   0, Warnings:   2
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 21:50:22 on Sep 21,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_top_tb(fast)
+# Loading work.lab3_ta(fast)
+# Loading ovi_ice40up.HSOSC(fast)
+# Loading work.lab3_ta_sync(fast)
+# Loading work.lab3_ta_scanner(fast)
+# Loading work.lab2_ta_counter(fast)
+# Loading work.lab3_ta_keypad_builder(fast)
+# Loading work.lab3_ta_keypad_decoder(fast)
+# Loading work.lab2_ta_counter(fast__1)
+# Loading work.lab3_ta_controller(fast)
+# Loading work.lab3_ta_digit_sr(fast)
+# Loading work.lab3_ta_savedkey_sr(fast)
+# Loading work.lab1_ta_hex_seg_decoder(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Passed top-level asynchronous reset.
+# Passed CHECK -> SAVE / saved-row selection.
+# Passed SAVE -> SETTLE synchronizer stage 1.
+# Passed SETTLE -> WAIT synchronizer stage 2.
+# Passed digits: newest=1 previous=0 at time 824000.
+# Passed long-hold single-registration test.
+# Passed digits: newest=5 previous=1 at time 2074000.
+# Passed digits: newest=2 previous=5 at time 2699000.
+# Passed first-key priority test.
+# Passed digits: newest=9 previous=2 at time 3845000.
+# Passed multi-key roll off test #1.
+# Passed simultaneous multi-key hold test.
+# Passed digits: newest=c previous=9 at time 5824000.
+# Passed multi-key roll off test #2.
+# Passed newest-digit display connection.
+# Passed previous-digit display connection.
+# TOP LEVEL TESTBENCH COMPLETE.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv(428)
+#    Time: 5906872 ps  Iteration: 0  Instance: /lab3_ta_top_tb
+# Break in Module lab3_ta_top_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv line 428
+# End time: 22:22:49 on Sep 21,2026, Elapsed time: 0:32:27
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   2
+#   Totals: Errors:   0, Warnings:   2
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:23:02 on Sep 21,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_top_tb(fast)
+# Loading work.lab3_ta(fast)
+# Loading ovi_ice40up.HSOSC(fast)
+# Loading work.lab3_ta_sync(fast)
+# Loading work.lab3_ta_scanner(fast)
+# Loading work.lab2_ta_counter(fast)
+# Loading work.lab3_ta_keypad_builder(fast)
+# Loading work.lab3_ta_keypad_decoder(fast)
+# Loading work.lab2_ta_counter(fast__1)
+# Loading work.lab3_ta_controller(fast)
+# Loading work.lab3_ta_digit_sr(fast)
+# Loading work.lab3_ta_savedkey_sr(fast)
+# Loading work.lab1_ta_hex_seg_decoder(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# RESET TEST START: at 0
+# Passed top-level asynchronous reset.
+# RESET TEST END: at 2000
+# TEST 1 START: at 52000
+# Passed CHECK -> SAVE / saved-row selection.
+# Passed SAVE -> SETTLE synchronizer stage 1.
+# Passed SETTLE -> WAIT synchronizer stage 2.
+# Passed digits: newest=1 previous=0 at time 824000.
+# Passed long-hold single-registration test.
+# TEST 1 END: at 1449000
+# TEST 2 START:  at 1510000
+# Passed digits: newest=5 previous=1 at time 2074000.
+# TEST 2 END:  at 2135000
+# TEST 3 START:  at 2135000
+# Passed digits: newest=2 previous=5 at time 2699000.
+# Passed first-key priority test.
+# Passed digits: newest=9 previous=2 at time 3845000.
+# Passed multi-key roll off test #1.
+# TEST 3 END:  at 3906000
+# TEST 4 START:  at 3906000
+# Passed simultaneous multi-key hold test.
+# TEST 4 END:  at 5157000
+# TEST 5 START:  at 5157000
+# Passed digits: newest=c previous=9 at time 5824000.
+# Passed multi-key roll off test #2.
+# TEST 5 END:  at 5828000
+# OUTPUT TEST START:  at 5828000
+# Passed newest-digit display connection.
+# Passed previous-digit display connection.
+# OUTPUT TEST END:  at 5907000
+# TOP LEVEL TESTBENCH COMPLETE.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv(421)
+#    Time: 5906872 ps  Iteration: 0  Instance: /lab3_ta_top_tb
+# Break in Module lab3_ta_top_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv line 421
+delete wave *
+
+add wave sim:/lab3_ta_top_tb/reset
+add wave sim:/lab3_ta_top_tb/dut/int_osc
+add wave sim:/lab3_ta_top_tb/dut/i_CONTROLLER/state
+
+add wave sim:/lab3_ta_top_tb/dut/saved_row
+add wave sim:/lab3_ta_top_tb/dut/saved_col
+
+add wave sim:/lab3_ta_top_tb/dut/dig1
+add wave sim:/lab3_ta_top_tb/dut/dig2
+delete wave *
+
+add wave -divider "TB Inputs"
+add wave sim:/lab3_ta_top_tb/reset
+add wave sim:/lab3_ta_top_tb/enable
+add wave sim:/lab3_ta_top_tb/pressed
+
+add wave -divider "Clock and Scan"
+add wave sim:/lab3_ta_top_tb/dut/int_osc
+add wave sim:/lab3_ta_top_tb/dut/row_scan
+add wave sim:/lab3_ta_top_tb/dut/row_scan_idx
+add wave sim:/lab3_ta_top_tb/dut/scan_tick
+add wave sim:/lab3_ta_top_tb/dut/scan_done
+add wave sim:/lab3_ta_top_tb/dut/scan_enable
+add wave sim:/lab3_ta_top_tb/row_out
+
+add wave -divider "Columns and Synchronizer"
+add wave sim:/lab3_ta_top_tb/col_raw
+add wave sim:/lab3_ta_top_tb/dut/i_SYNC/n1
+add wave sim:/lab3_ta_top_tb/dut/col_sync
+
+add wave -divider "Keypad Decode"
+add wave sim:/lab3_ta_top_tb/dut/keypad
+add wave sim:/lab3_ta_top_tb/dut/row_decoded
+add wave sim:/lab3_ta_top_tb/dut/col_decoded
+add wave sim:/lab3_ta_top_tb/dut/hex_decoded
+
+add wave -divider "Controller"
+add wave sim:/lab3_ta_top_tb/dut/i_CONTROLLER/state
+add wave sim:/lab3_ta_top_tb/dut/save_enable
+add wave sim:/lab3_ta_top_tb/dut/saved_row
+add wave sim:/lab3_ta_top_tb/dut/saved_col
+
+add wave -divider "Debounce"
+add wave sim:/lab3_ta_top_tb/dut/db_reset
+add wave sim:/lab3_ta_top_tb/dut/db_enable
+add wave sim:/lab3_ta_top_tb/dut/db_counter
+add wave sim:/lab3_ta_top_tb/dut/db_done
+
+add wave -divider "Digit Registration"
+add wave sim:/lab3_ta_top_tb/dut/shift_enable
+add wave sim:/lab3_ta_top_tb/dut/dig1
+add wave sim:/lab3_ta_top_tb/dut/dig2
+
+add wave -divider "Display Mux"
+add wave sim:/lab3_ta_top_tb/dut/hex_counter
+add wave sim:/lab3_ta_top_tb/dut/dig_s
+add wave sim:/lab3_ta_top_tb/dut/s
+add wave sim:/lab3_ta_top_tb/anode
+add wave sim:/lab3_ta_top_tb/seg
+restart -f
+run -all
+# Loading work.lab3_ta_top_tb(fast)
+# Loading work.lab3_ta(fast)
+# Loading ovi_ice40up.HSOSC(fast)
+# Loading work.lab3_ta_sync(fast)
+# Loading work.lab3_ta_scanner(fast)
+# Loading work.lab2_ta_counter(fast)
+# Loading work.lab3_ta_keypad_builder(fast)
+# Loading work.lab3_ta_keypad_decoder(fast)
+# Loading work.lab2_ta_counter(fast__1)
+# Loading work.lab3_ta_controller(fast)
+# Loading work.lab3_ta_digit_sr(fast)
+# Loading work.lab3_ta_savedkey_sr(fast)
+# Loading work.lab1_ta_hex_seg_decoder(fast)
+# RESET TEST START: at 0
+# Passed top-level asynchronous reset.
+# RESET TEST END: at 2000
+# TEST 1 START: at 52000
+# Passed CHECK -> SAVE / saved-row selection.
+# Passed SAVE -> SETTLE synchronizer stage 1.
+# Passed SETTLE -> WAIT synchronizer stage 2.
+# Passed digits: newest=1 previous=0 at time 824000.
+# Passed long-hold single-registration test.
+# TEST 1 END: at 1449000
+# TEST 2 START:  at 1510000
+# Passed digits: newest=5 previous=1 at time 2074000.
+# TEST 2 END:  at 2135000
+# TEST 3 START:  at 2135000
+# Passed digits: newest=2 previous=5 at time 2699000.
+# Passed first-key priority test.
+# Passed digits: newest=9 previous=2 at time 3845000.
+# Passed multi-key roll off test #1.
+# TEST 3 END:  at 3906000
+# TEST 4 START:  at 3906000
+# Passed simultaneous multi-key hold test.
+# TEST 4 END:  at 5157000
+# TEST 5 START:  at 5157000
+# Passed digits: newest=c previous=9 at time 5824000.
+# Passed multi-key roll off test #2.
+# TEST 5 END:  at 5828000
+# OUTPUT TEST START:  at 5828000
+# Passed newest-digit display connection.
+# Passed previous-digit display connection.
+# OUTPUT TEST END:  at 5907000
+# TOP LEVEL TESTBENCH COMPLETE.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv(421)
+#    Time: 5906872 ps  Iteration: 0  Instance: /lab3_ta_top_tb
+# Break in Module lab3_ta_top_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv line 421
+delete wave *
+
+add wave sim:/lab3_ta_top_tb/reset
+add wave sim:/lab3_ta_top_tb/dut/int_osc
+
+add wave sim:/lab3_ta_top_tb/dut/i_CONTROLLER/state
+
+add wave sim:/lab3_ta_top_tb/dut/saved_row
+add wave sim:/lab3_ta_top_tb/dut/saved_col
+
+add wave sim:/lab3_ta_top_tb/dut/dig1
+add wave sim:/lab3_ta_top_tb/dut/dig2
+
+wave zoom range 0ns 5ns
+# {0 ps} {5 ns}
+delete wave *
+
+add wave sim:/lab3_ta_top_tb/dut/int_osc
+
+add wave sim:/lab3_ta_top_tb/pressed
+add wave sim:/lab3_ta_top_tb/row_out
+add wave sim:/lab3_ta_top_tb/col_raw
+
+add wave sim:/lab3_ta_top_tb/dut/i_SYNC/n1
+add wave sim:/lab3_ta_top_tb/dut/col_sync
+
+add wave sim:/lab3_ta_top_tb/dut/i_CONTROLLER/state
+add wave sim:/lab3_ta_top_tb/dut/save_enable
+
+add wave sim:/lab3_ta_top_tb/dut/saved_row
+add wave sim:/lab3_ta_top_tb/dut/saved_col
+
+add wave sim:/lab3_ta_top_tb/dut/db_enable
+
+wave zoom range 50ns 260ns
+# {50 ns} {260 ns}
+delete wave *
+
+add wave sim:/lab3_ta_top_tb/dut/int_osc
+
+add wave sim:/lab3_ta_top_tb/pressed
+add wave sim:/lab3_ta_top_tb/dut/col_sync
+add wave sim:/lab3_ta_top_tb/dut/saved_col
+
+add wave sim:/lab3_ta_top_tb/dut/i_CONTROLLER/state
+
+add wave sim:/lab3_ta_top_tb/dut/db_enable
+add wave sim:/lab3_ta_top_tb/dut/db_counter
+add wave sim:/lab3_ta_top_tb/dut/db_done
+
+add wave sim:/lab3_ta_top_tb/dut/shift_enable
+
+add wave sim:/lab3_ta_top_tb/dut/dig1
+add wave sim:/lab3_ta_top_tb/dut/dig2
+
+wave zoom range 250ns 1450ns
+# {250 ns} {1450 ns}
+delete wave *
+
+add wave sim:/lab3_ta_top_tb/dut/int_osc
+
+add wave sim:/lab3_ta_top_tb/pressed
+add wave sim:/lab3_ta_top_tb/dut/i_CONTROLLER/state
+
+add wave sim:/lab3_ta_top_tb/dut/shift_enable
+
+add wave sim:/lab3_ta_top_tb/dut/hex_decoded
+add wave sim:/lab3_ta_top_tb/dut/dig1
+add wave sim:/lab3_ta_top_tb/dut/dig2
+
+wave zoom range 1510ns 2140ns
+# {1510 ns} {2140 ns}
+delete wave *
+
+add wave sim:/lab3_ta_top_tb/dut/int_osc
+
+add wave sim:/lab3_ta_top_tb/pressed
+add wave sim:/lab3_ta_top_tb/row_out
+add wave sim:/lab3_ta_top_tb/dut/col_sync
+
+add wave sim:/lab3_ta_top_tb/dut/i_CONTROLLER/state
+
+add wave sim:/lab3_ta_top_tb/dut/saved_row
+add wave sim:/lab3_ta_top_tb/dut/saved_col
+
+add wave sim:/lab3_ta_top_tb/dut/shift_enable
+
+add wave sim:/lab3_ta_top_tb/dut/dig1
+add wave sim:/lab3_ta_top_tb/dut/dig2
+
+wave zoom range 2135ns 3960ns
+# {2135 ns} {3960 ns}
+delete wave *
+
+add wave sim:/lab3_ta_top_tb/dut/int_osc
+
+add wave sim:/lab3_ta_top_tb/pressed
+add wave sim:/lab3_ta_top_tb/dut/keypad
+
+add wave sim:/lab3_ta_top_tb/dut/i_CONTROLLER/state
+
+add wave sim:/lab3_ta_top_tb/dut/save_enable
+add wave sim:/lab3_ta_top_tb/dut/saved_row
+add wave sim:/lab3_ta_top_tb/dut/saved_col
+
+add wave sim:/lab3_ta_top_tb/dut/shift_enable
+
+add wave sim:/lab3_ta_top_tb/dut/dig1
+add wave sim:/lab3_ta_top_tb/dut/dig2
+
+wave zoom range 3960ns 5830ns
+# {3960 ns} {5830 ns}
+delete wave *
+
+add wave sim:/lab3_ta_top_tb/dut/int_osc
+
+add wave sim:/lab3_ta_top_tb/dut/dig1
+add wave sim:/lab3_ta_top_tb/dut/dig2
+
+add wave sim:/lab3_ta_top_tb/dut/hex_counter
+add wave sim:/lab3_ta_top_tb/dut/dig_s
+add wave sim:/lab3_ta_top_tb/dut/s
+
+add wave sim:/lab3_ta_top_tb/anode
+add wave sim:/lab3_ta_top_tb/seg
+
+wave zoom range 5828ns 5910ns
+# {5828 ns} {5910 ns}

@@ -2,7 +2,14 @@
 //Email: thanderson@g.hmc.edu
 //Date: 9/19/2026
 //Description: Top level module for lab 3 of E155 that allows a 4x4 keypad to drive a dual seven segment display
-module lab3_ta (
+module lab3_ta  #(
+    parameter int DB_WIDTH       = 18,
+    parameter int DB_MAX_COUNT   = 239_999,
+    parameter int HEX_WIDTH      = 18,
+    parameter int HEX_MAX_COUNT  = 200_000,
+    parameter int SCAN_WIDTH     = 17,
+    parameter int SCAN_MAX_COUNT = 95_999
+     ) (
 	input logic reset, enable,
 	input logic [3:0] col_raw,
 	output logic [3:0] row_out,
@@ -36,11 +43,7 @@ module lab3_ta (
 
 	logic shift_enable;
 	logic save_enable;
-	
-	localparam DB_WIDTH = 18;
-	localparam DB_MAX_COUNT = 239_999;
-	localparam HEX_WIDTH = 18;
-	localparam HEX_MAX_COUNT = 200_000;
+
 	
 	logic [DB_WIDTH-1:0] db_counter;
 	logic [HEX_WIDTH-1:0] hex_counter;
@@ -62,7 +65,10 @@ module lab3_ta (
 	//Scanner
 	logic scan_reset_master;
 	assign scan_reset_master = scan_reset & reset;
-	lab3_ta_scanner i_SCANNER(
+	lab3_ta_scanner #(
+				.SCAN_WIDTH(SCAN_WIDTH), 
+				.SCAN_MAX_COUNT(SCAN_MAX_COUNT)
+			)i_SCANNER(
 			.clk(int_osc),
 			.reset(scan_reset_master),
 			.enable(scan_enable),

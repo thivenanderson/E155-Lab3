@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Sep 21 17:23:18 2026
+Mon Sep 21 21:42:14 2026
 
 
 Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/Lab3_impl_1_lattice.synproj -logfile Lab3_impl_1_lattice.srp -gui -msgset C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/promote.xml 
@@ -177,6 +177,8 @@ Verilog design file: ../source/impl_1/lab3_ta_keypad_builder_tb.sv
 Verilog design file: ../source/impl_1/lab3_ta_keypad_decoder_tb.sv
 Verilog design file: ../source/impl_1/lab3_ta_savedkey_sr.sv
 Verilog design file: ../source/impl_1/lab3_ta_savedkey_sr_tb.sv
+Verilog design file: ../source/impl_1/lab3_ta_controller_tb.sv
+Verilog design file: ../source/impl_1/lab3_ta_top_tb.sv
 VHDL library: pmi
 VHDL design file: C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.vhd
 
@@ -203,6 +205,8 @@ Analyzing Verilog file ../source/impl_1/lab3_ta_keypad_builder_tb.sv. VERI-1482
 Analyzing Verilog file ../source/impl_1/lab3_ta_keypad_decoder_tb.sv. VERI-1482
 Analyzing Verilog file ../source/impl_1/lab3_ta_savedkey_sr.sv. VERI-1482
 Analyzing Verilog file ../source/impl_1/lab3_ta_savedkey_sr_tb.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab3_ta_controller_tb.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab3_ta_top_tb.sv. VERI-1482
 Top module name (Verilog): lab3_ta
 INFO <35901018> - synthesis: ../source/impl_1/lab3_ta.sv(5): compiling module lab3_ta. VERI-1018
 INFO <35901018> - synthesis: C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
@@ -221,6 +225,15 @@ INFO <35901018> - synthesis: ../source/impl_1/lab1_ta_hex_seg_decoder.sv(5): com
 <A name="lse_parameter"></A><B><U><big>Parameter Setting</big></U></B>
 
 [Parameter Setting Section Start]
+
+	[Parameter Settings for top-level module]
+	(Module: lab3_ta)
+		DB_WIDTH                  18
+		DB_MAX_COUNT              239999
+		HEX_WIDTH                 18
+		HEX_MAX_COUNT             200000
+		SCAN_WIDTH                17
+		SCAN_MAX_COUNT            95999
 
 	[Parameter Settings for Instance(s): hf_osc]
 	(Module: HSOSC)
@@ -352,13 +365,13 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 91 MB
+Peak Memory Usage: 92 MB
 
 --------------------------------------------------------------
-Total CPU Time: 0 secs 
+Total CPU Time: 1 secs 
 Total REAL Time: 4 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 55c055647bb70ec32320092c5e480a3de0c7b28e
+Checksum -- synthesis -- netlist: bb56b461e96c2af17f381541d5a099018d988
 
 
 

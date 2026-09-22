@@ -1,99 +1,101 @@
 // Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2026.1.0.37.0
-// Netlist written on Mon Sep 21 17:23:21 2026
+// Netlist written on Mon Sep 21 21:42:18 2026
 // Source file index table: 
 // Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
 // file 0 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv"
 // file 1 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab2_ta_counter.sv"
 // file 2 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta.sv"
 // file 3 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_controller.sv"
-// file 4 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_digit_sr.sv"
-// file 5 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_digit_sr_tb.sv"
-// file 6 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_keypad_builder.sv"
-// file 7 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv"
-// file 8 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_keypad_decoder.sv"
-// file 9 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv"
-// file 10 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_savedkey_sr.sv"
-// file 11 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv"
-// file 12 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_scanner.sv"
-// file 13 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_scanner_tb.sv"
-// file 14 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_sync.sv"
-// file 15 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_sync_tb.sv"
-// file 16 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ice40up.v"
-// file 17 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ice40up.vhd"
-// file 18 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v"
-// file 19 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_distributed_ram.v"
-// file 20 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_ecc.v"
-// file 21 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_flag_and_cnts_logic.v"
-// file 22 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_gray_reg.v"
-// file 23 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_gray_synchronizer.v"
-// file 24 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden.v"
-// file 25 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_prim.v"
-// file 26 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_rd_ctrl_logic.v"
-// file 27 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_rd_output_logic.v"
-// file 28 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_ring_counter.v"
-// file 29 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_wr_ctrl_logic.v"
-// file 30 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_prim_gen.v"
-// file 31 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_rd_ctrl_logic.v"
-// file 32 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_wr_ctrl_logic.v"
-// file 33 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v"
-// file 34 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp_behavioral.v"
-// file 35 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp_functions.vh"
-// file 36 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v"
-// file 37 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp_lut_decode.v"
-// file 38 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dq/rtl/hsiao_ecc_decoder.v"
-// file 39 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dq/rtl/hsiao_ecc_encoder.v"
-// file 40 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v"
-// file 41 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dq/rtl/lscc_lfmxo4_ram_dq_lut_decode.v"
-// file 42 "c:/lscc/radiant/2026.1/ip/common/adder/rtl/lscc_adder.v"
-// file 43 "c:/lscc/radiant/2026.1/ip/common/adder_subtractor/rtl/lscc_add_sub.v"
-// file 44 "c:/lscc/radiant/2026.1/ip/common/complex_mult/rtl/lscc_complex_mult.v"
-// file 45 "c:/lscc/radiant/2026.1/ip/common/counter/rtl/lscc_cntr.v"
-// file 46 "c:/lscc/radiant/2026.1/ip/common/fifo/rtl/lscc_fifo.v"
-// file 47 "c:/lscc/radiant/2026.1/ip/common/fifo_dc/rtl/lscc_fifo_dc.v"
-// file 48 "c:/lscc/radiant/2026.1/ip/common/mult_accumulate/rtl/lscc_mult_accumulate.v"
-// file 49 "c:/lscc/radiant/2026.1/ip/common/mult_add_sub/rtl/lscc_mult_add_sub.v"
-// file 50 "c:/lscc/radiant/2026.1/ip/common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v"
-// file 51 "c:/lscc/radiant/2026.1/ip/common/multiplier/rtl/lscc_multiplier.v"
-// file 52 "c:/lscc/radiant/2026.1/ip/common/ram_dp/rtl/lscc_ram_dp.v"
-// file 53 "c:/lscc/radiant/2026.1/ip/common/ram_dq/rtl/lscc_ram_dq.v"
-// file 54 "c:/lscc/radiant/2026.1/ip/common/rom/rtl/lscc_rom.v"
-// file 55 "c:/lscc/radiant/2026.1/ip/common/subtractor/rtl/lscc_subtractor.v"
-// file 56 "c:/lscc/radiant/2026.1/ip/pmi/pmi_add.v"
-// file 57 "c:/lscc/radiant/2026.1/ip/pmi/pmi_addsub.v"
-// file 58 "c:/lscc/radiant/2026.1/ip/pmi/pmi_complex_mult.v"
-// file 59 "c:/lscc/radiant/2026.1/ip/pmi/pmi_counter.v"
-// file 60 "c:/lscc/radiant/2026.1/ip/pmi/pmi_dsp.v"
-// file 61 "c:/lscc/radiant/2026.1/ip/pmi/pmi_fifo.v"
-// file 62 "c:/lscc/radiant/2026.1/ip/pmi/pmi_fifo_dc.v"
-// file 63 "c:/lscc/radiant/2026.1/ip/pmi/pmi_mac.v"
-// file 64 "c:/lscc/radiant/2026.1/ip/pmi/pmi_mult.v"
-// file 65 "c:/lscc/radiant/2026.1/ip/pmi/pmi_multaddsub.v"
-// file 66 "c:/lscc/radiant/2026.1/ip/pmi/pmi_multaddsubsum.v"
-// file 67 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp.v"
-// file 68 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp_be.v"
-// file 69 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dq.v"
-// file 70 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dq_be.v"
-// file 71 "c:/lscc/radiant/2026.1/ip/pmi/pmi_rom.v"
-// file 72 "c:/lscc/radiant/2026.1/ip/pmi/pmi_sub.v"
-// file 73 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/ccu2_b.v"
-// file 74 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/fd1p3bz.v"
-// file 75 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/fd1p3dz.v"
-// file 76 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/fd1p3iz.v"
-// file 77 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/fd1p3jz.v"
-// file 78 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/hsosc.v"
-// file 79 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/hsosc1p8v.v"
-// file 80 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/ib.v"
-// file 81 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/ifd1p3az.v"
-// file 82 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/lsosc.v"
-// file 83 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/lsosc1p8v.v"
-// file 84 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/ob.v"
-// file 85 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/obz_b.v"
-// file 86 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/ofd1p3az.v"
-// file 87 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/pdp4k.v"
-// file 88 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/rgb.v"
-// file 89 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/rgb1p8v.v"
-// file 90 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/sp256k.v"
-// file 91 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/legacy.v"
+// file 4 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_controller_tb.sv"
+// file 5 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_digit_sr.sv"
+// file 6 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_digit_sr_tb.sv"
+// file 7 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_keypad_builder.sv"
+// file 8 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv"
+// file 9 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_keypad_decoder.sv"
+// file 10 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv"
+// file 11 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_savedkey_sr.sv"
+// file 12 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv"
+// file 13 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_scanner.sv"
+// file 14 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_scanner_tb.sv"
+// file 15 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_sync.sv"
+// file 16 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_sync_tb.sv"
+// file 17 "c:/users/thanderson/documents/github/e155-lab3/fpga/radiant_project/lab3/source/impl_1/lab3_ta_top_tb.sv"
+// file 18 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ice40up.v"
+// file 19 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ice40up.vhd"
+// file 20 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc.v"
+// file 21 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_distributed_ram.v"
+// file 22 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_ecc.v"
+// file 23 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_flag_and_cnts_logic.v"
+// file 24 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_gray_reg.v"
+// file 25 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_gray_synchronizer.v"
+// file 26 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden.v"
+// file 27 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_prim.v"
+// file 28 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_rd_ctrl_logic.v"
+// file 29 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_rd_output_logic.v"
+// file 30 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_ring_counter.v"
+// file 31 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_harden_wr_ctrl_logic.v"
+// file 32 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_prim_gen.v"
+// file 33 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_rd_ctrl_logic.v"
+// file 34 "c:/lscc/radiant/2026.1/ip/lfmxo4/fifo_dc/rtl/lscc_lfmxo4_fifo_dc_wr_ctrl_logic.v"
+// file 35 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v"
+// file 36 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp_behavioral.v"
+// file 37 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp_functions.vh"
+// file 38 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp_impl.v"
+// file 39 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp_lut_decode.v"
+// file 40 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dq/rtl/hsiao_ecc_decoder.v"
+// file 41 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dq/rtl/hsiao_ecc_encoder.v"
+// file 42 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v"
+// file 43 "c:/lscc/radiant/2026.1/ip/lfmxo4/ram_dq/rtl/lscc_lfmxo4_ram_dq_lut_decode.v"
+// file 44 "c:/lscc/radiant/2026.1/ip/common/adder/rtl/lscc_adder.v"
+// file 45 "c:/lscc/radiant/2026.1/ip/common/adder_subtractor/rtl/lscc_add_sub.v"
+// file 46 "c:/lscc/radiant/2026.1/ip/common/complex_mult/rtl/lscc_complex_mult.v"
+// file 47 "c:/lscc/radiant/2026.1/ip/common/counter/rtl/lscc_cntr.v"
+// file 48 "c:/lscc/radiant/2026.1/ip/common/fifo/rtl/lscc_fifo.v"
+// file 49 "c:/lscc/radiant/2026.1/ip/common/fifo_dc/rtl/lscc_fifo_dc.v"
+// file 50 "c:/lscc/radiant/2026.1/ip/common/mult_accumulate/rtl/lscc_mult_accumulate.v"
+// file 51 "c:/lscc/radiant/2026.1/ip/common/mult_add_sub/rtl/lscc_mult_add_sub.v"
+// file 52 "c:/lscc/radiant/2026.1/ip/common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v"
+// file 53 "c:/lscc/radiant/2026.1/ip/common/multiplier/rtl/lscc_multiplier.v"
+// file 54 "c:/lscc/radiant/2026.1/ip/common/ram_dp/rtl/lscc_ram_dp.v"
+// file 55 "c:/lscc/radiant/2026.1/ip/common/ram_dq/rtl/lscc_ram_dq.v"
+// file 56 "c:/lscc/radiant/2026.1/ip/common/rom/rtl/lscc_rom.v"
+// file 57 "c:/lscc/radiant/2026.1/ip/common/subtractor/rtl/lscc_subtractor.v"
+// file 58 "c:/lscc/radiant/2026.1/ip/pmi/pmi_add.v"
+// file 59 "c:/lscc/radiant/2026.1/ip/pmi/pmi_addsub.v"
+// file 60 "c:/lscc/radiant/2026.1/ip/pmi/pmi_complex_mult.v"
+// file 61 "c:/lscc/radiant/2026.1/ip/pmi/pmi_counter.v"
+// file 62 "c:/lscc/radiant/2026.1/ip/pmi/pmi_dsp.v"
+// file 63 "c:/lscc/radiant/2026.1/ip/pmi/pmi_fifo.v"
+// file 64 "c:/lscc/radiant/2026.1/ip/pmi/pmi_fifo_dc.v"
+// file 65 "c:/lscc/radiant/2026.1/ip/pmi/pmi_mac.v"
+// file 66 "c:/lscc/radiant/2026.1/ip/pmi/pmi_mult.v"
+// file 67 "c:/lscc/radiant/2026.1/ip/pmi/pmi_multaddsub.v"
+// file 68 "c:/lscc/radiant/2026.1/ip/pmi/pmi_multaddsubsum.v"
+// file 69 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp.v"
+// file 70 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dp_be.v"
+// file 71 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dq.v"
+// file 72 "c:/lscc/radiant/2026.1/ip/pmi/pmi_ram_dq_be.v"
+// file 73 "c:/lscc/radiant/2026.1/ip/pmi/pmi_rom.v"
+// file 74 "c:/lscc/radiant/2026.1/ip/pmi/pmi_sub.v"
+// file 75 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/ccu2_b.v"
+// file 76 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/fd1p3bz.v"
+// file 77 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/fd1p3dz.v"
+// file 78 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/fd1p3iz.v"
+// file 79 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/fd1p3jz.v"
+// file 80 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/hsosc.v"
+// file 81 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/hsosc1p8v.v"
+// file 82 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/ib.v"
+// file 83 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/ifd1p3az.v"
+// file 84 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/lsosc.v"
+// file 85 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/lsosc1p8v.v"
+// file 86 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/ob.v"
+// file 87 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/obz_b.v"
+// file 88 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/ofd1p3az.v"
+// file 89 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/pdp4k.v"
+// file 90 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/rgb.v"
+// file 91 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/rgb1p8v.v"
+// file 92 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/sp256k.v"
+// file 93 "c:/lscc/radiant/2026.1/cae_library/simulation/verilog/ice40up/legacy.v"
 
 //
 // Verilog Description of module lab3_ta
@@ -171,11 +173,11 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
     (* lut_function="(A (B+!(C))+!A (B (C)))" *) LUT4 dig1_1__I_0_3_lut (.A(dig1[1]), 
             .B(dig2[1]), .C(anode_c), .Z(s[1]));
     defparam dig1_1__I_0_3_lut.INIT = "0xcaca";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=4, LSE_RCOL=6, LSE_LLINE=144, LSE_RLINE=149 *) \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  i_HEX_COUNTER (enable_c, 
-            shift_enable_N_211, hex_counter[17], int_osc, hex_counter[16], 
-            hex_counter[15], hex_counter[14], hex_counter[13], hex_counter[6], 
-            hex_counter[12], hex_counter[9], hex_counter[11], hex_counter[10], 
-            hex_counter[8], n859, hex_counter[7], reset_c, hex_counter[5]);
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=4, LSE_RCOL=6, LSE_LLINE=150, LSE_RLINE=155 *) \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  i_HEX_COUNTER (enable_c, 
+            hex_counter[17], int_osc, shift_enable_N_211, hex_counter[16], 
+            hex_counter[11], hex_counter[15], hex_counter[14], hex_counter[13], 
+            hex_counter[12], hex_counter[10], hex_counter[9], hex_counter[8], 
+            hex_counter[7], hex_counter[6], hex_counter[5], n859, reset_c);
     (* lut_function="(A+(B))" *) LUT4 i259_2_lut (.A(hex_counter[5]), .B(hex_counter[6]), 
             .Z(n14_adj_219));
     defparam i259_2_lut.INIT = "0xeeee";
@@ -234,7 +236,7 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
     (* lut_function="(!(A+(B+((D)+!C))))" *) LUT4 i4_4_lut (.A(keypad[13]), 
             .B(keypad[15]), .C(n225), .D(n3328), .Z(row_decoded_2__N_45));
     defparam i4_4_lut.INIT = "0x0010";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=4, LSE_RCOL=6, LSE_LLINE=95, LSE_RLINE=100 *) \lab2_ta_counter(WIDTH=18,MAX_COUNT=239999)  i_DB_COUNTER ({db_counter}, 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=4, LSE_RCOL=6, LSE_LLINE=101, LSE_RLINE=106 *) \lab2_ta_counter(WIDTH=18,MAX_COUNT=239999)  i_DB_COUNTER ({db_counter}, 
             db_reset, int_osc, db_done_N_209);
     IB \col_raw_pad[0]  (.I(col_raw[0]), .O(col_raw_c[0]));
     OB \row_out_pad[3]  (.I(row_out_c[3]), .O(row_out[3]));
@@ -243,10 +245,10 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
     OB \row_out_pad[0]  (.I(row_out_c[0]), .O(row_out[0]));
     OB \anode_pad[1]  (.I(anode_c_N_201), .O(anode[1]));
     OB \anode_pad[0]  (.I(anode_c), .O(anode[0]));
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=18, LSE_RCOL=5, LSE_LLINE=65, LSE_RLINE=72 *) lab3_ta_scanner i_SCANNER (scan_counter[3], 
-            n3528, scan_counter[0], scan_counter[16], n3529, row_scan[0], 
-            row_scan[2], row_scan[1], {row_scan_idx}, int_osc, n3203, 
-            scan_counter[1], scan_enable, n3191, reset_c, n27);
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=5, LSE_RCOL=5, LSE_LLINE=71, LSE_RLINE=78 *) lab3_ta_scanner i_SCANNER (int_osc, 
+            scan_counter[16], scan_counter[3], n27, scan_counter[0], 
+            scan_enable, n3529, n3528, row_scan[0], row_scan[2], row_scan[1], 
+            {row_scan_idx}, n3203, scan_counter[1], n3191, reset_c);
     OB \seg_pad[6]  (.I(seg_c[6]), .O(seg[6]));
     OB \seg_pad[5]  (.I(seg_c[5]), .O(seg[5]));
     OB \seg_pad[4]  (.I(seg_c[4]), .O(seg[4]));
@@ -254,21 +256,21 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
     OB \seg_pad[2]  (.I(seg_c[2]), .O(seg[2]));
     OB \seg_pad[1]  (.I(seg_c[1]), .O(seg[1]));
     OB \seg_pad[0]  (.I(seg_c[0]), .O(seg[0]));
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=130, LSE_RLINE=138 *) lab3_ta_savedkey_sr i_SAVEDKEY_SR (col_decoded[0], 
-            save_enable, row_decoded[0], int_osc, {saved_col}, shift_enable_N_211, 
-            row_decoded[2], {saved_row}, row_decoded[1], n2927, save_enable_N_212, 
-            save_enable_N_213[1], row_decoded_2__N_45);
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=136, LSE_RLINE=144 *) lab3_ta_savedkey_sr i_SAVEDKEY_SR (save_enable, 
+            col_decoded[0], n2927, save_enable_N_212, {saved_col}, row_decoded[2], 
+            int_osc, row_decoded[0], {saved_row}, shift_enable_N_211, 
+            row_decoded[1], save_enable_N_213[1], row_decoded_2__N_45);
     (* lut_function="(A (B (C (D))))" *) LUT4 i1_4_lut_adj_35 (.A(scan_counter[3]), 
             .B(n27), .C(scan_counter[0]), .D(scan_counter[1]), .Z(n3191));
     defparam i1_4_lut_adj_35.INIT = "0x8000";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) lab3_ta_keypad_builder i_KEYPAD_BUILDER ({row_scan_idx}, 
-            {col_sync}, {keypad}, scan_done_N_203, n161, shift_enable_N_211, 
-            int_osc, scan_enable, n579);
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=84, LSE_RLINE=89 *) lab3_ta_keypad_decoder i_KEYPAD_DECODER ({keypad}, 
-            n942, n963, n16, n10, row_decoded[2], {hex_decoded}, 
-            row_decoded_2__N_45, row_decoded[1], row_decoded[0], n950, 
-            n14, n957, n193, n2927, col_decoded[0], n947, n926, 
-            n954, n18, n17);
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) lab3_ta_keypad_builder i_KEYPAD_BUILDER ({row_scan_idx}, 
+            {keypad}, {col_sync}, scan_done_N_203, shift_enable_N_211, 
+            int_osc, scan_enable, n579, n161);
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=90, LSE_RLINE=95 *) lab3_ta_keypad_decoder i_KEYPAD_DECODER (n963, 
+            n954, {keypad}, n942, {hex_decoded}, n16, n18, row_decoded_2__N_45, 
+            n947, row_decoded[1], row_decoded[0], row_decoded[2], n14, 
+            n10, n193, n2927, col_decoded[0], n926, n957, n950, 
+            n17);
     (* lut_function="(!(A (B (D)+!B (C (D)))+!A (B+(C+!(D)))))" *) LUT4 saved_row_3__I_0_3_lut_4_lut (.A(saved_row[3]), 
             .B(scan_counter[16]), .C(n3203), .D(scan_enable), .Z(row_out_c[3]));
     defparam saved_row_3__I_0_3_lut_4_lut.INIT = "0x03aa";
@@ -296,18 +298,19 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
     (* lut_function="(A+(B+(C+(D))))" *) LUT4 i1360_3_lut_4_lut (.A(keypad[1]), 
             .B(keypad[0]), .C(keypad[3]), .D(keypad[2]), .Z(n1525));
     defparam i1360_3_lut_4_lut.INIT = "0xfffe";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=29, LSE_RCOL=6, LSE_LLINE=155, LSE_RLINE=158 *) lab1_ta_hex_seg_decoder i_HEX_DECODER ({seg_c}, 
-            {s});
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=29, LSE_RCOL=6, LSE_LLINE=161, LSE_RLINE=164 *) lab1_ta_hex_seg_decoder i_HEX_DECODER ({s}, 
+            {seg_c});
     (* lut_function="(A (B))" *) LUT4 i3083_2_lut (.A(db_counter[6]), .B(db_counter[13]), 
             .Z(n3382));
     defparam i3083_2_lut.INIT = "0x8888";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=21, LSE_RCOL=3, LSE_LLINE=104, LSE_RLINE=118 *) lab3_ta_controller i_CONTROLLER ({keypad}, 
-            n10, n16, {col_sync}, n954, save_enable_N_212, shift_enable, 
-            db_reset, db_done_N_209, n17, n161, n18, int_osc, n950, 
-            n947, n957, n926, n963, n942, shift_enable_N_211, save_enable_N_213[1], 
-            save_enable, {saved_col}, n579, scan_enable, n14);
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=57, LSE_RLINE=61 *) lab3_ta_sync i_SYNC ({col_sync}, 
-            {col_raw_c}, int_osc);
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=21, LSE_RCOL=3, LSE_LLINE=110, LSE_RLINE=124 *) lab3_ta_controller i_CONTROLLER (n10, 
+            n963, n954, {keypad}, db_reset, shift_enable_N_211, {col_sync}, 
+            db_done_N_209, save_enable, n18, n947, n950, n942, n957, 
+            n926, int_osc, save_enable_N_213[1], shift_enable, n16, 
+            save_enable_N_212, n161, n579, scan_enable, n14, {saved_col}, 
+            n17);
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=60, LSE_RLINE=64 *) lab3_ta_sync i_SYNC ({col_sync}, 
+            int_osc, {col_raw_c});
     (* lut_function="(A (B (C (D))))" *) LUT4 i3117_4_lut (.A(db_counter[1]), 
             .B(db_counter[3]), .C(db_counter[0]), .D(db_counter[5]), .Z(n3416));
     defparam i3117_4_lut.INIT = "0x8000";
@@ -333,8 +336,8 @@ module lab3_ta (input reset, input enable, input [3:0]col_raw, output [3:0]row_o
             .TRIM1(GND_net), .TRIM0(GND_net), .CLKHF(int_osc));
     defparam hf_osc.CLKHF_DIV = "0b01";
     defparam hf_osc.FABRIC_TRIME = "DISABLE";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) lab3_ta_digit_sr i_DIGIT_SR ({dig1}, 
-            shift_enable, {dig2}, int_osc, shift_enable_N_211, {hex_decoded});
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=127, LSE_RLINE=134 *) lab3_ta_digit_sr i_DIGIT_SR ({dig1}, 
+            shift_enable, {dig2}, {hex_decoded}, int_osc, shift_enable_N_211);
     
 endmodule
 
@@ -342,23 +345,26 @@ endmodule
 // Verilog Description of module \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000) 
 //
 
-module \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  (input enable_c, output shift_enable_N_211, 
-            output \hex_counter[17] , input int_osc, output \hex_counter[16] , 
-            output \hex_counter[15] , output \hex_counter[14] , output \hex_counter[13] , 
-            output \hex_counter[6] , output \hex_counter[12] , output \hex_counter[9] , 
-            output \hex_counter[11] , output \hex_counter[10] , output \hex_counter[8] , 
-            input n859, output \hex_counter[7] , input reset_c, output \hex_counter[5] );
+module \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  (input enable_c, output \hex_counter[17] , 
+            input int_osc, output shift_enable_N_211, output \hex_counter[16] , 
+            output \hex_counter[11] , output \hex_counter[15] , output \hex_counter[14] , 
+            output \hex_counter[13] , output \hex_counter[12] , output \hex_counter[10] , 
+            output \hex_counter[9] , output \hex_counter[8] , output \hex_counter[7] , 
+            output \hex_counter[6] , output \hex_counter[5] , input n859, 
+            input reset_c);
     
     (* is_clock=1 *) wire int_osc;
     
     wire GND_net, VCC_net;
     wire [17:0]n59;
+    
+    wire n35;
     wire [17:0]n78;
     
-    wire n35, n14, n16, n2729, n3424, n2731, n2737, n2723, n2739, 
-        n10, n4038, n4056, n2733, n15_adj_217, n16_adj_218, n17, 
-        n3426, n18, n15, n4050, n4059, n2735, n4053, n4047, 
-        n4044, n2727, n4041, n2725, n4035, n4032;
+    wire n14, n4059, n2737, n3424, n4038, n2739, n4053, n4041, 
+        n18, n4032, n2727, n16_adj_217, n15_adj_218, n17, n10, 
+        n3426, n4056, n16, n15, n2731, n2735, n2733, n4050, 
+        n4047, n2729, n4044, n2725, n2723, n4035;
     
     (* lut_function="(A (B))" *) LUT4 i1196_2_lut (.A(n59[7]), .B(n35), 
             .Z(n78[7]));
@@ -437,11 +443,11 @@ module \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  (input enable_c, output shif
     defparam counter_283__i5.REGSET = "RESET";
     defparam counter_283__i5.SRMODE = "ASYNC";
     (* syn_use_carry_chain=1 *) FD1P3XZ counter_283__i4 (.D(n78[3]), .SP(enable_c), 
-            .CK(int_osc), .SR(shift_enable_N_211), .Q(n15_adj_217));
+            .CK(int_osc), .SR(shift_enable_N_211), .Q(n15_adj_218));
     defparam counter_283__i4.REGSET = "RESET";
     defparam counter_283__i4.SRMODE = "ASYNC";
     (* syn_use_carry_chain=1 *) FD1P3XZ counter_283__i3 (.D(n78[2]), .SP(enable_c), 
-            .CK(int_osc), .SR(shift_enable_N_211), .Q(n16_adj_218));
+            .CK(int_osc), .SR(shift_enable_N_211), .Q(n16_adj_217));
     defparam counter_283__i3.REGSET = "RESET";
     defparam counter_283__i3.SRMODE = "ASYNC";
     (* syn_use_carry_chain=1 *) FD1P3XZ counter_283__i2 (.D(n78[1]), .SP(enable_c), 
@@ -462,13 +468,13 @@ module \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  (input enable_c, output shif
             .B(\hex_counter[17] ), .C(\hex_counter[11] ), .D(\hex_counter[6] ), 
             .Z(n3424));
     defparam i3125_4_lut.INIT = "0x8000";
-    (* lut_function="(A+(B))" *) LUT4 i1_2_lut (.A(n15_adj_217), .B(\hex_counter[15] ), 
+    (* lut_function="(A+(B))" *) LUT4 i1_2_lut (.A(n15_adj_218), .B(\hex_counter[15] ), 
             .Z(n10));
     defparam i1_2_lut.INIT = "0xeeee";
     (* lut_function="(A (B (C)))" *) LUT4 i3127_3_lut (.A(\hex_counter[10] ), 
             .B(n3424), .C(\hex_counter[16] ), .Z(n3426));
     defparam i3127_3_lut.INIT = "0x8080";
-    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i7_4_lut (.A(n16_adj_218), .B(\hex_counter[5] ), 
+    (* lut_function="(A+(B+(C+(D))))" *) LUT4 i7_4_lut (.A(n16_adj_217), .B(\hex_counter[5] ), 
             .C(\hex_counter[9] ), .D(n10), .Z(n16));
     defparam i7_4_lut.INIT = "0xfffe";
     (* lut_function="(A+(B+(C+(D))))" *) LUT4 i6_4_lut (.A(n14), .B(\hex_counter[7] ), 
@@ -536,14 +542,14 @@ module \lab2_ta_counter(WIDTH=18,MAX_COUNT=200000)  (input enable_c, output shif
     (* lut_function="(A (B))" *) LUT4 i1271_2_lut (.A(n59[3]), .B(n35), 
             .Z(n78[3]));
     defparam i1271_2_lut.INIT = "0x8888";
-    FA2 counter_283_add_4_5 (.A0(GND_net), .B0(GND_net), .C0(n15_adj_217), 
+    FA2 counter_283_add_4_5 (.A0(GND_net), .B0(GND_net), .C0(n15_adj_218), 
         .D0(n2725), .CI0(n2725), .A1(GND_net), .B1(GND_net), .C1(n14), 
         .D1(n4038), .CI1(n4038), .CO0(n4038), .CO1(n2727), .S0(n59[3]), 
         .S1(n59[4]));
     defparam counter_283_add_4_5.INIT0 = "0xc33c";
     defparam counter_283_add_4_5.INIT1 = "0xc33c";
     FA2 counter_283_add_4_3 (.A0(GND_net), .B0(GND_net), .C0(n17), .D0(n2723), 
-        .CI0(n2723), .A1(GND_net), .B1(GND_net), .C1(n16_adj_218), .D1(n4035), 
+        .CI0(n2723), .A1(GND_net), .B1(GND_net), .C1(n16_adj_217), .D1(n4035), 
         .CI1(n4035), .CO0(n4035), .CO1(n2725), .S0(n59[1]), .S1(n59[2]));
     defparam counter_283_add_4_3.INIT0 = "0xc33c";
     defparam counter_283_add_4_3.INIT1 = "0xc33c";
@@ -581,12 +587,12 @@ module \lab2_ta_counter(WIDTH=18,MAX_COUNT=239999)  (output [17:0]db_counter,
     wire GND_net, VCC_net;
     wire [17:0]n77;
     
-    wire n4086;
+    wire n2712, n2718, n4086, n2720;
     wire [17:0]n97;
     
-    wire n2718, n2720, n2710, n2716, n4077, n4083, n4062, n2708, 
-        n4089, db_counter_0__N_126, n4071, n2714, n4080, n2712, 
-        n4074, n2706, n2704, n4068, n4065;
+    wire n2716, n4083, n4074, n4065, db_counter_0__N_126, n2714, 
+        n4080, n4077, n2710, n2704, n4071, n2708, n2706, n4068, 
+        n4062, n4089;
     
     FA2 counter_282_add_4_17 (.A0(GND_net), .B0(GND_net), .C0(db_counter[15]), 
         .D0(n2718), .CI0(n2718), .A1(GND_net), .B1(GND_net), .C1(db_counter[16]), 
@@ -783,18 +789,18 @@ endmodule
 // Verilog Description of module lab3_ta_scanner
 //
 
-module lab3_ta_scanner (output \scan_counter[3] , output n3528, output \scan_counter[0] , 
-            output \scan_counter[16] , output n3529, output \row_scan[0] , 
-            output \row_scan[2] , output \row_scan[1] , output [1:0]row_scan_idx, 
-            input int_osc, output n3203, output \scan_counter[1] , input scan_enable, 
-            input n3191, input reset_c, output n27);
+module lab3_ta_scanner (input int_osc, output \scan_counter[16] , output \scan_counter[3] , 
+            output n27, output \scan_counter[0] , input scan_enable, output n3529, 
+            output n3528, output \row_scan[0] , output \row_scan[2] , 
+            output \row_scan[1] , output [1:0]row_scan_idx, output n3203, 
+            output \scan_counter[1] , input n3191, input reset_c);
     
     wire [16:0]scan_counter;
     (* is_clock=1 *) wire int_osc;
     
-    wire n3386, n3525, n3530, n2972, n904, n3526, n29, n3531, 
-        n3194, n918, n916, n1589, n1635, n587, n1651, n1567, 
-        n1444, n931, n2969, n889;
+    wire n2972, n916, n3386, n3530, n904, n3526, n29, n3525, 
+        n3531, n918, n3194, n1635, n587, n931, n1589, n1567, 
+        n889, n1651, n1444, n2969;
     
     (* lut_function="(!((((D)+!C)+!B)+!A))" *) LUT4 i3222_3_lut_4_lut (.A(scan_counter[10]), 
             .B(scan_counter[7]), .C(scan_counter[14]), .D(n2972), .Z(n3530));
@@ -872,13 +878,13 @@ module lab3_ta_scanner (output \scan_counter[3] , output n3528, output \scan_cou
     (* lut_function="(!((B (C+(D))+!B (C+!(D)))+!A))" *) LUT4 i1_4_lut_adj_27 (.A(n1635), 
             .B(\row_scan[0] ), .C(\row_scan[1] ), .D(\row_scan[2] ), .Z(row_scan_idx[0]));
     defparam i1_4_lut_adj_27.INIT = "0x0208";
-    (* LSE_LINE_FILE_ID=41, LSE_LCOL=4, LSE_RCOL=6, LSE_LLINE=21, LSE_RLINE=26 *) \lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)  i_SCAN_COUNTER (n3194, 
-            scan_counter[13], scan_counter[9], scan_counter[8], scan_counter[7], 
-            scan_counter[10], n1567, scan_counter[11], scan_counter[12], 
-            int_osc, \scan_counter[0] , \scan_counter[1] , n29, scan_counter[6], 
-            \scan_counter[16] , scan_enable, scan_counter[15], n3386, 
-            scan_counter[14], \scan_counter[3] , n3191, reset_c, n27, 
-            n889);
+    (* LSE_LINE_FILE_ID=41, LSE_LCOL=4, LSE_RCOL=6, LSE_LLINE=21, LSE_RLINE=26 *) \lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)  i_SCAN_COUNTER (scan_counter[9], 
+            scan_counter[7], scan_counter[10], n1567, n889, \scan_counter[0] , 
+            scan_counter[8], scan_counter[11], scan_counter[12], int_osc, 
+            n3386, \scan_counter[1] , scan_counter[15], scan_counter[6], 
+            n3194, scan_enable, \scan_counter[16] , \scan_counter[3] , 
+            scan_counter[14], scan_counter[13], n29, n3191, reset_c, 
+            n27);
     
 endmodule
 
@@ -886,28 +892,29 @@ endmodule
 // Verilog Description of module \lab2_ta_counter(WIDTH=17,MAX_COUNT=95999) 
 //
 
-module \lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)  (input n3194, output \scan_counter[13] , 
-            output \scan_counter[9] , output \scan_counter[8] , output \scan_counter[7] , 
-            output \scan_counter[10] , output n1567, output \scan_counter[11] , 
-            output \scan_counter[12] , input int_osc, output \scan_counter[0] , 
-            output \scan_counter[1] , output n29, output \scan_counter[6] , 
-            output \scan_counter[16] , input scan_enable, output \scan_counter[15] , 
-            input n3386, output \scan_counter[14] , output \scan_counter[3] , 
-            input n3191, input reset_c, output n27, output n889);
+module \lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)  (output \scan_counter[9] , 
+            output \scan_counter[7] , output \scan_counter[10] , output n1567, 
+            output n889, output \scan_counter[0] , output \scan_counter[8] , 
+            output \scan_counter[11] , output \scan_counter[12] , input int_osc, 
+            input n3386, output \scan_counter[1] , output \scan_counter[15] , 
+            output \scan_counter[6] , input n3194, input scan_enable, 
+            output \scan_counter[16] , output \scan_counter[3] , output \scan_counter[14] , 
+            output \scan_counter[13] , output n29, input n3191, input reset_c, 
+            output n27);
     
     (* is_clock=1 *) wire int_osc;
-    wire [16:0]scan_counter;
     wire scan_reset_master;
+    wire [16:0]scan_counter;
     
-    wire GND_net, VCC_net, n4110, n10;
-    wire [16:0]n92;
-    
-    wire n2686;
+    wire VCC_net, GND_net;
     wire [16:0]n73;
     
-    wire n2696, n2694, n2698, n4107, n4092, n3202, n2692, n4101, 
-        n4104, n2690, n4113, n2700, n4116, n14, n2688, n4098, 
-        n4095;
+    wire n4110;
+    wire [16:0]n92;
+    
+    wire n2692, n10, n2696, n2694, n2698, n4107, n2700, n4092, 
+        n4113, n2686, n4104, n4098, n2690, n4101, n14, n3202, 
+        n4116, n2688, n4095;
     
     (* lut_function="(A (B (C)))" *) LUT4 i2_2_lut_3_lut (.A(\scan_counter[9] ), 
             .B(\scan_counter[7] ), .C(\scan_counter[10] ), .Z(n10));
@@ -1008,7 +1015,7 @@ module \lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)  (input n3194, output \scan_co
             .CK(int_osc), .SR(scan_reset_master), .Q(\scan_counter[1] ));
     defparam counter_284__i1.REGSET = "RESET";
     defparam counter_284__i1.SRMODE = "ASYNC";
-    VLO i1 (.Z(GND_net));
+    VLO i2 (.Z(GND_net));
     (* lut_function="(!((B)+!A))" *) LUT4 i1337_2_lut (.A(n73[1]), .B(n3202), 
             .Z(n92[1]));
     defparam i1337_2_lut.INIT = "0x2222";
@@ -1102,7 +1109,7 @@ module \lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)  (input n3194, output \scan_co
         .S1(n73[2]));
     defparam counter_284_add_4_3.INIT0 = "0xc33c";
     defparam counter_284_add_4_3.INIT1 = "0xc33c";
-    VHI i2 (.Z(VCC_net));
+    VHI i1 (.Z(VCC_net));
     (* syn_use_carry_chain=1 *) FD1P3XZ counter_284__i0 (.D(n92[0]), .SP(scan_enable), 
             .CK(int_osc), .SR(scan_reset_master), .Q(\scan_counter[0] ));
     defparam counter_284__i0.REGSET = "RESET";
@@ -1114,33 +1121,33 @@ endmodule
 // Verilog Description of module lab3_ta_savedkey_sr
 //
 
-module lab3_ta_savedkey_sr (input \col_decoded[0] , input save_enable, input \row_decoded[0] , 
-            input int_osc, output [1:0]saved_col, input shift_enable_N_211, 
-            input \row_decoded[2] , output [3:0]saved_row, input \row_decoded[1] , 
-            input n2927, input save_enable_N_212, input \save_enable_N_213[1] , 
+module lab3_ta_savedkey_sr (input save_enable, input \col_decoded[0] , input n2927, 
+            input save_enable_N_212, output [1:0]saved_col, input \row_decoded[2] , 
+            input int_osc, input \row_decoded[0] , output [3:0]saved_row, 
+            input shift_enable_N_211, input \row_decoded[1] , input \save_enable_N_213[1] , 
             input row_decoded_2__N_45);
     
     (* is_clock=1 *) wire int_osc;
     
     wire n1000, n999, VCC_net;
     
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=130, LSE_RLINE=138 *) FD1P3XZ saved_row_i0_i0 (.D(\row_decoded[0] ), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=136, LSE_RLINE=144 *) FD1P3XZ saved_row_i0_i0 (.D(\row_decoded[0] ), 
             .SP(save_enable), .CK(int_osc), .SR(shift_enable_N_211), .Q(saved_row[0]));
     defparam saved_row_i0_i0.REGSET = "RESET";
     defparam saved_row_i0_i0.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=130, LSE_RLINE=138 *) FD1P3XZ saved_row_i0_i2 (.D(\row_decoded[2] ), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=136, LSE_RLINE=144 *) FD1P3XZ saved_row_i0_i2 (.D(\row_decoded[2] ), 
             .SP(save_enable), .CK(int_osc), .SR(shift_enable_N_211), .Q(saved_row[2]));
     defparam saved_row_i0_i2.REGSET = "RESET";
     defparam saved_row_i0_i2.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=130, LSE_RLINE=138 *) FD1P3XZ saved_row_i0_i1 (.D(\row_decoded[1] ), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=136, LSE_RLINE=144 *) FD1P3XZ saved_row_i0_i1 (.D(\row_decoded[1] ), 
             .SP(save_enable), .CK(int_osc), .SR(shift_enable_N_211), .Q(saved_row[1]));
     defparam saved_row_i0_i1.REGSET = "RESET";
     defparam saved_row_i0_i1.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=130, LSE_RLINE=138 *) FD1P3XZ saved_col_i0_i1 (.D(n1000), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=136, LSE_RLINE=144 *) FD1P3XZ saved_col_i0_i1 (.D(n1000), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(saved_col[1]));
     defparam saved_col_i0_i1.REGSET = "RESET";
     defparam saved_col_i0_i1.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=130, LSE_RLINE=138 *) FD1P3XZ saved_row_i0_i3 (.D(n999), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=136, LSE_RLINE=144 *) FD1P3XZ saved_row_i0_i3 (.D(n999), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(saved_row[3]));
     defparam saved_row_i0_i3.REGSET = "RESET";
     defparam saved_row_i0_i3.SRMODE = "ASYNC";
@@ -1153,7 +1160,7 @@ module lab3_ta_savedkey_sr (input \col_decoded[0] , input save_enable, input \ro
             .B(row_decoded_2__N_45), .C(save_enable_N_212), .D(\save_enable_N_213[1] ), 
             .Z(n999));
     defparam i833_3_lut_4_lut.INIT = "0x3aaa";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=130, LSE_RLINE=138 *) FD1P3XZ saved_col_i0_i0 (.D(\col_decoded[0] ), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=22, LSE_RCOL=4, LSE_LLINE=136, LSE_RLINE=144 *) FD1P3XZ saved_col_i0_i0 (.D(\col_decoded[0] ), 
             .SP(save_enable), .CK(int_osc), .SR(shift_enable_N_211), .Q(saved_col[0]));
     defparam saved_col_i0_i0.REGSET = "RESET";
     defparam saved_col_i0_i0.SRMODE = "ASYNC";
@@ -1164,14 +1171,14 @@ endmodule
 // Verilog Description of module lab3_ta_keypad_builder
 //
 
-module lab3_ta_keypad_builder (input [1:0]row_scan_idx, input [3:0]col_sync, 
-            output [15:0]keypad, input scan_done_N_203, output n161, input shift_enable_N_211, 
-            input int_osc, input scan_enable, output n579);
+module lab3_ta_keypad_builder (input [1:0]row_scan_idx, output [15:0]keypad, 
+            input [3:0]col_sync, input scan_done_N_203, input shift_enable_N_211, 
+            input int_osc, input scan_enable, output n579, output n161);
     
     (* is_clock=1 *) wire int_osc;
     
-    wire n983, n883, n997, n995, n996, n998, n989, n939, n990, 
-        n994, n993, n984, n992, n988, n991, n985, n987, n986, 
+    wire n883, n998, n983, n996, n985, n984, n997, n939, n993, 
+        n995, n994, n992, n989, n988, n990, n991, n987, n986, 
         VCC_net;
     
     (* lut_function="(!(A (B (C)+!B !(D))+!A !(D)))" *) LUT4 i817_3_lut_4_lut (.A(row_scan_idx[0]), 
@@ -1225,63 +1232,63 @@ module lab3_ta_keypad_builder (input [1:0]row_scan_idx, input [3:0]col_sync,
     (* lut_function="(A (D)+!A (B (D)+!B !(C)))" *) LUT4 i820_3_lut_4_lut (.A(row_scan_idx[0]), 
             .B(n939), .C(col_sync[1]), .D(keypad[13]), .Z(n986));
     defparam i820_3_lut_4_lut.INIT = "0xef01";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i2 (.D(n997), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i2 (.D(n997), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[2]));
     defparam keypad_i0_i2.REGSET = "RESET";
     defparam keypad_i0_i2.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i3 (.D(n996), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i3 (.D(n996), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[3]));
     defparam keypad_i0_i3.REGSET = "RESET";
     defparam keypad_i0_i3.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i4 (.D(n995), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i4 (.D(n995), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[4]));
     defparam keypad_i0_i4.REGSET = "RESET";
     defparam keypad_i0_i4.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i5 (.D(n994), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i5 (.D(n994), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[5]));
     defparam keypad_i0_i5.REGSET = "RESET";
     defparam keypad_i0_i5.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i6 (.D(n993), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i6 (.D(n993), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[6]));
     defparam keypad_i0_i6.REGSET = "RESET";
     defparam keypad_i0_i6.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i7 (.D(n992), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i7 (.D(n992), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[7]));
     defparam keypad_i0_i7.REGSET = "RESET";
     defparam keypad_i0_i7.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i8 (.D(n991), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i8 (.D(n991), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[8]));
     defparam keypad_i0_i8.REGSET = "RESET";
     defparam keypad_i0_i8.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i9 (.D(n990), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i9 (.D(n990), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[9]));
     defparam keypad_i0_i9.REGSET = "RESET";
     defparam keypad_i0_i9.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i10 (.D(n989), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i10 (.D(n989), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[10]));
     defparam keypad_i0_i10.REGSET = "RESET";
     defparam keypad_i0_i10.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i11 (.D(n988), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i11 (.D(n988), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[11]));
     defparam keypad_i0_i11.REGSET = "RESET";
     defparam keypad_i0_i11.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i12 (.D(n987), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i12 (.D(n987), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[12]));
     defparam keypad_i0_i12.REGSET = "RESET";
     defparam keypad_i0_i12.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i13 (.D(n986), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i13 (.D(n986), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[13]));
     defparam keypad_i0_i13.REGSET = "RESET";
     defparam keypad_i0_i13.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i14 (.D(n985), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i14 (.D(n985), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[14]));
     defparam keypad_i0_i14.REGSET = "RESET";
     defparam keypad_i0_i14.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i15 (.D(n984), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i15 (.D(n984), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[15]));
     defparam keypad_i0_i15.REGSET = "RESET";
     defparam keypad_i0_i15.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i0 (.D(n983), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i0 (.D(n983), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[0]));
     defparam keypad_i0_i0.REGSET = "RESET";
     defparam keypad_i0_i0.SRMODE = "ASYNC";
@@ -1297,7 +1304,7 @@ module lab3_ta_keypad_builder (input [1:0]row_scan_idx, input [3:0]col_sync,
             .B(row_scan_idx[1]), .C(scan_done_N_203), .D(scan_enable), 
             .Z(n161));
     defparam i41_2_lut_3_lut_4_lut.INIT = "0x8000";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=74, LSE_RLINE=82 *) FD1P3XZ keypad_i0_i1 (.D(n998), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=25, LSE_RCOL=5, LSE_LLINE=80, LSE_RLINE=88 *) FD1P3XZ keypad_i0_i1 (.D(n998), 
             .SP(VCC_net), .CK(int_osc), .SR(shift_enable_N_211), .Q(keypad[1]));
     defparam keypad_i0_i1.REGSET = "RESET";
     defparam keypad_i0_i1.SRMODE = "ASYNC";
@@ -1308,17 +1315,17 @@ endmodule
 // Verilog Description of module lab3_ta_keypad_decoder
 //
 
-module lab3_ta_keypad_decoder (input [15:0]keypad, input n942, input n963, 
-            input n16, input n10, output \row_decoded[2] , output [3:0]hex_decoded, 
-            input row_decoded_2__N_45, output \row_decoded[1] , output \row_decoded[0] , 
-            input n950, input n14, input n957, input n193, output n2927, 
-            output \col_decoded[0] , input n947, input n926, input n954, 
-            input n18, input n17);
+module lab3_ta_keypad_decoder (input n963, input n954, input [15:0]keypad, 
+            input n942, output [3:0]hex_decoded, input n16, input n18, 
+            input row_decoded_2__N_45, input n947, output \row_decoded[1] , 
+            output \row_decoded[0] , output \row_decoded[2] , input n14, 
+            input n10, input n193, output n2927, output \col_decoded[0] , 
+            input n926, input n957, input n950, input n17);
     
     
-    wire n1390, n962, n1585, n1613, n968, n967, n948, n3190, 
-        n970, n1483, n7, n1352, n971, n958, n4, n4_adj_215, 
-        n961, n6, n973, n964, n3187, n955, n6_adj_216;
+    wire n971, n1390, n6, n968, n967, n948, n3190, n1483, n3187, 
+        n964, n970, n1352, n4, n962, n1585, n973, n961, n6_adj_215, 
+        n958, n955, n1613, n4_adj_216, n7;
     
     (* lut_function="(A+(B (C)+!B !(C)))" *) LUT4 i1274_3_lut (.A(n963), .B(keypad[1]), 
             .C(keypad[0]), .Z(n1390));
@@ -1362,10 +1369,10 @@ module lab3_ta_keypad_decoder (input [15:0]keypad, input n942, input n963,
     (* lut_function="(A+(B+((D)+!C)))" *) LUT4 i2_3_lut_4_lut_adj_10 (.A(n10), 
             .B(n926), .C(keypad[2]), .D(keypad[3]), .Z(n961));
     defparam i2_3_lut_4_lut_adj_10.INIT = "0xffef";
-    (* lut_function="(A (B))" *) LUT4 i1_2_lut (.A(n971), .B(n961), .Z(n6));
+    (* lut_function="(A (B))" *) LUT4 i1_2_lut (.A(n971), .B(n961), .Z(n6_adj_215));
     defparam i1_2_lut.INIT = "0x8888";
     (* lut_function="(A (B (C (D))))" *) LUT4 i4_4_lut (.A(n973), .B(n958), 
-            .C(n193), .D(n6), .Z(n2927));
+            .C(n193), .D(n6_adj_215), .Z(n2927));
     defparam i4_4_lut.INIT = "0x8000";
     (* lut_function="(A+(B+!(C)))" *) LUT4 i2_3_lut (.A(keypad[15]), .B(n957), 
             .C(keypad[14]), .Z(n958));
@@ -1377,7 +1384,7 @@ module lab3_ta_keypad_decoder (input [15:0]keypad, input n942, input n963,
             .B(n964), .C(n947), .D(keypad[8]), .Z(n3187));
     defparam i1_4_lut_adj_12.INIT = "0xccc4";
     (* lut_function="(!(A (B (C (D)))))" *) LUT4 i3307_4_lut (.A(n955), .B(n3187), 
-            .C(n1613), .D(n6_adj_216), .Z(hex_decoded[1]));
+            .C(n1613), .D(n6), .Z(hex_decoded[1]));
     defparam i3307_4_lut.INIT = "0x7fff";
     (* lut_function="((B+!(C))+!A)" *) LUT4 i3304_3_lut (.A(n970), .B(n3190), 
             .C(n1585), .Z(hex_decoded[2]));
@@ -1386,10 +1393,10 @@ module lab3_ta_keypad_decoder (input [15:0]keypad, input n942, input n963,
             .C(n950), .D(keypad[11]), .Z(n973));
     defparam i2_4_lut.INIT = "0xfffb";
     (* lut_function="(A+(B))" *) LUT4 i1_2_lut_adj_13 (.A(n954), .B(keypad[12]), 
-            .Z(n4_adj_215));
+            .Z(n4_adj_216));
     defparam i1_2_lut_adj_13.INIT = "0xeeee";
     (* lut_function="(A (B (C (D)))+!A (B (D)))" *) LUT4 i2_4_lut_adj_14 (.A(keypad[13]), 
-            .B(n970), .C(n4_adj_215), .D(n948), .Z(n1613));
+            .B(n970), .C(n4_adj_216), .D(n948), .Z(n1613));
     defparam i2_4_lut_adj_14.INIT = "0xc400";
     (* lut_function="(!(A (B (C+(D)))+!A (B)))" *) LUT4 i2_4_lut_adj_15 (.A(keypad[15]), 
             .B(n1613), .C(n957), .D(keypad[14]), .Z(n7));
@@ -1413,7 +1420,7 @@ module lab3_ta_keypad_decoder (input [15:0]keypad, input n942, input n963,
             .B(n954), .C(keypad[12]), .D(n948), .Z(n1352));
     defparam i1189_2_lut_4_lut.INIT = "0xef00";
     (* lut_function="(A (D)+!A (B (D)+!B !(C+!(D))))" *) LUT4 i1_2_lut_4_lut (.A(keypad[15]), 
-            .B(n957), .C(keypad[14]), .D(n962), .Z(n6_adj_216));
+            .B(n957), .C(keypad[14]), .D(n962), .Z(n6));
     defparam i1_2_lut_4_lut.INIT = "0xef00";
     
 endmodule
@@ -1422,7 +1429,7 @@ endmodule
 // Verilog Description of module lab1_ta_hex_seg_decoder
 //
 
-module lab1_ta_hex_seg_decoder (output [6:0]seg_c, input [3:0]s);
+module lab1_ta_hex_seg_decoder (input [3:0]s, output [6:0]seg_c);
     
     
     (* lut_function="(!(A (B+!(C (D)+!C !(D)))+!A !(B (C (D))+!B !(C+!(D)))))" *) LUT4 s_3__I_0_4_lut (.A(s[2]), 
@@ -1453,23 +1460,22 @@ endmodule
 // Verilog Description of module lab3_ta_controller
 //
 
-module lab3_ta_controller (input [15:0]keypad, output n10, output n16, 
-            input [3:0]col_sync, output n954, output save_enable_N_212, 
-            output shift_enable, output db_reset, input db_done_N_209, 
-            output n17, input n161, output n18, input int_osc, output n950, 
-            output n947, output n957, output n926, output n963, output n942, 
-            input shift_enable_N_211, output \save_enable_N_213[1] , output save_enable, 
-            input [1:0]saved_col, input n579, output scan_enable, output n14);
+module lab3_ta_controller (output n10, output n963, output n954, input [15:0]keypad, 
+            output db_reset, input shift_enable_N_211, input [3:0]col_sync, 
+            input db_done_N_209, output save_enable, output n18, output n947, 
+            output n950, output n942, output n957, output n926, input int_osc, 
+            output \save_enable_N_213[1] , output shift_enable, output n16, 
+            output save_enable_N_212, input n161, input n579, output scan_enable, 
+            output n14, input [1:0]saved_col, output n17);
     
     (* is_clock=1 *) wire int_osc;
     
-    wire n3344, n3873, n29, n3404, n22_adj_214, n3392, n3885, 
-        n59, n2951, n3198;
+    wire n22_adj_214, n25, n3873, n19, n3344, n3406, n3392, n584, 
+        n2951, n3885, n59;
     wire [7:0]save_enable_N_213;
     
-    wire n22, n584, n3408, n3324, n976, n3400, n586, n3396, 
-        n26, n19, n3406, n24, n3342, n3410, n3364, n25, n3767, 
-        VCC_net;
+    wire n3198, n3342, n3400, n3364, n22, n3396, n586, n26, 
+        n29, n3408, n3404, n3324, n24, n3410, n976, n3767, VCC_net;
     
     (* lut_function="(A+(B+(C+(D))))" *) LUT4 i41_rep_15_4_lut (.A(n10), .B(n22_adj_214), 
             .C(keypad[2]), .D(keypad[3]), .Z(n3873));
@@ -1630,47 +1636,47 @@ endmodule
 // Verilog Description of module lab3_ta_sync
 //
 
-module lab3_ta_sync (output [3:0]col_sync, input [3:0]col_raw_c, input int_osc);
+module lab3_ta_sync (output [3:0]col_sync, input int_osc, input [3:0]col_raw_c);
     
     wire [3:0]n1;
     (* is_clock=1 *) wire int_osc;
     
     wire VCC_net, GND_net;
     
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=57, LSE_RLINE=61 *) IOL_B n1_i3 (.PADDI(col_raw_c[3]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=60, LSE_RLINE=64 *) IOL_B n1_i3 (.PADDI(col_raw_c[3]), 
             .DO1(GND_net), .DO0(GND_net), .CE(VCC_net), .IOLTO(GND_net), 
             .HOLD(GND_net), .INCLK(int_osc), .OUTCLK(GND_net), .DI0(n1[3]));
     defparam n1_i3.LATCHIN = "NONE_REG";
     defparam n1_i3.DDROUT = "NO";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=57, LSE_RLINE=61 *) FD1P3XZ q_i3 (.D(n1[3]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=60, LSE_RLINE=64 *) FD1P3XZ q_i3 (.D(n1[3]), 
             .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(col_sync[3]));
     defparam q_i3.REGSET = "RESET";
     defparam q_i3.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=57, LSE_RLINE=61 *) IOL_B n1_i2 (.PADDI(col_raw_c[2]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=60, LSE_RLINE=64 *) IOL_B n1_i2 (.PADDI(col_raw_c[2]), 
             .DO1(GND_net), .DO0(GND_net), .CE(VCC_net), .IOLTO(GND_net), 
             .HOLD(GND_net), .INCLK(int_osc), .OUTCLK(GND_net), .DI0(n1[2]));
     defparam n1_i2.LATCHIN = "NONE_REG";
     defparam n1_i2.DDROUT = "NO";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=57, LSE_RLINE=61 *) IOL_B n1_i1 (.PADDI(col_raw_c[1]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=60, LSE_RLINE=64 *) IOL_B n1_i1 (.PADDI(col_raw_c[1]), 
             .DO1(GND_net), .DO0(GND_net), .CE(VCC_net), .IOLTO(GND_net), 
             .HOLD(GND_net), .INCLK(int_osc), .OUTCLK(GND_net), .DI0(n1[1]));
     defparam n1_i1.LATCHIN = "NONE_REG";
     defparam n1_i1.DDROUT = "NO";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=57, LSE_RLINE=61 *) IOL_B n1_i0 (.PADDI(col_raw_c[0]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=60, LSE_RLINE=64 *) IOL_B n1_i0 (.PADDI(col_raw_c[0]), 
             .DO1(GND_net), .DO0(GND_net), .CE(VCC_net), .IOLTO(GND_net), 
             .HOLD(GND_net), .INCLK(int_osc), .OUTCLK(GND_net), .DI0(n1[0]));
     defparam n1_i0.LATCHIN = "NONE_REG";
     defparam n1_i0.DDROUT = "NO";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=57, LSE_RLINE=61 *) FD1P3XZ q_i2 (.D(n1[2]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=60, LSE_RLINE=64 *) FD1P3XZ q_i2 (.D(n1[2]), 
             .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(col_sync[2]));
     defparam q_i2.REGSET = "RESET";
     defparam q_i2.SRMODE = "CE_OVER_LSR";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=57, LSE_RLINE=61 *) FD1P3XZ q_i1 (.D(n1[1]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=60, LSE_RLINE=64 *) FD1P3XZ q_i1 (.D(n1[1]), 
             .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(col_sync[1]));
     defparam q_i1.REGSET = "RESET";
     defparam q_i1.SRMODE = "CE_OVER_LSR";
     VLO i2 (.Z(GND_net));
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=57, LSE_RLINE=61 *) FD1P3XZ q_i0 (.D(n1[0]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=15, LSE_RCOL=5, LSE_LLINE=60, LSE_RLINE=64 *) FD1P3XZ q_i0 (.D(n1[0]), 
             .SP(VCC_net), .CK(int_osc), .SR(GND_net), .Q(col_sync[0]));
     defparam q_i0.REGSET = "RESET";
     defparam q_i0.SRMODE = "CE_OVER_LSR";
@@ -1683,46 +1689,46 @@ endmodule
 //
 
 module lab3_ta_digit_sr (output [3:0]dig1, input shift_enable, output [3:0]dig2, 
-            input int_osc, input shift_enable_N_211, input [3:0]hex_decoded);
+            input [3:0]hex_decoded, input int_osc, input shift_enable_N_211);
     
     (* is_clock=1 *) wire int_osc;
     
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2_i0_i2 (.D(dig1[2]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=127, LSE_RLINE=134 *) FD1P3XZ digit2_i0_i2 (.D(dig1[2]), 
             .SP(shift_enable), .CK(int_osc), .SR(shift_enable_N_211), 
             .Q(dig2[2]));
     defparam digit2_i0_i2.REGSET = "RESET";
     defparam digit2_i0_i2.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2_i0_i1 (.D(dig1[1]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=127, LSE_RLINE=134 *) FD1P3XZ digit2_i0_i1 (.D(dig1[1]), 
             .SP(shift_enable), .CK(int_osc), .SR(shift_enable_N_211), 
             .Q(dig2[1]));
     defparam digit2_i0_i1.REGSET = "RESET";
     defparam digit2_i0_i1.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2_i0_i0 (.D(dig1[0]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=127, LSE_RLINE=134 *) FD1P3XZ digit2_i0_i0 (.D(dig1[0]), 
             .SP(shift_enable), .CK(int_osc), .SR(shift_enable_N_211), 
             .Q(dig2[0]));
     defparam digit2_i0_i0.REGSET = "RESET";
     defparam digit2_i0_i0.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1_i0_i3 (.D(hex_decoded[3]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=127, LSE_RLINE=134 *) FD1P3XZ digit1_i0_i3 (.D(hex_decoded[3]), 
             .SP(shift_enable), .CK(int_osc), .SR(shift_enable_N_211), 
             .Q(dig1[3]));
     defparam digit1_i0_i3.REGSET = "RESET";
     defparam digit1_i0_i3.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1_i0_i0 (.D(hex_decoded[0]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=127, LSE_RLINE=134 *) FD1P3XZ digit1_i0_i0 (.D(hex_decoded[0]), 
             .SP(shift_enable), .CK(int_osc), .SR(shift_enable_N_211), 
             .Q(dig1[0]));
     defparam digit1_i0_i0.REGSET = "RESET";
     defparam digit1_i0_i0.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1_i0_i2 (.D(hex_decoded[2]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=127, LSE_RLINE=134 *) FD1P3XZ digit1_i0_i2 (.D(hex_decoded[2]), 
             .SP(shift_enable), .CK(int_osc), .SR(shift_enable_N_211), 
             .Q(dig1[2]));
     defparam digit1_i0_i2.REGSET = "RESET";
     defparam digit1_i0_i2.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit1_i0_i1 (.D(hex_decoded[1]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=127, LSE_RLINE=134 *) FD1P3XZ digit1_i0_i1 (.D(hex_decoded[1]), 
             .SP(shift_enable), .CK(int_osc), .SR(shift_enable_N_211), 
             .Q(dig1[1]));
     defparam digit1_i0_i1.REGSET = "RESET";
     defparam digit1_i0_i1.SRMODE = "ASYNC";
-    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=121, LSE_RLINE=128 *) FD1P3XZ digit2_i0_i3 (.D(dig1[3]), 
+    (* LSE_LINE_FILE_ID=33, LSE_LCOL=19, LSE_RCOL=4, LSE_LLINE=127, LSE_RLINE=134 *) FD1P3XZ digit2_i0_i3 (.D(dig1[3]), 
             .SP(shift_enable), .CK(int_osc), .SR(shift_enable_N_211), 
             .Q(dig2[3]));
     defparam digit2_i0_i3.REGSET = "RESET";

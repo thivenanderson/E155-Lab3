@@ -50,9 +50,9 @@ module lab3_ta_controller_tb();
 
     initial begin
 
-        // ---------------------------------------------------------
+        
         // Initial values
-        // ---------------------------------------------------------
+   
 
         reset       = 1;
         scan_done   = 0;
@@ -64,9 +64,9 @@ module lab3_ta_controller_tb();
         saved_col   = 2'd0;
 
 
-        // =========================================================
-        // TEST ASYNCHRONOUS RESET
-        // =========================================================
+
+        // test asynch reset
+  
 
         #2;
         reset = 0;       // not on a clock edge
@@ -88,12 +88,12 @@ module lab3_ta_controller_tb();
         reset = 1;
 
 
-        // =========================================================
-        // MULTIPLE KEYS
+        
+        // Test multiple keys
         //
         // SCAN -> CHECK -> SCAN
-        // Must not save anything.
-        // =========================================================
+        // Should not go to save
+
 
         keypad    = 16'b1100_0000_0000_0000;
         scan_done = 1;
@@ -124,12 +124,12 @@ module lab3_ta_controller_tb();
             $error("FAILED multi-key rejection.");
 
 
-        // =========================================================
-        // VALID KEY
+
+        // Test valid key
         //
         // SCAN -> CHECK
         // save_enable should assert during CHECK.
-        // =========================================================
+
 
         @(negedge clk);
 
@@ -162,9 +162,9 @@ module lab3_ta_controller_tb();
         saved_col = 2'd2;
 
 
-        // =========================================================
+
         // CHECK -> SAVE
-        // =========================================================
+ 
 
         @(posedge clk);
         #1;
@@ -177,9 +177,8 @@ module lab3_ta_controller_tb();
             $error("FAILED CHECK -> SAVE.");
 
 
-        // =========================================================
         // SAVE -> SETTLE
-        // =========================================================
+
 
         @(posedge clk);
         #1;
@@ -191,9 +190,8 @@ module lab3_ta_controller_tb();
             $error("FAILED SAVE -> SETTLE.");
 
 
-        // =========================================================
         // SETTLE -> WAIT
-        // =========================================================
+
 
         @(posedge clk);
         #1;
@@ -206,12 +204,12 @@ module lab3_ta_controller_tb();
             $error("FAILED entry into WAIT.");
 
 
-        // =========================================================
-        // EXTRA KEY WHILE ORIGINAL KEY IS HELD
+   
+        // Multi key press test
         //
         // saved_col = 2, so bit 2 must stay LOW.
         // Another column can also go low and should be ignored.
-        // =========================================================
+
 
         @(negedge clk);
 
@@ -231,11 +229,11 @@ module lab3_ta_controller_tb();
             $error("FAILED additional-key behavior during WAIT.");
 
 
-        // =========================================================
-        // COMPLETE DEBOUNCE
+
+        // Test debounce
         //
         // WAIT -> PULSE
-        // =========================================================
+
 
         @(negedge clk);
 
@@ -252,11 +250,11 @@ module lab3_ta_controller_tb();
             $error("FAILED WAIT -> PULSE.");
 
 
-        // =========================================================
+    
         // PULSE -> PRESSED
         //
         // shift_enable must last exactly one clock.
-        // =========================================================
+
 
         @(negedge clk);
         db_done = 0;
@@ -272,11 +270,11 @@ module lab3_ta_controller_tb();
             $error("FAILED one-cycle shift pulse.");
 
 
-        // =========================================================
+   
         // HOLD KEY
         //
         // Should remain PRESSED and never register again.
-        // =========================================================
+
 
         repeat (3) begin
 
@@ -292,12 +290,12 @@ module lab3_ta_controller_tb();
         end
 
 
-        // =========================================================
-        // RELEASE ORIGINAL KEY
+
+        // Test release of key presed
         //
         // saved_col = 2 -> set bit 2 back HIGH.
         // PRESSED -> SCAN
-        // =========================================================
+
 
         @(negedge clk);
 
@@ -315,9 +313,9 @@ module lab3_ta_controller_tb();
             $error("FAILED release -> SCAN.");
 
 
-        // =========================================================
-        // FINAL ASYNCHRONOUS RESET TEST FROM NON-SCAN STATE
-        // =========================================================
+
+        // Test asynch reset from non SCAN state
+
 
         @(negedge clk);
 
@@ -335,7 +333,7 @@ module lab3_ta_controller_tb();
             $error("FAILED to enter CHECK.");
 
 
-        // Assert reset BETWEEN clock edges
+        // Assert reset asynch
         #2;
         reset = 0;
 

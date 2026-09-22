@@ -1,0 +1,14 @@
+BEGIN 1:lab3_ta_sync:fast:work
+    n1 :  1:lab3_ta_top_tb:fast:work
+END 
+BEGIN 1:lab3_ta:fast:work
+    col_sync :  1:lab3_ta_top_tb:fast:work
+    dig2 :  1:lab3_ta_top_tb:fast:work
+    saved_row :  1:lab3_ta_top_tb:fast:work
+    saved_col :  1:lab3_ta_top_tb:fast:work
+    dig1 :  1:lab3_ta_top_tb:fast:work
+    scan_enable :  1:lab3_ta_top_tb:fast:work
+    int_osc :  1:lab3_ta_top_tb:fast:work
+    save_enable :  1:lab3_ta_top_tb:fast:work
+    db_enable :  1:lab3_ta_top_tb:fast:work
+END 

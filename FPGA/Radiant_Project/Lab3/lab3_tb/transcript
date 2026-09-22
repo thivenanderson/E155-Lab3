@@ -14,804 +14,14 @@
 # //
 # do C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/lab3_tb.vdo
 # ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# Creating library 'qrun.out/work'.
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# Start time: 17:21:13 on Sep 20,2026
-# 
-# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
-# 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# -- Compiling module lab3_ta
-# 
-# -- Compiling module lab1_ta_hex_seg_decoder
-# 
-# -- Compiling module lab2_ta_counter
-# 
-# -- Compiling module lab3_ta_scanner
-# 
-# -- Compiling module lab3_ta_sync
-# 
-# -- Compiling module lab3_ta_keypad_decoder
-# 
-# -- Compiling module lab3_ta_keypad_builder
-# 
-# -- Compiling module lab3_ta_digit_sr
-# 
-# -- Compiling module lab3_ta_controller
-# 
-# -- Compiling module lab3_ta_scanner_tb
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta
-# 
-# 	lab3_ta_scanner_tb
-# 
-# End time: 17:21:13 on Sep 20,2026, Elapsed time: 0:00:00
-# 
-# Errors: 0, Warnings: 0
-# 
-# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# 
-# Start time: 17:21:14 on Sep 20,2026
-# 
-# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_scanner_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
-# 
-# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta_scanner_tb
-# 
-# 
-# 
-# Analyzing design...
-# 
-# -- Loading module lab3_ta_scanner_tb
-# 
-# -- Loading module lab3_ta_scanner
-# 
-# -- Loading module lab2_ta_counter
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# Optimizing 3 design-units (inlining 0/3 module instances):
-# 
-# -- Optimizing module lab3_ta_scanner_tb(fast)
-# 
-# -- Optimizing module lab3_ta_scanner(fast)
-# 
-# -- Optimizing module lab2_ta_counter(fast)
-# 
-# Optimized design name is qrun_opt
-# 
-# End time: 17:21:14 on Sep 20,2026, Elapsed time: 0:00:00
-# 
-# Errors: 0, Warnings: 3
-# 
-vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
-# //  Questa Lattice OEM Edition-64
-# //  Version 2025.2 win64 May 31 2025
-# //
-# // Unpublished work. Copyright 2025 Siemens
-# //
-# // This material contains trade secrets or otherwise confidential information
-# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
-# // "SISW"), or its licensors. Access to and use of this information is strictly
-# // limited as set forth in the Customer's applicable agreements with SISW.
-# //
-# // This material may not be copied, distributed, or otherwise disclosed outside
-# // of the Customer's facilities without the express written permission of SISW,
-# // and may not be used in any way not expressly authorized by SISW.
-# //
-# do C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/lab3_tb.vdo
-# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
 # Deleting directory qrun.out...
 # Creating library 'qrun.out/work'.
 # Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
 # 
 # 
-# Start time: 17:32:55 on Sep 20,2026
+# Start time: 21:46:37 on Sep 21,2026
 # 
-# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
-# 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# -- Compiling module lab3_ta
-# 
-# -- Compiling module lab1_ta_hex_seg_decoder
-# 
-# -- Compiling module lab2_ta_counter
-# 
-# -- Compiling module lab3_ta_scanner
-# 
-# -- Compiling module lab3_ta_sync
-# 
-# -- Compiling module lab3_ta_keypad_decoder
-# 
-# -- Compiling module lab3_ta_keypad_builder
-# 
-# -- Compiling module lab3_ta_digit_sr
-# 
-# -- Compiling module lab3_ta_controller
-# 
-# -- Compiling module lab3_ta_scanner_tb
-# 
-# -- Compiling module lab3_ta_sync_tb
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta
-# 
-# 	lab3_ta_scanner_tb
-# 
-# 	lab3_ta_sync_tb
-# 
-# End time: 17:32:55 on Sep 20,2026, Elapsed time: 0:00:00
-# 
-# Errors: 0, Warnings: 0
-# 
-# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# 
-# Start time: 17:32:55 on Sep 20,2026
-# 
-# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_sync_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
-# 
-# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta_sync_tb
-# 
-# 
-# 
-# Analyzing design...
-# 
-# -- Loading module lab3_ta_sync_tb
-# 
-# -- Loading module lab3_ta_sync
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# Optimizing 2 design-units (inlining 0/2 module instances):
-# 
-# -- Optimizing module lab3_ta_sync_tb(fast)
-# 
-# -- Optimizing module lab3_ta_sync(fast)
-# 
-# Optimized design name is qrun_opt
-# 
-# End time: 17:32:56 on Sep 20,2026, Elapsed time: 0:00:01
-# 
-# Errors: 0, Warnings: 3
-# 
-vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
-# //  Questa Lattice OEM Edition-64
-# //  Version 2025.2 win64 May 31 2025
-# //
-# // Unpublished work. Copyright 2025 Siemens
-# //
-# // This material contains trade secrets or otherwise confidential information
-# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
-# // "SISW"), or its licensors. Access to and use of this information is strictly
-# // limited as set forth in the Customer's applicable agreements with SISW.
-# //
-# // This material may not be copied, distributed, or otherwise disclosed outside
-# // of the Customer's facilities without the express written permission of SISW,
-# // and may not be used in any way not expressly authorized by SISW.
-# //
-# do C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/lab3_tb.vdo
-# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# Deleting directory qrun.out...
-# Creating library 'qrun.out/work'.
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# Start time: 17:36:47 on Sep 20,2026
-# 
-# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
-# 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# -- Compiling module lab3_ta
-# 
-# -- Compiling module lab1_ta_hex_seg_decoder
-# 
-# -- Compiling module lab2_ta_counter
-# 
-# -- Compiling module lab3_ta_scanner
-# 
-# -- Compiling module lab3_ta_sync
-# 
-# -- Compiling module lab3_ta_keypad_decoder
-# 
-# -- Compiling module lab3_ta_keypad_builder
-# 
-# -- Compiling module lab3_ta_digit_sr
-# 
-# -- Compiling module lab3_ta_controller
-# 
-# -- Compiling module lab3_ta_scanner_tb
-# 
-# -- Compiling module lab3_ta_sync_tb
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta
-# 
-# 	lab3_ta_scanner_tb
-# 
-# 	lab3_ta_sync_tb
-# 
-# End time: 17:36:47 on Sep 20,2026, Elapsed time: 0:00:00
-# 
-# Errors: 0, Warnings: 0
-# 
-# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# 
-# Start time: 17:36:47 on Sep 20,2026
-# 
-# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_scanner_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
-# 
-# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta_scanner_tb
-# 
-# 
-# 
-# Analyzing design...
-# 
-# -- Loading module lab3_ta_scanner_tb
-# 
-# -- Loading module lab3_ta_scanner
-# 
-# -- Loading module lab2_ta_counter
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# Optimizing 3 design-units (inlining 0/3 module instances):
-# 
-# -- Optimizing module lab3_ta_scanner_tb(fast)
-# 
-# -- Optimizing module lab3_ta_scanner(fast)
-# 
-# -- Optimizing module lab2_ta_counter(fast)
-# 
-# Optimized design name is qrun_opt
-# 
-# End time: 17:36:48 on Sep 20,2026, Elapsed time: 0:00:01
-# 
-# Errors: 0, Warnings: 3
-# 
-vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
-# //  Questa Lattice OEM Edition-64
-# //  Version 2025.2 win64 May 31 2025
-# //
-# // Unpublished work. Copyright 2025 Siemens
-# //
-# // This material contains trade secrets or otherwise confidential information
-# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
-# // "SISW"), or its licensors. Access to and use of this information is strictly
-# // limited as set forth in the Customer's applicable agreements with SISW.
-# //
-# // This material may not be copied, distributed, or otherwise disclosed outside
-# // of the Customer's facilities without the express written permission of SISW,
-# // and may not be used in any way not expressly authorized by SISW.
-# //
-# do C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/lab3_tb.vdo
-# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# Deleting directory qrun.out...
-# Creating library 'qrun.out/work'.
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# Start time: 17:41:41 on Sep 20,2026
-# 
-# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
-# 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# -- Compiling module lab3_ta
-# 
-# -- Compiling module lab1_ta_hex_seg_decoder
-# 
-# -- Compiling module lab2_ta_counter
-# 
-# -- Compiling module lab3_ta_scanner
-# 
-# -- Compiling module lab3_ta_sync
-# 
-# -- Compiling module lab3_ta_keypad_decoder
-# 
-# -- Compiling module lab3_ta_keypad_builder
-# 
-# -- Compiling module lab3_ta_digit_sr
-# 
-# -- Compiling module lab3_ta_controller
-# 
-# -- Compiling module lab3_ta_scanner_tb
-# 
-# -- Compiling module lab3_ta_sync_tb
-# 
-# -- Compiling module lab3_ta_digit_sr_tb
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta
-# 
-# 	lab3_ta_scanner_tb
-# 
-# 	lab3_ta_sync_tb
-# 
-# 	lab3_ta_digit_sr_tb
-# 
-# End time: 17:41:41 on Sep 20,2026, Elapsed time: 0:00:00
-# 
-# Errors: 0, Warnings: 0
-# 
-# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# 
-# Start time: 17:41:42 on Sep 20,2026
-# 
-# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_digit_sr_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
-# 
-# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta_digit_sr_tb
-# 
-# 
-# 
-# Analyzing design...
-# 
-# -- Loading module lab3_ta_digit_sr_tb
-# 
-# -- Loading module lab3_ta_digit_sr
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# Optimizing 2 design-units (inlining 0/2 module instances):
-# 
-# -- Optimizing module lab3_ta_digit_sr_tb(fast)
-# 
-# -- Optimizing module lab3_ta_digit_sr(fast)
-# 
-# Optimized design name is qrun_opt
-# 
-# End time: 17:41:42 on Sep 20,2026, Elapsed time: 0:00:00
-# 
-# Errors: 0, Warnings: 3
-# 
-vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
-# //  Questa Lattice OEM Edition-64
-# //  Version 2025.2 win64 May 31 2025
-# //
-# // Unpublished work. Copyright 2025 Siemens
-# //
-# // This material contains trade secrets or otherwise confidential information
-# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
-# // "SISW"), or its licensors. Access to and use of this information is strictly
-# // limited as set forth in the Customer's applicable agreements with SISW.
-# //
-# // This material may not be copied, distributed, or otherwise disclosed outside
-# // of the Customer's facilities without the express written permission of SISW,
-# // and may not be used in any way not expressly authorized by SISW.
-# //
-# do C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/lab3_tb.vdo
-# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# Deleting directory qrun.out...
-# Creating library 'qrun.out/work'.
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# Start time: 17:48:10 on Sep 20,2026
-# 
-# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
-# 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# -- Compiling module lab3_ta
-# 
-# -- Compiling module lab1_ta_hex_seg_decoder
-# 
-# -- Compiling module lab2_ta_counter
-# 
-# -- Compiling module lab3_ta_scanner
-# 
-# -- Compiling module lab3_ta_sync
-# 
-# -- Compiling module lab3_ta_keypad_decoder
-# 
-# -- Compiling module lab3_ta_keypad_builder
-# 
-# -- Compiling module lab3_ta_digit_sr
-# 
-# -- Compiling module lab3_ta_controller
-# 
-# -- Compiling module lab3_ta_scanner_tb
-# 
-# -- Compiling module lab3_ta_sync_tb
-# 
-# -- Compiling module lab3_ta_digit_sr_tb
-# 
-# -- Compiling module lab3_ta_keypad_builder_tb
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta
-# 
-# 	lab3_ta_scanner_tb
-# 
-# 	lab3_ta_sync_tb
-# 
-# 	lab3_ta_digit_sr_tb
-# 
-# 	lab3_ta_keypad_builder_tb
-# 
-# End time: 17:48:10 on Sep 20,2026, Elapsed time: 0:00:00
-# 
-# Errors: 0, Warnings: 0
-# 
-# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# 
-# Start time: 17:48:11 on Sep 20,2026
-# 
-# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_keypad_builder_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
-# 
-# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta_keypad_builder_tb
-# 
-# 
-# 
-# Analyzing design...
-# 
-# -- Loading module lab3_ta_keypad_builder_tb
-# 
-# -- Loading module lab3_ta_keypad_builder
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# Optimizing 2 design-units (inlining 0/2 module instances):
-# 
-# -- Optimizing module lab3_ta_keypad_builder_tb(fast)
-# 
-# -- Optimizing module lab3_ta_keypad_builder(fast)
-# 
-# Optimized design name is qrun_opt
-# 
-# End time: 17:48:11 on Sep 20,2026, Elapsed time: 0:00:00
-# 
-# Errors: 0, Warnings: 3
-# 
-vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
-# //  Questa Lattice OEM Edition-64
-# //  Version 2025.2 win64 May 31 2025
-# //
-# // Unpublished work. Copyright 2025 Siemens
-# //
-# // This material contains trade secrets or otherwise confidential information
-# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
-# // "SISW"), or its licensors. Access to and use of this information is strictly
-# // limited as set forth in the Customer's applicable agreements with SISW.
-# //
-# // This material may not be copied, distributed, or otherwise disclosed outside
-# // of the Customer's facilities without the express written permission of SISW,
-# // and may not be used in any way not expressly authorized by SISW.
-# //
-# do C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/lab3_tb.vdo
-# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# Deleting directory qrun.out...
-# Creating library 'qrun.out/work'.
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# Start time: 18:06:57 on Sep 20,2026
-# 
-# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
-# 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# -- Compiling module lab3_ta
-# 
-# -- Compiling module lab1_ta_hex_seg_decoder
-# 
-# -- Compiling module lab2_ta_counter
-# 
-# -- Compiling module lab3_ta_scanner
-# 
-# -- Compiling module lab3_ta_sync
-# 
-# -- Compiling module lab3_ta_keypad_decoder
-# 
-# -- Compiling module lab3_ta_keypad_builder
-# 
-# -- Compiling module lab3_ta_digit_sr
-# 
-# -- Compiling module lab3_ta_controller
-# 
-# -- Compiling module lab3_ta_scanner_tb
-# 
-# -- Compiling module lab3_ta_sync_tb
-# 
-# -- Compiling module lab3_ta_digit_sr_tb
-# 
-# -- Compiling module lab3_ta_keypad_builder_tb
-# 
-# -- Compiling module lab3_ta_keypad_decoder_tb
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta
-# 
-# 	lab3_ta_scanner_tb
-# 
-# 	lab3_ta_sync_tb
-# 
-# 	lab3_ta_digit_sr_tb
-# 
-# 	lab3_ta_keypad_builder_tb
-# 
-# 	lab3_ta_keypad_decoder_tb
-# 
-# End time: 18:06:57 on Sep 20,2026, Elapsed time: 0:00:00
-# 
-# Errors: 0, Warnings: 0
-# 
-# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# 
-# Start time: 18:06:57 on Sep 20,2026
-# 
-# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_keypad_decoder_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
-# 
-# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# ** Warning: (vopt-31) Unable to unlink file "C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/qrun.out/work/qrun_opt/_lib.qdb".
-# 
-# ** Warning: (vopt-133) Unable to remove directory "C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/qrun.out/work/qrun_opt".
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta_keypad_decoder_tb
-# 
-# 
-# 
-# Analyzing design...
-# 
-# -- Loading module lab3_ta_keypad_decoder_tb
-# 
-# -- Loading module lab3_ta_keypad_decoder
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# init_auxdbinfo(): INTERNAL ERROR: Cannot open page file "C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/qrun.out/work/qrun_opt/_lib1_0.qpg" in read mode
-# 
-# Optimizing 2 design-units (inlining 0/2 module instances):
-# 
-# -- Optimizing module lab3_ta_keypad_decoder_tb(fast)
-# 
-# -- Optimizing module lab3_ta_keypad_decoder(fast)
-# 
-# Optimized design name is qrun_opt
-# 
-# End time: 18:06:59 on Sep 20,2026, Elapsed time: 0:00:02
-# 
-# Errors: 0, Warnings: 5
-# 
-vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
-# //  Questa Lattice OEM Edition-64
-# //  Version 2025.2 win64 May 31 2025
-# //
-# // Unpublished work. Copyright 2025 Siemens
-# //
-# // This material contains trade secrets or otherwise confidential information
-# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
-# // "SISW"), or its licensors. Access to and use of this information is strictly
-# // limited as set forth in the Customer's applicable agreements with SISW.
-# //
-# // This material may not be copied, distributed, or otherwise disclosed outside
-# // of the Customer's facilities without the express written permission of SISW,
-# // and may not be used in any way not expressly authorized by SISW.
-# //
-# do C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/lab3_tb.vdo
-# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# Deleting directory qrun.out...
-# Creating library 'qrun.out/work'.
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# Start time: 16:33:36 on Sep 21,2026
-# 
-# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
-# 
-# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# -- Compiling module lab3_ta
-# 
-# -- Compiling module lab1_ta_hex_seg_decoder
-# 
-# -- Compiling module lab2_ta_counter
-# 
-# -- Compiling module lab3_ta_scanner
-# 
-# -- Compiling module lab3_ta_sync
-# 
-# -- Compiling module lab3_ta_keypad_decoder
-# 
-# -- Compiling module lab3_ta_keypad_builder
-# 
-# -- Compiling module lab3_ta_digit_sr
-# 
-# -- Compiling module lab3_ta_controller
-# 
-# -- Compiling module lab3_ta_scanner_tb
-# 
-# -- Compiling module lab3_ta_sync_tb
-# 
-# -- Compiling module lab3_ta_digit_sr_tb
-# 
-# -- Compiling module lab3_ta_keypad_builder_tb
-# 
-# -- Compiling module lab3_ta_keypad_decoder_tb
-# 
-# -- Compiling module lab3_ta_savedkey_sr
-# 
-# -- Compiling module lab3_ta_savedkey_sr_tb
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta
-# 
-# 	lab3_ta_scanner_tb
-# 
-# 	lab3_ta_sync_tb
-# 
-# 	lab3_ta_digit_sr_tb
-# 
-# 	lab3_ta_keypad_builder_tb
-# 
-# 	lab3_ta_keypad_decoder_tb
-# 
-# 	lab3_ta_savedkey_sr_tb
-# 
-# End time: 16:33:36 on Sep 21,2026, Elapsed time: 0:00:00
-# 
-# Errors: 0, Warnings: 0
-# 
-# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# 
-# Start time: 16:33:37 on Sep 21,2026
-# 
-# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_savedkey_sr_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
-# 
-# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# 
-# ** Warning: (vopt-31) Unable to unlink file "C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/qrun.out/work/qrun_opt/_lib.qdb".
-# 
-# ** Warning: (vopt-133) Unable to remove directory "C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/qrun.out/work/qrun_opt".
-# 
-# 
-# 
-# Top level modules:
-# 
-# 	lab3_ta_savedkey_sr_tb
-# 
-# 
-# 
-# Analyzing design...
-# 
-# -- Loading module lab3_ta_savedkey_sr_tb
-# 
-# -- Loading module lab3_ta_savedkey_sr
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
-# 
-# Optimizing 2 design-units (inlining 0/2 module instances):
-# 
-# -- Optimizing module lab3_ta_savedkey_sr_tb(fast)
-# 
-# -- Optimizing module lab3_ta_savedkey_sr(fast)
-# 
-# Optimized design name is qrun_opt
-# 
-# End time: 16:33:38 on Sep 21,2026, Elapsed time: 0:00:01
-# 
-# Errors: 0, Warnings: 5
-# 
-vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
-# //  Questa Lattice OEM Edition-64
-# //  Version 2025.2 win64 May 31 2025
-# //
-# // Unpublished work. Copyright 2025 Siemens
-# //
-# // This material contains trade secrets or otherwise confidential information
-# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
-# // "SISW"), or its licensors. Access to and use of this information is strictly
-# // limited as set forth in the Customer's applicable agreements with SISW.
-# //
-# // This material may not be copied, distributed, or otherwise disclosed outside
-# // of the Customer's facilities without the express written permission of SISW,
-# // and may not be used in any way not expressly authorized by SISW.
-# //
-# do C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/lab3_tb.vdo
-# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
-# Deleting directory qrun.out...
-# Creating library 'qrun.out/work'.
-# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# 
-# 
-# Start time: 17:32:56 on Sep 21,2026
-# 
-# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
 # 
 # ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
 # 
@@ -849,11 +59,11 @@ vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -d
 # 
 # -- Compiling module lab3_ta_controller_tb
 # 
+# -- Compiling module lab3_ta_top_tb
+# 
 # 
 # 
 # Top level modules:
-# 
-# 	lab3_ta
 # 
 # 	lab3_ta_scanner_tb
 # 
@@ -869,7 +79,9 @@ vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -d
 # 
 # 	lab3_ta_controller_tb
 # 
-# End time: 17:32:56 on Sep 21,2026, Elapsed time: 0:00:00
+# 	lab3_ta_top_tb
+# 
+# End time: 21:46:38 on Sep 21,2026, Elapsed time: 0:00:01
 # 
 # Errors: 0, Warnings: 0
 # 
@@ -878,9 +90,9 @@ vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -d
 # 
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # 
-# Start time: 17:32:57 on Sep 21,2026
+# Start time: 21:46:38 on Sep 21,2026
 # 
-# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_controller_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_top_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
 # 
 # ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
 # 
@@ -888,32 +100,462 @@ vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -d
 # 
 # Top level modules:
 # 
-# 	lab3_ta_controller_tb
+# 	lab3_ta_top_tb
 # 
 # 
 # 
 # Analyzing design...
 # 
-# -- Loading module lab3_ta_controller_tb
+# -- Loading module lab3_ta_top_tb
+# 
+# -- Loading module lab3_ta
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module lab3_ta_sync
+# 
+# -- Loading module lab3_ta_scanner
+# 
+# -- Loading module lab2_ta_counter
+# 
+# -- Loading module lab3_ta_keypad_builder
+# 
+# -- Loading module lab3_ta_keypad_decoder
 # 
 # -- Loading module lab3_ta_controller
 # 
-# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# -- Loading module lab3_ta_digit_sr
+# 
+# -- Loading module lab3_ta_savedkey_sr
+# 
+# -- Loading module lab1_ta_hex_seg_decoder
 # 
 # ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
 # 
-# Optimizing 2 design-units (inlining 0/2 module instances):
+# Optimizing 17 design-units (inlining 4/18 module instances):
 # 
-# -- Optimizing module lab3_ta_controller_tb(fast)
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab3_ta_top_tb(fast)
 # 
 # -- Optimizing module lab3_ta_controller(fast)
 # 
 # ** Note: (vopt-143) Recognized 1 FSM in module "lab3_ta_controller(fast)".
 # 
+# -- Optimizing module lab3_ta(fast)
+# 
+# -- Optimizing module lab3_ta_keypad_decoder(fast)
+# 
+# -- Optimizing module lab3_ta_scanner(fast)
+# 
+# -- Optimizing module lab3_ta_keypad_builder(fast)
+# 
+# -- Optimizing module lab1_ta_hex_seg_decoder(fast)
+# 
+# -- Optimizing module lab3_ta_digit_sr(fast)
+# 
+# -- Optimizing module lab3_ta_savedkey_sr(fast)
+# 
+# -- Optimizing module lab2_ta_counter(fast)
+# 
+# -- Optimizing module lab2_ta_counter(fast__1)
+# 
+# -- Optimizing module lab3_ta_sync(fast)
+# 
 # Optimized design name is qrun_opt
 # 
-# End time: 17:32:57 on Sep 21,2026, Elapsed time: 0:00:00
+# End time: 21:46:38 on Sep 21,2026, Elapsed time: 0:00:00
 # 
-# Errors: 0, Warnings: 3
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/lab3_tb.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 21:50:21 on Sep 21,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab3_ta
+# 
+# -- Compiling module lab1_ta_hex_seg_decoder
+# 
+# -- Compiling module lab2_ta_counter
+# 
+# -- Compiling module lab3_ta_scanner
+# 
+# -- Compiling module lab3_ta_sync
+# 
+# -- Compiling module lab3_ta_keypad_decoder
+# 
+# -- Compiling module lab3_ta_keypad_builder
+# 
+# -- Compiling module lab3_ta_digit_sr
+# 
+# -- Compiling module lab3_ta_controller
+# 
+# -- Compiling module lab3_ta_scanner_tb
+# 
+# -- Compiling module lab3_ta_sync_tb
+# 
+# -- Compiling module lab3_ta_digit_sr_tb
+# 
+# -- Compiling module lab3_ta_keypad_builder_tb
+# 
+# -- Compiling module lab3_ta_keypad_decoder_tb
+# 
+# -- Compiling module lab3_ta_savedkey_sr
+# 
+# -- Compiling module lab3_ta_savedkey_sr_tb
+# 
+# -- Compiling module lab3_ta_controller_tb
+# 
+# -- Compiling module lab3_ta_top_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab3_ta_scanner_tb
+# 
+# 	lab3_ta_sync_tb
+# 
+# 	lab3_ta_digit_sr_tb
+# 
+# 	lab3_ta_keypad_builder_tb
+# 
+# 	lab3_ta_keypad_decoder_tb
+# 
+# 	lab3_ta_savedkey_sr_tb
+# 
+# 	lab3_ta_controller_tb
+# 
+# 	lab3_ta_top_tb
+# 
+# End time: 21:50:21 on Sep 21,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 21:50:21 on Sep 21,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_top_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab3_ta_top_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab3_ta_top_tb
+# 
+# -- Loading module lab3_ta
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module lab3_ta_sync
+# 
+# -- Loading module lab3_ta_scanner
+# 
+# -- Loading module lab2_ta_counter
+# 
+# -- Loading module lab3_ta_keypad_builder
+# 
+# -- Loading module lab3_ta_keypad_decoder
+# 
+# -- Loading module lab3_ta_controller
+# 
+# -- Loading module lab3_ta_digit_sr
+# 
+# -- Loading module lab3_ta_savedkey_sr
+# 
+# -- Loading module lab1_ta_hex_seg_decoder
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 17 design-units (inlining 4/18 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab3_ta_top_tb(fast)
+# 
+# -- Optimizing module lab3_ta_controller(fast)
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "lab3_ta_controller(fast)".
+# 
+# -- Optimizing module lab3_ta(fast)
+# 
+# -- Optimizing module lab3_ta_keypad_decoder(fast)
+# 
+# -- Optimizing module lab3_ta_scanner(fast)
+# 
+# -- Optimizing module lab3_ta_keypad_builder(fast)
+# 
+# -- Optimizing module lab1_ta_hex_seg_decoder(fast)
+# 
+# -- Optimizing module lab3_ta_digit_sr(fast)
+# 
+# -- Optimizing module lab3_ta_savedkey_sr(fast)
+# 
+# -- Optimizing module lab2_ta_counter(fast)
+# 
+# -- Optimizing module lab2_ta_counter(fast__1)
+# 
+# -- Optimizing module lab3_ta_sync(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 21:50:22 on Sep 21,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/lab3_tb/lab3_tb.vdo
+# ** Note: (qrun-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# Start time: 22:23:01 on Sep 21,2026
+# 
+# vlog -reportprogress 300 -L work -sv -L pmi_work -L ovi_ice40up C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab1_ta_hex_seg_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab2_ta_counter.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_builder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -csession=incr 
+# 
+# ** Note: (vlog-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# -- Compiling module lab3_ta
+# 
+# -- Compiling module lab1_ta_hex_seg_decoder
+# 
+# -- Compiling module lab2_ta_counter
+# 
+# -- Compiling module lab3_ta_scanner
+# 
+# -- Compiling module lab3_ta_sync
+# 
+# -- Compiling module lab3_ta_keypad_decoder
+# 
+# -- Compiling module lab3_ta_keypad_builder
+# 
+# -- Compiling module lab3_ta_digit_sr
+# 
+# -- Compiling module lab3_ta_controller
+# 
+# -- Compiling module lab3_ta_scanner_tb
+# 
+# -- Compiling module lab3_ta_sync_tb
+# 
+# -- Compiling module lab3_ta_digit_sr_tb
+# 
+# -- Compiling module lab3_ta_keypad_builder_tb
+# 
+# -- Compiling module lab3_ta_keypad_decoder_tb
+# 
+# -- Compiling module lab3_ta_savedkey_sr
+# 
+# -- Compiling module lab3_ta_savedkey_sr_tb
+# 
+# -- Compiling module lab3_ta_controller_tb
+# 
+# -- Compiling module lab3_ta_top_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab3_ta_scanner_tb
+# 
+# 	lab3_ta_sync_tb
+# 
+# 	lab3_ta_digit_sr_tb
+# 
+# 	lab3_ta_keypad_builder_tb
+# 
+# 	lab3_ta_keypad_decoder_tb
+# 
+# 	lab3_ta_savedkey_sr_tb
+# 
+# 	lab3_ta_controller_tb
+# 
+# 	lab3_ta_top_tb
+# 
+# End time: 22:23:01 on Sep 21,2026, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2025.2 Compiler 2025.05 May 31 2025
+# 
+# 
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# 
+# Start time: 22:23:01 on Sep 21,2026
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up lab3_ta_top_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=3 
+# 
+# ** Note: (vopt-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	lab3_ta_top_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module lab3_ta_top_tb
+# 
+# -- Loading module lab3_ta
+# 
+# -- Loading module ovi_ice40up.HSOSC
+# 
+# -- Loading module ovi_ice40up.VLO
+# 
+# -- Loading module ovi_ice40up.HSOSC_CORE
+# 
+# -- Loading module ovi_ice40up.HFOSC
+# 
+# -- Loading module ovi_ice40up.HFOSC_CORE
+# 
+# -- Loading module lab3_ta_sync
+# 
+# -- Loading module lab3_ta_scanner
+# 
+# -- Loading module lab2_ta_counter
+# 
+# -- Loading module lab3_ta_keypad_builder
+# 
+# -- Loading module lab3_ta_keypad_decoder
+# 
+# -- Loading module lab3_ta_controller
+# 
+# -- Loading module lab3_ta_digit_sr
+# 
+# -- Loading module lab3_ta_savedkey_sr
+# 
+# -- Loading module lab1_ta_hex_seg_decoder
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 17 design-units (inlining 4/18 module instances):
+# 
+# -- Inlining module ovi_ice40up.VLO(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC_CORE(fast)
+# 
+# -- Inlining module ovi_ice40up.HFOSC(fast)
+# 
+# -- Inlining module ovi_ice40up.HSOSC_CORE(fast)
+# 
+# -- Optimizing module ovi_ice40up.HSOSC(fast)
+# 
+# -- Optimizing module lab3_ta_top_tb(fast)
+# 
+# -- Optimizing module lab3_ta_controller(fast)
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "lab3_ta_controller(fast)".
+# 
+# -- Optimizing module lab3_ta(fast)
+# 
+# -- Optimizing module lab3_ta_keypad_decoder(fast)
+# 
+# -- Optimizing module lab3_ta_scanner(fast)
+# 
+# -- Optimizing module lab3_ta_keypad_builder(fast)
+# 
+# -- Optimizing module lab1_ta_hex_seg_decoder(fast)
+# 
+# -- Optimizing module lab3_ta_digit_sr(fast)
+# 
+# -- Optimizing module lab3_ta_savedkey_sr(fast)
+# 
+# -- Optimizing module lab2_ta_counter(fast)
+# 
+# -- Optimizing module lab2_ta_counter(fast__1)
+# 
+# -- Optimizing module lab3_ta_sync(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 22:23:02 on Sep 21,2026, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 2
 # 
 vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log

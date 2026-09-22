@@ -56,6 +56,8 @@
 -sver "../source/impl_1/lab3_ta_keypad_decoder_tb.sv"
 -sver "../source/impl_1/lab3_ta_savedkey_sr.sv"
 -sver "../source/impl_1/lab3_ta_savedkey_sr_tb.sv"
+-sver "../source/impl_1/lab3_ta_controller_tb.sv"
+-sver "../source/impl_1/lab3_ta_top_tb.sv"
 -path ".."
 -top lab3_ta
 # Output Configuration

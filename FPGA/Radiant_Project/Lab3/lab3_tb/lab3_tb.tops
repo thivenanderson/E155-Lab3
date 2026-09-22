@@ -1,4 +1,3 @@
-lab3_ta,/,C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta.sv
 lab3_ta_scanner_tb,/,C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_scanner_tb.sv
 lab3_ta_sync_tb,/,C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_sync_tb.sv
 lab3_ta_digit_sr_tb,/,C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_digit_sr_tb.sv
@@ -6,3 +5,4 @@ lab3_ta_keypad_builder_tb,/,C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/
 lab3_ta_keypad_decoder_tb,/,C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_keypad_decoder_tb.sv
 lab3_ta_savedkey_sr_tb,/,C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_savedkey_sr_tb.sv
 lab3_ta_controller_tb,/,C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv
+lab3_ta_top_tb,/,C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_top_tb.sv

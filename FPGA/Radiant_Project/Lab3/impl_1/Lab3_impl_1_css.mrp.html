@@ -49,7 +49,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2026.1.0.37.0
-Mapped on: Mon Sep 21 16:21:21 2026
+Mapped on: Mon Sep 21 16:57:44 2026
 
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
@@ -62,8 +62,8 @@ Command line:   map -pdc C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Rad
 
    Number of slice registers:  94 out of  5280 (2%)
    Number of I/O registers:      4 out of   117 (3%)
-   Number of LUT4s:           316 out of  5280 (6%)
-      Number of logic LUT4s:             248
+   Number of LUT4s:           308 out of  5280 (6%)
+      Number of logic LUT4s:             240
       Number of inserted feedthru LUT4s:   9
       Number of replicated LUT4s:          1
       Number of ripple logic:             29 (58 LUT4s)
@@ -92,25 +92,25 @@ Command line:   map -pdc C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Rad
       Net int_osc: 98 loads, 98 rising, 0 falling (Driver: Pin hf_osc/CLKHF)
    Number of Clock Enables:  6
       Net VCC_net: 1 loads, 0 SLICEs
-      Net n1123: 8 loads, 8 SLICEs
-      Net n1120: 4 loads, 4 SLICEs
-      Net db_reset: 18 loads, 18 SLICEs
-      Net scan_enable: 17 loads, 17 SLICEs
       Pin enable: 18 loads, 18 SLICEs (Net: enable_c)
+      Net scan_enable: 17 loads, 17 SLICEs
+      Net db_reset: 18 loads, 18 SLICEs
+      Net save_enable: 4 loads, 4 SLICEs
+      Net shift_enable: 8 loads, 8 SLICEs
    Number of LSRs:  3
-      Net hex_counter_5__N_122: 36 loads, 36 SLICEs
-      Net i_DB_COUNTER.db_counter_0__N_96: 18 loads, 18 SLICEs
+      Net shift_enable_N_211: 55 loads, 55 SLICEs
+      Net i_DB_COUNTER.db_counter_0__N_126: 18 loads, 18 SLICEs
       Net i_SCANNER.i_SCAN_COUNTER.scan_reset_master: 17 loads, 17 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net hex_counter_5__N_122: 36 loads
+      Net shift_enable_N_211: 55 loads
       Net scan_enable: 24 loads
-      Net reset_c: 23 loads
       Net db_reset: 22 loads
-      Net db_done_N_177: 20 loads
+      Net db_done_N_209: 20 loads
       Net enable_c: 18 loads
-      Net i_DB_COUNTER.db_counter_0__N_96: 18 loads
+      Net i_DB_COUNTER.db_counter_0__N_126: 18 loads
       Net i_HEX_COUNTER.n35: 18 loads
-      Net i_SCANNER.i_SCAN_COUNTER.n3163: 17 loads
+      Net row_scan_idx[0]: 18 loads
+      Net i_SCANNER.i_SCAN_COUNTER.n3202: 17 loads
       Net i_SCANNER.i_SCAN_COUNTER.scan_reset_master: 17 loads
 
    Number of warnings:  0
@@ -181,16 +181,16 @@ OSC 1:                                 Pin/Node Value
 
 <A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
 
-Instance Name: hf_osc
-         Type: HFOSC
+Instance Name: i_SYNC/n1_i3
+         Type: IOLOGIC
 Instance Name: i_SYNC/n1_i2
          Type: IOLOGIC
 Instance Name: i_SYNC/n1_i1
          Type: IOLOGIC
 Instance Name: i_SYNC/n1_i0
          Type: IOLOGIC
-Instance Name: i_SYNC/n1_i3
-         Type: IOLOGIC
+Instance Name: hf_osc
+         Type: HFOSC
 
 <A name="mrp_consum"></A><B><U><big>Constraint Summary</big></U></B>
 
@@ -202,7 +202,7 @@ Instance Name: i_SYNC/n1_i3
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 69 MB
-Checksum -- map: ec97e761f6f8af0ba2baf9433fc5cbedd7a069b
+Checksum -- map: 4e92ab24b34e19f69f0fd3caede3b111aca86bd7
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995
      AT&amp;T Corp.   All rights reserved.

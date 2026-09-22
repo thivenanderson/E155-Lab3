@@ -9,7 +9,7 @@ module lab3_ta_savedkey_sr(
 	output logic [1:0] saved_col,
 	output logic [3:0] saved_row
 	);
-	always_ff @(posedge clk) begin
+	always_ff @(posedge clk, negedge reset) begin
 		if (!reset) begin
 			saved_row <= 4'b0;
 			saved_col <= 2'b0;

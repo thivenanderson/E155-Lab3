@@ -8,7 +8,7 @@ module lab3_ta_digit_sr(
 	input logic [3:0] digit,
 	output logic [3:0] digit1, digit2
 	);
-	always_ff @(posedge clk) begin
+	always_ff @(posedge clk, negedge reset) begin
 		if (!reset) begin
 			digit1 <= 4'b0000;
 			digit2 <= 4'b0000;

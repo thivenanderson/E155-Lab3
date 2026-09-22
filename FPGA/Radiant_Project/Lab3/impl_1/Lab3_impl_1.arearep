@@ -9,7 +9,7 @@ I/O cells:      19
                          HSOSC_CORE         1          100.0
                                  IB         6          100.0
                               IOL_B         4          100.0
-                               LUT4       247          100.0
+                               LUT4       240          100.0
                                  OB        13          100.0
 SUB MODULES
             lab1_ta_hex_seg_decoder         1
@@ -23,21 +23,16 @@ lab2_ta_counter(WIDTH=18,MAX_COUNT=239999)         1
                 lab3_ta_savedkey_sr         1
                     lab3_ta_scanner         1
                        lab3_ta_sync         1
-                              TOTAL       405
+                              TOTAL       398
 ----------------------------------------------------------------------
-Report for cell lab3_ta_savedkey_sr.v1
-Instance Path : i_SAVEDKEY_SR
+Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=200000).v1
+Instance Path : i_HEX_COUNTER
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ         6            6.4
-                              TOTAL         6
-----------------------------------------------------------------------
-Report for cell lab3_ta_keypad_decoder.v1
-Instance Path : i_KEYPAD_DECODER
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4        37           15.0
-                              TOTAL        37
+                                FA2        10           34.5
+                            FD1P3XZ        18           19.1
+                               LUT4        25           10.4
+                              TOTAL        53
 ----------------------------------------------------------------------
 Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=239999).v1
 Instance Path : i_DB_COUNTER
@@ -45,7 +40,7 @@ Instance Path : i_DB_COUNTER
                                cell     count   Res Usage(%)
                                 FA2        10           34.5
                             FD1P3XZ        18           19.1
-                               LUT4        19            7.7
+                               LUT4        19            7.9
                               TOTAL        47
 ----------------------------------------------------------------------
 Report for cell lab3_ta_scanner.v1
@@ -54,10 +49,10 @@ Instance Path : i_SCANNER
                                cell     count   Res Usage(%)
                                 FA2         9           31.0
                             FD1P3XZ        17           18.1
-                               LUT4        53           21.5
+                               LUT4        50           20.8
 SUB MODULES
 lab2_ta_counter(WIDTH=17,MAX_COUNT=95999)         1
-                              TOTAL        80
+                              TOTAL        77
 ----------------------------------------------------------------------
 Report for cell lab2_ta_counter(WIDTH=17,MAX_COUNT=95999).v1
 Instance Path : i_SCANNER.i_SCAN_COUNTER
@@ -65,39 +60,46 @@ Instance Path : i_SCANNER.i_SCAN_COUNTER
                                cell     count   Res Usage(%)
                                 FA2         9           31.0
                             FD1P3XZ        17           18.1
-                               LUT4        26           10.5
-                              TOTAL        52
+                               LUT4        25           10.4
+                              TOTAL        51
 ----------------------------------------------------------------------
-Report for cell lab2_ta_counter(WIDTH=18,MAX_COUNT=200000).v1
-Instance Path : i_HEX_COUNTER
+Report for cell lab3_ta_savedkey_sr.v1
+Instance Path : i_SAVEDKEY_SR
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2        10           34.5
-                            FD1P3XZ        18           19.1
-                               LUT4        25           10.1
-                              TOTAL        53
-----------------------------------------------------------------------
-Report for cell lab3_ta_digit_sr.v1
-Instance Path : i_DIGIT_SR
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3XZ         8            8.5
+                            FD1P3XZ         6            6.4
+                               LUT4         2            0.8
                               TOTAL         8
-----------------------------------------------------------------------
-Report for cell lab1_ta_hex_seg_decoder.v1
-Instance Path : i_HEX_DECODER
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4         7            2.8
-                              TOTAL         7
 ----------------------------------------------------------------------
 Report for cell lab3_ta_keypad_builder.v1
 Instance Path : i_KEYPAD_BUILDER
                                   Cell usage:
                                cell     count   Res Usage(%)
                             FD1P3XZ        16           17.0
-                               LUT4        21            8.5
-                              TOTAL        37
+                               LUT4        20            8.3
+                              TOTAL        36
+----------------------------------------------------------------------
+Report for cell lab3_ta_keypad_decoder.v1
+Instance Path : i_KEYPAD_DECODER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        32           13.3
+                              TOTAL        32
+----------------------------------------------------------------------
+Report for cell lab1_ta_hex_seg_decoder.v1
+Instance Path : i_HEX_DECODER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7            2.9
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell lab3_ta_controller.v1
+Instance Path : i_CONTROLLER
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         7            7.4
+                               LUT4        41           17.1
+                              TOTAL        48
 ----------------------------------------------------------------------
 Report for cell lab3_ta_sync.v1
 Instance Path : i_SYNC
@@ -107,10 +109,9 @@ Instance Path : i_SYNC
                               IOL_B         4          100.0
                               TOTAL         8
 ----------------------------------------------------------------------
-Report for cell lab3_ta_controller.v1
-Instance Path : i_CONTROLLER
+Report for cell lab3_ta_digit_sr.v1
+Instance Path : i_DIGIT_SR
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ         7            7.4
-                               LUT4        36           14.6
-                              TOTAL        43
+                            FD1P3XZ         8            8.5
+                              TOTAL         8

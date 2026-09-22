@@ -14,7 +14,7 @@ module lab3_ta_keypad_builder(
     output logic        scan_done
 );
 
-	always_ff @(posedge clk) begin
+	always_ff @(posedge clk, negedge reset) begin
 		if (!reset)
 			keypad <= 16'b0;
 		else if (scan_tick) begin

@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2026.1.0.37.0
 
-Mon Sep 21 16:21:31 2026
+Mon Sep 21 16:57:54 2026
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -52,7 +52,7 @@ create_clock -name {int_osc} -period 41.6667 [get_pins {hf_osc/CLKHF }]
 
 1.2  Constraint Coverage
 ---------------------------
-Constraint Coverage: 87.4671%
+Constraint Coverage: 87.3114%
 
 
 1.3  Overall Summary
@@ -70,13 +70,13 @@ Clocked but unconstrained timing start points
 -------------------------------------------------------------------
          Listing 7 Start Points         |           Type           
 -------------------------------------------------------------------
-i_SAVEDKEY_SR/saved_row__i1/Q           |          No required time
-i_SAVEDKEY_SR/saved_row__i0/Q           |          No required time
-i_DIGIT_SR/digit2__i0/Q                 |          No required time
-i_DIGIT_SR/digit2__i1/Q                 |          No required time
-i_DIGIT_SR/digit2__i3/Q                 |          No required time
-i_DIGIT_SR/digit2__i2/Q                 |          No required time
-i_SAVEDKEY_SR/saved_row__i2/Q           |          No required time
+i_SAVEDKEY_SR/saved_row_i0_i0/Q         |          No required time
+i_SAVEDKEY_SR/saved_row_i0_i1/Q         |          No required time
+i_SAVEDKEY_SR/saved_row_i0_i2/Q         |          No required time
+i_DIGIT_SR/digit2_i0_i2/Q               |          No required time
+i_DIGIT_SR/digit2_i0_i3/Q               |          No required time
+i_DIGIT_SR/digit2_i0_i1/Q               |          No required time
+i_DIGIT_SR/digit2_i0_i0/Q               |          No required time
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing start po |                          
@@ -88,29 +88,30 @@ Clocked but unconstrained timing end points
 -------------------------------------------------------------------
          Listing 10 End Points          |           Type           
 -------------------------------------------------------------------
-i_SAVEDKEY_SR/saved_col__i0/SR          |           No arrival time
-{i_SAVEDKEY_SR/saved_row__i1/SR   i_SAVEDKEY_SR/saved_row__i0/SR}                           
+{i_HEX_COUNTER/counter_283__i17/SP   i_HEX_COUNTER/counter_283__i16/SP}                           
                                         |           No arrival time
-{i_HEX_COUNTER/counter_277__i14/SP   i_HEX_COUNTER/counter_277__i15/SP}                           
+{i_HEX_COUNTER/counter_283__i17/SR   i_HEX_COUNTER/counter_283__i16/SR}                           
                                         |           No arrival time
-{i_HEX_COUNTER/counter_277__i14/SR   i_HEX_COUNTER/counter_277__i15/SR}                           
+{i_HEX_COUNTER/counter_283__i15/SP   i_HEX_COUNTER/counter_283__i14/SP}                           
                                         |           No arrival time
-{i_HEX_COUNTER/counter_277__i13/SP   i_HEX_COUNTER/counter_277__i12/SP}                           
+{i_HEX_COUNTER/counter_283__i15/SR   i_HEX_COUNTER/counter_283__i14/SR}                           
                                         |           No arrival time
-{i_HEX_COUNTER/counter_277__i13/SR   i_HEX_COUNTER/counter_277__i12/SR}                           
+{i_HEX_COUNTER/counter_283__i13/SP   i_HEX_COUNTER/counter_283__i12/SP}                           
                                         |           No arrival time
-{i_HEX_COUNTER/counter_277__i11/SP   i_HEX_COUNTER/counter_277__i10/SP}                           
+{i_HEX_COUNTER/counter_283__i13/SR   i_HEX_COUNTER/counter_283__i12/SR}                           
                                         |           No arrival time
-{i_HEX_COUNTER/counter_277__i11/SR   i_HEX_COUNTER/counter_277__i10/SR}                           
+{i_HEX_COUNTER/counter_283__i11/SP   i_HEX_COUNTER/counter_283__i10/SP}                           
                                         |           No arrival time
-{i_HEX_COUNTER/counter_277__i9/SP   i_HEX_COUNTER/counter_277__i8/SP}                           
+{i_HEX_COUNTER/counter_283__i11/SR   i_HEX_COUNTER/counter_283__i10/SR}                           
                                         |           No arrival time
-{i_HEX_COUNTER/counter_277__i9/SR   i_HEX_COUNTER/counter_277__i8/SR}                           
+{i_HEX_COUNTER/counter_283__i9/SP   i_HEX_COUNTER/counter_283__i8/SP}                           
+                                        |           No arrival time
+{i_HEX_COUNTER/counter_283__i9/SR   i_HEX_COUNTER/counter_283__i8/SR}                           
                                         |           No arrival time
 -------------------------------------------------------------------
                                         |                          
 Number of unconstrained timing end poin |                          
-ts                                      |                        35
+ts                                      |                        45
                                         |                          
 -------------------------------------------------------------------
 
@@ -173,7 +174,7 @@ Single Clock Domain
              Clock int_osc              |                    |       Period       |     Frequency      
 -------------------------------------------------------------------------------------------------------
  From int_osc                           |             Target |          41.667 ns |         24.000 MHz 
-                                        | Actual (all paths) |          22.177 ns |         45.092 MHz 
+                                        | Actual (all paths) |          24.795 ns |         40.331 MHz 
 hf_osc/CLKHF (MPW)                      |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
 -------------------------------------------------------------------------------------------------------
 
@@ -184,16 +185,16 @@ Clock Domain Crossing
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-i_SAVEDKEY_SR/saved_row__i3/D            |   19.490 ns 
-i_KEYPAD_BUILDER/keypad__i11/D           |   20.639 ns 
-i_KEYPAD_BUILDER/keypad__i8/D            |   20.639 ns 
-i_KEYPAD_BUILDER/keypad__i10/D           |   20.692 ns 
-i_KEYPAD_BUILDER/keypad__i9/D            |   20.692 ns 
-i_SAVEDKEY_SR/saved_col__i1/D            |   20.811 ns 
-i_KEYPAD_BUILDER/keypad__i6/D            |   21.154 ns 
-i_KEYPAD_BUILDER/keypad__i7/D            |   21.418 ns 
-i_CONTROLLER/state_FSM_i1/D              |   21.550 ns 
-i_KEYPAD_BUILDER/keypad__i15/D           |   21.578 ns 
+i_KEYPAD_BUILDER/keypad_i0_i1/D          |   16.872 ns 
+i_KEYPAD_BUILDER/keypad_i0_i6/D          |   17.533 ns 
+i_KEYPAD_BUILDER/keypad_i0_i4/D          |   17.533 ns 
+i_KEYPAD_BUILDER/keypad_i0_i7/D          |   17.586 ns 
+i_KEYPAD_BUILDER/keypad_i0_i5/D          |   17.586 ns 
+i_KEYPAD_BUILDER/keypad_i0_i2/D          |   17.586 ns 
+i_KEYPAD_BUILDER/keypad_i0_i3/D          |   17.850 ns 
+i_KEYPAD_BUILDER/keypad_i0_i0/D          |   18.101 ns 
+i_CONTROLLER/state_FSM_i1/D              |   18.432 ns 
+i_KEYPAD_BUILDER/keypad_i0_i15/D         |   19.885 ns 
 -------------------------------------------------------
                                          |             
 Setup # of endpoints with negative slack:|           0 
@@ -216,686 +217,710 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_KEYPAD_BUILDER/keypad__i2/Q  (SLICE_R15C11B)
-Path End         : i_SAVEDKEY_SR/saved_row__i3/D  (SLICE_R13C9A)
+Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q  (SLICE_R17C7C)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i1/D  (SLICE_R21C9A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 7
-Delay Ratio      : 81.3% (route), 18.7% (logic)
+Logic Level      : 8
+Delay Ratio      : 81.4% (route), 18.6% (logic)
 Clock Skew       : 0.000 ns 
 Setup Constraint : 41.666 ns 
-Path Slack       : 19.489 ns  (Passed)
+Path Slack       : 16.871 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                  5.499  57      
-{i_KEYPAD_BUILDER/keypad__i3/CK   i_KEYPAD_BUILDER/keypad__i2/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                  5.499  56      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i6/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-i_KEYPAD_BUILDER/keypad__i2/CK->i_KEYPAD_BUILDER/keypad__i2/Q
-                                          SLICE_R15C11B      CLK_TO_Q1_DELAY     1.388                  6.887  12      
-i_CONTROLLER/keypad[2]                                       NET DELAY           3.780                 10.667  12      
-i_CONTROLLER/i25_2_lut_4_lut/C->i_CONTROLLER/i25_2_lut_4_lut/Z
-                                          SLICE_R18C10A      B0_TO_F0_DELAY      0.449                 11.116  5       
-i_CONTROLLER/n19                                             NET DELAY           2.551                 13.667  5       
-i_CONTROLLER/i41_2_lut/A->i_CONTROLLER/i41_2_lut/Z
-                                          SLICE_R17C9A       A1_TO_F1_DELAY      0.449                 14.116  3       
-i_CONTROLLER/n23                                             NET DELAY           2.485                 16.601  3       
-i_CONTROLLER/i1_4_lut/A->i_CONTROLLER/i1_4_lut/Z
-                                          SLICE_R18C10C      B0_TO_F0_DELAY      0.449                 17.050  1       
-i_CONTROLLER/n17                                             NET DELAY           3.080                 20.130  1       
-i_CONTROLLER/i15_4_lut/A->i_CONTROLLER/i15_4_lut/Z
-                                          SLICE_R16C10B      B1_TO_F1_DELAY      0.449                 20.579  6       
-i_CONTROLLER/save_enable_N_179                               NET DELAY           3.542                 24.121  6       
-i_CONTROLLER/i1_2_lut/B->i_CONTROLLER/i1_2_lut/Z
-                                          SLICE_R14C9A       C0_TO_F0_DELAY      0.449                 24.570  1       
-i_CONTROLLER/save_enable                                     NET DELAY           2.432                 27.002  1       
-i1_4_lut_adj_42/D->i1_4_lut_adj_42/Z      SLICE_R13C9A       C1_TO_F1_DELAY      0.476                 27.478  1       
-i_SAVEDKEY_SR/n1104                                          NET DELAY           0.000                 27.478  1       
-i_SAVEDKEY_SR/saved_row__i3/D                                ENDPOINT            0.000                 27.478  1       
+i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK->i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q
+                                          SLICE_R17C7C       CLK_TO_Q0_DELAY     1.388                  6.887  9       
+i_SCANNER/i_SCAN_COUNTER/scan_counter[7]                     NET DELAY           3.265                 10.152  9       
+i_SCANNER/i1279_2_lut/B->i_SCANNER/i1279_2_lut/Z
+                                          SLICE_R18C9A       B0_TO_F0_DELAY      0.476                 10.628  1       
+i_SCANNER/n1444                                              NET DELAY           0.304                 10.932  1       
+i_SCANNER/i2_4_lut_adj_25/B->i_SCANNER/i2_4_lut_adj_25/Z
+                                          SLICE_R18C9A       C1_TO_F1_DELAY      0.449                 11.381  1       
+i_SCANNER/n2969                                              NET DELAY           2.168                 13.549  1       
+i_SCANNER/row_scan_0__I_0_4_lut/A->i_SCANNER/row_scan_0__I_0_4_lut/Z
+                                          SLICE_R18C9B       D1_TO_F1_DELAY      0.449                 13.998  4       
+i_SCANNER/row_scan[0]                                        NET DELAY           3.661                 17.659  4       
+i_SCANNER/row_scan_1__I_0_4_lut/B->i_SCANNER/row_scan_1__I_0_4_lut/Z
+                                          SLICE_R18C9B       A0_TO_F0_DELAY      0.449                 18.108  3       
+i_SCANNER/row_scan[1]                                        NET DELAY           3.595                 21.703  3       
+i_SCANNER/i1_4_lut/D->i_SCANNER/i1_4_lut/Z
+                                          SLICE_R18C9C       B0_TO_F0_DELAY      0.449                 22.152  4       
+i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.168                 24.320  4       
+i_KEYPAD_BUILDER/i1_2_lut_adj_19/A->i_KEYPAD_BUILDER/i1_2_lut_adj_19/Z
+                                          SLICE_R17C9C       D1_TO_F1_DELAY      0.449                 24.769  8       
+i_KEYPAD_BUILDER/n883                                        NET DELAY           4.851                 29.620  8       
+i_KEYPAD_BUILDER/i832_3_lut_4_lut/B->i_KEYPAD_BUILDER/i832_3_lut_4_lut/Z
+                                          SLICE_R21C9A       A1_TO_F1_DELAY      0.476                 30.096  1       
+i_KEYPAD_BUILDER/n998                                        NET DELAY           0.000                 30.096  1       
+i_KEYPAD_BUILDER/keypad_i0_i1/D                              ENDPOINT            0.000                 30.096  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                 47.165  57      
-i_SAVEDKEY_SR/saved_row__i3/CK                               CLOCK PIN           0.000                 47.165  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                 47.165  56      
+{i_KEYPAD_BUILDER/keypad_i0_i0/CK   i_KEYPAD_BUILDER/keypad_i0_i1/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 Required Time                                                                                          46.967  
-Arrival Time                                                                                        -(27.477)  
+Arrival Time                                                                                        -(30.095)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   19.489  
+Path Slack  (Passed)                                                                                   16.871  
 
 
 
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q  (SLICE_R11C12A)
-Path End         : i_KEYPAD_BUILDER/keypad__i11/D  (SLICE_R16C12A)
+Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q  (SLICE_R17C7C)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i6/D  (SLICE_R22C9A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 7
-Delay Ratio      : 80.3% (route), 19.7% (logic)
+Logic Level      : 8
+Delay Ratio      : 80.8% (route), 19.2% (logic)
 Clock Skew       : 0.000 ns 
 Setup Constraint : 41.666 ns 
-Path Slack       : 20.638 ns  (Passed)
+Path Slack       : 17.532 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                  5.499  57      
-{i_SCANNER/i_SCAN_COUNTER/counter_278__i16/CK   i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                  5.499  56      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i6/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK->i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q
-                                          SLICE_R11C12A      CLK_TO_Q1_DELAY     1.388                  6.887  5       
-i_SCANNER/i_SCAN_COUNTER/scan_counter[12]
-                                                             NET DELAY           3.212                 10.099  5       
-i_SCANNER/i1_2_lut_3_lut_adj_15/C->i_SCANNER/i1_2_lut_3_lut_adj_15/Z
-                                          SLICE_R13C11D      C0_TO_F0_DELAY      0.449                 10.548  2       
-i_SCANNER/n974                                               NET DELAY           2.551                 13.099  2       
-i_SCANNER/i1835_4_lut/C->i_SCANNER/i1835_4_lut/Z
-                                          SLICE_R13C10D      A1_TO_F1_DELAY      0.449                 13.548  1       
-i_SCANNER/n2016                                              NET DELAY           2.168                 15.716  1       
-i_SCANNER/i2_4_lut/C->i_SCANNER/i2_4_lut/Z
-                                          SLICE_R14C11B      D1_TO_F1_DELAY      0.449                 16.165  3       
-i_SCANNER/row_scan[2]                                        NET DELAY           2.763                 18.928  3       
-i_SCANNER/i1_4_lut_adj_11/C->i_SCANNER/i1_4_lut_adj_11/Z
-                                          SLICE_R14C10A      D1_TO_F1_DELAY      0.449                 19.377  6       
-i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.432                 21.809  6       
-i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_3/A->i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_3/Z
-                                          SLICE_R14C9C       C0_TO_F0_DELAY      0.449                 22.258  4       
-i_KEYPAD_BUILDER/n821                                        NET DELAY           3.595                 25.853  4       
-i_KEYPAD_BUILDER/i897_4_lut/D->i_KEYPAD_BUILDER/i897_4_lut/Z
-                                          SLICE_R16C12A      B1_TO_F1_DELAY      0.476                 26.329  1       
-i_KEYPAD_BUILDER/n1082                                       NET DELAY           0.000                 26.329  1       
-i_KEYPAD_BUILDER/keypad__i11/D                               ENDPOINT            0.000                 26.329  1       
+i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK->i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q
+                                          SLICE_R17C7C       CLK_TO_Q0_DELAY     1.388                  6.887  9       
+i_SCANNER/i_SCAN_COUNTER/scan_counter[7]                     NET DELAY           3.265                 10.152  9       
+i_SCANNER/i1279_2_lut/B->i_SCANNER/i1279_2_lut/Z
+                                          SLICE_R18C9A       B0_TO_F0_DELAY      0.476                 10.628  1       
+i_SCANNER/n1444                                              NET DELAY           0.304                 10.932  1       
+i_SCANNER/i2_4_lut_adj_25/B->i_SCANNER/i2_4_lut_adj_25/Z
+                                          SLICE_R18C9A       C1_TO_F1_DELAY      0.449                 11.381  1       
+i_SCANNER/n2969                                              NET DELAY           2.168                 13.549  1       
+i_SCANNER/row_scan_0__I_0_4_lut/A->i_SCANNER/row_scan_0__I_0_4_lut/Z
+                                          SLICE_R18C9B       D1_TO_F1_DELAY      0.449                 13.998  4       
+i_SCANNER/row_scan[0]                                        NET DELAY           3.661                 17.659  4       
+i_SCANNER/row_scan_1__I_0_4_lut/B->i_SCANNER/row_scan_1__I_0_4_lut/Z
+                                          SLICE_R18C9B       A0_TO_F0_DELAY      0.449                 18.108  3       
+i_SCANNER/row_scan[1]                                        NET DELAY           3.595                 21.703  3       
+i_SCANNER/i1_4_lut/D->i_SCANNER/i1_4_lut/Z
+                                          SLICE_R18C9C       B0_TO_F0_DELAY      0.449                 22.152  4       
+i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.168                 24.320  4       
+i_KEYPAD_BUILDER/i1_2_lut_adj_19/A->i_KEYPAD_BUILDER/i1_2_lut_adj_19/Z
+                                          SLICE_R17C9C       D1_TO_F1_DELAY      0.449                 24.769  8       
+i_KEYPAD_BUILDER/n883                                        NET DELAY           4.190                 28.959  8       
+i_KEYPAD_BUILDER/i827_3_lut_4_lut/B->i_KEYPAD_BUILDER/i827_3_lut_4_lut/Z
+                                          SLICE_R22C9A       B0_TO_F0_DELAY      0.476                 29.435  1       
+i_KEYPAD_BUILDER/n993                                        NET DELAY           0.000                 29.435  1       
+i_KEYPAD_BUILDER/keypad_i0_i6/D                              ENDPOINT            0.000                 29.435  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                 47.165  57      
-{i_KEYPAD_BUILDER/keypad__i10/CK   i_KEYPAD_BUILDER/keypad__i11/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                 47.165  56      
+{i_KEYPAD_BUILDER/keypad_i0_i6/CK   i_KEYPAD_BUILDER/keypad_i0_i7/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 Required Time                                                                                          46.967  
-Arrival Time                                                                                        -(26.328)  
+Arrival Time                                                                                        -(29.434)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   20.638  
+Path Slack  (Passed)                                                                                   17.532  
 
 
 
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q  (SLICE_R11C12A)
-Path End         : i_KEYPAD_BUILDER/keypad__i8/D  (SLICE_R16C8D)
+Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q  (SLICE_R17C7C)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i4/D  (SLICE_R22C9B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 7
-Delay Ratio      : 80.3% (route), 19.7% (logic)
+Logic Level      : 8
+Delay Ratio      : 80.8% (route), 19.2% (logic)
 Clock Skew       : 0.000 ns 
 Setup Constraint : 41.666 ns 
-Path Slack       : 20.638 ns  (Passed)
+Path Slack       : 17.532 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                  5.499  57      
-{i_SCANNER/i_SCAN_COUNTER/counter_278__i16/CK   i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                  5.499  56      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i6/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK->i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q
-                                          SLICE_R11C12A      CLK_TO_Q1_DELAY     1.388                  6.887  5       
-i_SCANNER/i_SCAN_COUNTER/scan_counter[12]
-                                                             NET DELAY           3.212                 10.099  5       
-i_SCANNER/i1_2_lut_3_lut_adj_15/C->i_SCANNER/i1_2_lut_3_lut_adj_15/Z
-                                          SLICE_R13C11D      C0_TO_F0_DELAY      0.449                 10.548  2       
-i_SCANNER/n974                                               NET DELAY           2.551                 13.099  2       
-i_SCANNER/i1835_4_lut/C->i_SCANNER/i1835_4_lut/Z
-                                          SLICE_R13C10D      A1_TO_F1_DELAY      0.449                 13.548  1       
-i_SCANNER/n2016                                              NET DELAY           2.168                 15.716  1       
-i_SCANNER/i2_4_lut/C->i_SCANNER/i2_4_lut/Z
-                                          SLICE_R14C11B      D1_TO_F1_DELAY      0.449                 16.165  3       
-i_SCANNER/row_scan[2]                                        NET DELAY           2.763                 18.928  3       
-i_SCANNER/i1_4_lut_adj_11/C->i_SCANNER/i1_4_lut_adj_11/Z
-                                          SLICE_R14C10A      D1_TO_F1_DELAY      0.449                 19.377  6       
-i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.432                 21.809  6       
-i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_3/A->i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_3/Z
-                                          SLICE_R14C9C       C0_TO_F0_DELAY      0.449                 22.258  4       
-i_KEYPAD_BUILDER/n821                                        NET DELAY           3.595                 25.853  4       
-i_KEYPAD_BUILDER/i903_4_lut/D->i_KEYPAD_BUILDER/i903_4_lut/Z
-                                          SLICE_R16C8D       B0_TO_F0_DELAY      0.476                 26.329  1       
-i_KEYPAD_BUILDER/n1088                                       NET DELAY           0.000                 26.329  1       
-i_KEYPAD_BUILDER/keypad__i8/D                                ENDPOINT            0.000                 26.329  1       
+i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK->i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q
+                                          SLICE_R17C7C       CLK_TO_Q0_DELAY     1.388                  6.887  9       
+i_SCANNER/i_SCAN_COUNTER/scan_counter[7]                     NET DELAY           3.265                 10.152  9       
+i_SCANNER/i1279_2_lut/B->i_SCANNER/i1279_2_lut/Z
+                                          SLICE_R18C9A       B0_TO_F0_DELAY      0.476                 10.628  1       
+i_SCANNER/n1444                                              NET DELAY           0.304                 10.932  1       
+i_SCANNER/i2_4_lut_adj_25/B->i_SCANNER/i2_4_lut_adj_25/Z
+                                          SLICE_R18C9A       C1_TO_F1_DELAY      0.449                 11.381  1       
+i_SCANNER/n2969                                              NET DELAY           2.168                 13.549  1       
+i_SCANNER/row_scan_0__I_0_4_lut/A->i_SCANNER/row_scan_0__I_0_4_lut/Z
+                                          SLICE_R18C9B       D1_TO_F1_DELAY      0.449                 13.998  4       
+i_SCANNER/row_scan[0]                                        NET DELAY           3.661                 17.659  4       
+i_SCANNER/row_scan_1__I_0_4_lut/B->i_SCANNER/row_scan_1__I_0_4_lut/Z
+                                          SLICE_R18C9B       A0_TO_F0_DELAY      0.449                 18.108  3       
+i_SCANNER/row_scan[1]                                        NET DELAY           3.595                 21.703  3       
+i_SCANNER/i1_4_lut/D->i_SCANNER/i1_4_lut/Z
+                                          SLICE_R18C9C       B0_TO_F0_DELAY      0.449                 22.152  4       
+i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.168                 24.320  4       
+i_KEYPAD_BUILDER/i1_2_lut_adj_19/A->i_KEYPAD_BUILDER/i1_2_lut_adj_19/Z
+                                          SLICE_R17C9C       D1_TO_F1_DELAY      0.449                 24.769  8       
+i_KEYPAD_BUILDER/n883                                        NET DELAY           4.190                 28.959  8       
+i_KEYPAD_BUILDER/i829_3_lut_4_lut/B->i_KEYPAD_BUILDER/i829_3_lut_4_lut/Z
+                                          SLICE_R22C9B       B0_TO_F0_DELAY      0.476                 29.435  1       
+i_KEYPAD_BUILDER/n995                                        NET DELAY           0.000                 29.435  1       
+i_KEYPAD_BUILDER/keypad_i0_i4/D                              ENDPOINT            0.000                 29.435  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                 47.165  57      
-{i_KEYPAD_BUILDER/keypad__i8/CK   i_KEYPAD_BUILDER/keypad__i9/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                 47.165  56      
+{i_KEYPAD_BUILDER/keypad_i0_i4/CK   i_KEYPAD_BUILDER/keypad_i0_i5/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 Required Time                                                                                          46.967  
-Arrival Time                                                                                        -(26.328)  
+Arrival Time                                                                                        -(29.434)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   20.638  
+Path Slack  (Passed)                                                                                   17.532  
 
 
 
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q  (SLICE_R11C12A)
-Path End         : i_KEYPAD_BUILDER/keypad__i10/D  (SLICE_R16C12A)
+Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q  (SLICE_R17C7C)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i7/D  (SLICE_R22C9A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 7
-Delay Ratio      : 80.2% (route), 19.8% (logic)
+Logic Level      : 8
+Delay Ratio      : 80.8% (route), 19.2% (logic)
 Clock Skew       : 0.000 ns 
 Setup Constraint : 41.666 ns 
-Path Slack       : 20.691 ns  (Passed)
+Path Slack       : 17.585 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                  5.499  57      
-{i_SCANNER/i_SCAN_COUNTER/counter_278__i16/CK   i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                  5.499  56      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i6/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK->i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q
-                                          SLICE_R11C12A      CLK_TO_Q1_DELAY     1.388                  6.887  5       
-i_SCANNER/i_SCAN_COUNTER/scan_counter[12]
-                                                             NET DELAY           3.212                 10.099  5       
-i_SCANNER/i1_2_lut_3_lut_adj_15/C->i_SCANNER/i1_2_lut_3_lut_adj_15/Z
-                                          SLICE_R13C11D      C0_TO_F0_DELAY      0.449                 10.548  2       
-i_SCANNER/n974                                               NET DELAY           2.551                 13.099  2       
-i_SCANNER/i1835_4_lut/C->i_SCANNER/i1835_4_lut/Z
-                                          SLICE_R13C10D      A1_TO_F1_DELAY      0.449                 13.548  1       
-i_SCANNER/n2016                                              NET DELAY           2.168                 15.716  1       
-i_SCANNER/i2_4_lut/C->i_SCANNER/i2_4_lut/Z
-                                          SLICE_R14C11B      D1_TO_F1_DELAY      0.449                 16.165  3       
-i_SCANNER/row_scan[2]                                        NET DELAY           2.763                 18.928  3       
-i_SCANNER/i1_4_lut_adj_11/C->i_SCANNER/i1_4_lut_adj_11/Z
-                                          SLICE_R14C10A      D1_TO_F1_DELAY      0.449                 19.377  6       
-i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.432                 21.809  6       
-i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_3/A->i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_3/Z
-                                          SLICE_R14C9C       C0_TO_F0_DELAY      0.449                 22.258  4       
-i_KEYPAD_BUILDER/n821                                        NET DELAY           3.542                 25.800  4       
-i_KEYPAD_BUILDER/i899_4_lut/D->i_KEYPAD_BUILDER/i899_4_lut/Z
-                                          SLICE_R16C12A      C0_TO_F0_DELAY      0.476                 26.276  1       
-i_KEYPAD_BUILDER/n1084                                       NET DELAY           0.000                 26.276  1       
-i_KEYPAD_BUILDER/keypad__i10/D                               ENDPOINT            0.000                 26.276  1       
+i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK->i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q
+                                          SLICE_R17C7C       CLK_TO_Q0_DELAY     1.388                  6.887  9       
+i_SCANNER/i_SCAN_COUNTER/scan_counter[7]                     NET DELAY           3.265                 10.152  9       
+i_SCANNER/i1279_2_lut/B->i_SCANNER/i1279_2_lut/Z
+                                          SLICE_R18C9A       B0_TO_F0_DELAY      0.476                 10.628  1       
+i_SCANNER/n1444                                              NET DELAY           0.304                 10.932  1       
+i_SCANNER/i2_4_lut_adj_25/B->i_SCANNER/i2_4_lut_adj_25/Z
+                                          SLICE_R18C9A       C1_TO_F1_DELAY      0.449                 11.381  1       
+i_SCANNER/n2969                                              NET DELAY           2.168                 13.549  1       
+i_SCANNER/row_scan_0__I_0_4_lut/A->i_SCANNER/row_scan_0__I_0_4_lut/Z
+                                          SLICE_R18C9B       D1_TO_F1_DELAY      0.449                 13.998  4       
+i_SCANNER/row_scan[0]                                        NET DELAY           3.661                 17.659  4       
+i_SCANNER/row_scan_1__I_0_4_lut/B->i_SCANNER/row_scan_1__I_0_4_lut/Z
+                                          SLICE_R18C9B       A0_TO_F0_DELAY      0.449                 18.108  3       
+i_SCANNER/row_scan[1]                                        NET DELAY           3.595                 21.703  3       
+i_SCANNER/i1_4_lut/D->i_SCANNER/i1_4_lut/Z
+                                          SLICE_R18C9C       B0_TO_F0_DELAY      0.449                 22.152  4       
+i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.168                 24.320  4       
+i_KEYPAD_BUILDER/i1_2_lut_adj_19/A->i_KEYPAD_BUILDER/i1_2_lut_adj_19/Z
+                                          SLICE_R17C9C       D1_TO_F1_DELAY      0.449                 24.769  8       
+i_KEYPAD_BUILDER/n883                                        NET DELAY           4.137                 28.906  8       
+i_KEYPAD_BUILDER/i826_3_lut_4_lut/B->i_KEYPAD_BUILDER/i826_3_lut_4_lut/Z
+                                          SLICE_R22C9A       C1_TO_F1_DELAY      0.476                 29.382  1       
+i_KEYPAD_BUILDER/n992                                        NET DELAY           0.000                 29.382  1       
+i_KEYPAD_BUILDER/keypad_i0_i7/D                              ENDPOINT            0.000                 29.382  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                 47.165  57      
-{i_KEYPAD_BUILDER/keypad__i10/CK   i_KEYPAD_BUILDER/keypad__i11/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                 47.165  56      
+{i_KEYPAD_BUILDER/keypad_i0_i6/CK   i_KEYPAD_BUILDER/keypad_i0_i7/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 Required Time                                                                                          46.967  
-Arrival Time                                                                                        -(26.275)  
+Arrival Time                                                                                        -(29.381)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   20.691  
+Path Slack  (Passed)                                                                                   17.585  
 
 
 
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q  (SLICE_R11C12A)
-Path End         : i_KEYPAD_BUILDER/keypad__i9/D  (SLICE_R16C8D)
+Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q  (SLICE_R17C7C)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i5/D  (SLICE_R22C9B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 7
-Delay Ratio      : 80.2% (route), 19.8% (logic)
+Logic Level      : 8
+Delay Ratio      : 80.8% (route), 19.2% (logic)
 Clock Skew       : 0.000 ns 
 Setup Constraint : 41.666 ns 
-Path Slack       : 20.691 ns  (Passed)
+Path Slack       : 17.585 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                  5.499  57      
-{i_SCANNER/i_SCAN_COUNTER/counter_278__i16/CK   i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                  5.499  56      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i6/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK->i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q
-                                          SLICE_R11C12A      CLK_TO_Q1_DELAY     1.388                  6.887  5       
-i_SCANNER/i_SCAN_COUNTER/scan_counter[12]
-                                                             NET DELAY           3.212                 10.099  5       
-i_SCANNER/i1_2_lut_3_lut_adj_15/C->i_SCANNER/i1_2_lut_3_lut_adj_15/Z
-                                          SLICE_R13C11D      C0_TO_F0_DELAY      0.449                 10.548  2       
-i_SCANNER/n974                                               NET DELAY           2.551                 13.099  2       
-i_SCANNER/i1835_4_lut/C->i_SCANNER/i1835_4_lut/Z
-                                          SLICE_R13C10D      A1_TO_F1_DELAY      0.449                 13.548  1       
-i_SCANNER/n2016                                              NET DELAY           2.168                 15.716  1       
-i_SCANNER/i2_4_lut/C->i_SCANNER/i2_4_lut/Z
-                                          SLICE_R14C11B      D1_TO_F1_DELAY      0.449                 16.165  3       
-i_SCANNER/row_scan[2]                                        NET DELAY           2.763                 18.928  3       
-i_SCANNER/i1_4_lut_adj_11/C->i_SCANNER/i1_4_lut_adj_11/Z
-                                          SLICE_R14C10A      D1_TO_F1_DELAY      0.449                 19.377  6       
-i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.432                 21.809  6       
-i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_3/A->i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_3/Z
-                                          SLICE_R14C9C       C0_TO_F0_DELAY      0.449                 22.258  4       
-i_KEYPAD_BUILDER/n821                                        NET DELAY           3.542                 25.800  4       
-i_KEYPAD_BUILDER/i901_4_lut/D->i_KEYPAD_BUILDER/i901_4_lut/Z
-                                          SLICE_R16C8D       C1_TO_F1_DELAY      0.476                 26.276  1       
-i_KEYPAD_BUILDER/n1086                                       NET DELAY           0.000                 26.276  1       
-i_KEYPAD_BUILDER/keypad__i9/D                                ENDPOINT            0.000                 26.276  1       
+i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK->i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q
+                                          SLICE_R17C7C       CLK_TO_Q0_DELAY     1.388                  6.887  9       
+i_SCANNER/i_SCAN_COUNTER/scan_counter[7]                     NET DELAY           3.265                 10.152  9       
+i_SCANNER/i1279_2_lut/B->i_SCANNER/i1279_2_lut/Z
+                                          SLICE_R18C9A       B0_TO_F0_DELAY      0.476                 10.628  1       
+i_SCANNER/n1444                                              NET DELAY           0.304                 10.932  1       
+i_SCANNER/i2_4_lut_adj_25/B->i_SCANNER/i2_4_lut_adj_25/Z
+                                          SLICE_R18C9A       C1_TO_F1_DELAY      0.449                 11.381  1       
+i_SCANNER/n2969                                              NET DELAY           2.168                 13.549  1       
+i_SCANNER/row_scan_0__I_0_4_lut/A->i_SCANNER/row_scan_0__I_0_4_lut/Z
+                                          SLICE_R18C9B       D1_TO_F1_DELAY      0.449                 13.998  4       
+i_SCANNER/row_scan[0]                                        NET DELAY           3.661                 17.659  4       
+i_SCANNER/row_scan_1__I_0_4_lut/B->i_SCANNER/row_scan_1__I_0_4_lut/Z
+                                          SLICE_R18C9B       A0_TO_F0_DELAY      0.449                 18.108  3       
+i_SCANNER/row_scan[1]                                        NET DELAY           3.595                 21.703  3       
+i_SCANNER/i1_4_lut/D->i_SCANNER/i1_4_lut/Z
+                                          SLICE_R18C9C       B0_TO_F0_DELAY      0.449                 22.152  4       
+i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.168                 24.320  4       
+i_KEYPAD_BUILDER/i1_2_lut_adj_19/A->i_KEYPAD_BUILDER/i1_2_lut_adj_19/Z
+                                          SLICE_R17C9C       D1_TO_F1_DELAY      0.449                 24.769  8       
+i_KEYPAD_BUILDER/n883                                        NET DELAY           4.137                 28.906  8       
+i_KEYPAD_BUILDER/i828_3_lut_4_lut/B->i_KEYPAD_BUILDER/i828_3_lut_4_lut/Z
+                                          SLICE_R22C9B       C1_TO_F1_DELAY      0.476                 29.382  1       
+i_KEYPAD_BUILDER/n994                                        NET DELAY           0.000                 29.382  1       
+i_KEYPAD_BUILDER/keypad_i0_i5/D                              ENDPOINT            0.000                 29.382  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                 47.165  57      
-{i_KEYPAD_BUILDER/keypad__i8/CK   i_KEYPAD_BUILDER/keypad__i9/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                 47.165  56      
+{i_KEYPAD_BUILDER/keypad_i0_i4/CK   i_KEYPAD_BUILDER/keypad_i0_i5/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 Required Time                                                                                          46.967  
-Arrival Time                                                                                        -(26.275)  
+Arrival Time                                                                                        -(29.381)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   20.691  
+Path Slack  (Passed)                                                                                   17.585  
 
 
 
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_KEYPAD_BUILDER/keypad__i2/Q  (SLICE_R15C11B)
-Path End         : i_SAVEDKEY_SR/saved_col__i1/D  (SLICE_R16C8B)
+Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q  (SLICE_R17C7C)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i2/D  (SLICE_R23C9D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 7
-Delay Ratio      : 80.1% (route), 19.9% (logic)
+Logic Level      : 8
+Delay Ratio      : 80.8% (route), 19.2% (logic)
 Clock Skew       : 0.000 ns 
 Setup Constraint : 41.666 ns 
-Path Slack       : 20.810 ns  (Passed)
+Path Slack       : 17.585 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                  5.499  57      
-{i_KEYPAD_BUILDER/keypad__i3/CK   i_KEYPAD_BUILDER/keypad__i2/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                  5.499  56      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i6/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-i_KEYPAD_BUILDER/keypad__i2/CK->i_KEYPAD_BUILDER/keypad__i2/Q
-                                          SLICE_R15C11B      CLK_TO_Q1_DELAY     1.388                  6.887  12      
-i_CONTROLLER/keypad[2]                                       NET DELAY           3.780                 10.667  12      
-i_CONTROLLER/i25_2_lut_4_lut/C->i_CONTROLLER/i25_2_lut_4_lut/Z
-                                          SLICE_R18C10A      B0_TO_F0_DELAY      0.449                 11.116  5       
-i_CONTROLLER/n19                                             NET DELAY           2.551                 13.667  5       
-i_CONTROLLER/i41_2_lut/A->i_CONTROLLER/i41_2_lut/Z
-                                          SLICE_R17C9A       A1_TO_F1_DELAY      0.449                 14.116  3       
-i_CONTROLLER/n23                                             NET DELAY           2.485                 16.601  3       
-i_CONTROLLER/i1_4_lut/A->i_CONTROLLER/i1_4_lut/Z
-                                          SLICE_R18C10C      B0_TO_F0_DELAY      0.449                 17.050  1       
-i_CONTROLLER/n17                                             NET DELAY           3.080                 20.130  1       
-i_CONTROLLER/i15_4_lut/A->i_CONTROLLER/i15_4_lut/Z
-                                          SLICE_R16C10B      B1_TO_F1_DELAY      0.449                 20.579  6       
-i_CONTROLLER/save_enable_N_179                               NET DELAY           2.485                 23.064  6       
-i_CONTROLLER/i2_3_lut/C->i_CONTROLLER/i2_3_lut/Z
-                                          SLICE_R16C9D       B0_TO_F0_DELAY      0.449                 23.513  1       
-i_CONTROLLER/n2884                                           NET DELAY           2.168                 25.681  1       
-i1_4_lut_adj_43/C->i1_4_lut_adj_43/Z      SLICE_R16C8B       D1_TO_F1_DELAY      0.476                 26.157  1       
-i_SAVEDKEY_SR/n12                                            NET DELAY           0.000                 26.157  1       
-i_SAVEDKEY_SR/saved_col__i1/D                                ENDPOINT            0.000                 26.157  1       
+i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK->i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q
+                                          SLICE_R17C7C       CLK_TO_Q0_DELAY     1.388                  6.887  9       
+i_SCANNER/i_SCAN_COUNTER/scan_counter[7]                     NET DELAY           3.265                 10.152  9       
+i_SCANNER/i1279_2_lut/B->i_SCANNER/i1279_2_lut/Z
+                                          SLICE_R18C9A       B0_TO_F0_DELAY      0.476                 10.628  1       
+i_SCANNER/n1444                                              NET DELAY           0.304                 10.932  1       
+i_SCANNER/i2_4_lut_adj_25/B->i_SCANNER/i2_4_lut_adj_25/Z
+                                          SLICE_R18C9A       C1_TO_F1_DELAY      0.449                 11.381  1       
+i_SCANNER/n2969                                              NET DELAY           2.168                 13.549  1       
+i_SCANNER/row_scan_0__I_0_4_lut/A->i_SCANNER/row_scan_0__I_0_4_lut/Z
+                                          SLICE_R18C9B       D1_TO_F1_DELAY      0.449                 13.998  4       
+i_SCANNER/row_scan[0]                                        NET DELAY           3.661                 17.659  4       
+i_SCANNER/row_scan_1__I_0_4_lut/B->i_SCANNER/row_scan_1__I_0_4_lut/Z
+                                          SLICE_R18C9B       A0_TO_F0_DELAY      0.449                 18.108  3       
+i_SCANNER/row_scan[1]                                        NET DELAY           3.595                 21.703  3       
+i_SCANNER/i1_4_lut/D->i_SCANNER/i1_4_lut/Z
+                                          SLICE_R18C9C       B0_TO_F0_DELAY      0.449                 22.152  4       
+i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.168                 24.320  4       
+i_KEYPAD_BUILDER/i1_2_lut_adj_19/A->i_KEYPAD_BUILDER/i1_2_lut_adj_19/Z
+                                          SLICE_R17C9C       D1_TO_F1_DELAY      0.449                 24.769  8       
+i_KEYPAD_BUILDER/n883                                        NET DELAY           4.137                 28.906  8       
+i_KEYPAD_BUILDER/i831_3_lut_4_lut/B->i_KEYPAD_BUILDER/i831_3_lut_4_lut/Z
+                                          SLICE_R23C9D       C0_TO_F0_DELAY      0.476                 29.382  1       
+i_KEYPAD_BUILDER/n997                                        NET DELAY           0.000                 29.382  1       
+i_KEYPAD_BUILDER/keypad_i0_i2/D                              ENDPOINT            0.000                 29.382  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                 47.165  57      
-i_SAVEDKEY_SR/saved_col__i1/CK                               CLOCK PIN           0.000                 47.165  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                 47.165  56      
+{i_KEYPAD_BUILDER/keypad_i0_i2/CK   i_KEYPAD_BUILDER/keypad_i0_i3/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 Required Time                                                                                          46.967  
-Arrival Time                                                                                        -(26.156)  
+Arrival Time                                                                                        -(29.381)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   20.810  
+Path Slack  (Passed)                                                                                   17.585  
 
 
 
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q  (SLICE_R11C12A)
-Path End         : i_KEYPAD_BUILDER/keypad__i6/D  (SLICE_R15C12A)
+Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q  (SLICE_R17C7C)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i3/D  (SLICE_R23C9D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 7
-Delay Ratio      : 79.8% (route), 20.2% (logic)
+Logic Level      : 8
+Delay Ratio      : 80.6% (route), 19.4% (logic)
 Clock Skew       : 0.000 ns 
 Setup Constraint : 41.666 ns 
-Path Slack       : 21.153 ns  (Passed)
+Path Slack       : 17.849 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                  5.499  57      
-{i_SCANNER/i_SCAN_COUNTER/counter_278__i16/CK   i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                  5.499  56      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i6/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK->i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q
-                                          SLICE_R11C12A      CLK_TO_Q1_DELAY     1.388                  6.887  5       
-i_SCANNER/i_SCAN_COUNTER/scan_counter[12]
-                                                             NET DELAY           3.212                 10.099  5       
-i_SCANNER/i1_2_lut_3_lut_adj_15/C->i_SCANNER/i1_2_lut_3_lut_adj_15/Z
-                                          SLICE_R13C11D      C0_TO_F0_DELAY      0.449                 10.548  2       
-i_SCANNER/n974                                               NET DELAY           2.551                 13.099  2       
-i_SCANNER/i1835_4_lut/C->i_SCANNER/i1835_4_lut/Z
-                                          SLICE_R13C10D      A1_TO_F1_DELAY      0.449                 13.548  1       
-i_SCANNER/n2016                                              NET DELAY           2.168                 15.716  1       
-i_SCANNER/i2_4_lut/C->i_SCANNER/i2_4_lut/Z
-                                          SLICE_R14C11B      D1_TO_F1_DELAY      0.449                 16.165  3       
-i_SCANNER/row_scan[2]                                        NET DELAY           2.763                 18.928  3       
-i_SCANNER/i1_4_lut_adj_11/C->i_SCANNER/i1_4_lut_adj_11/Z
-                                          SLICE_R14C10A      D1_TO_F1_DELAY      0.449                 19.377  6       
-i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           3.080                 22.457  6       
-i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_1/A->i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_1/Z
-                                          SLICE_R14C12C      B0_TO_F0_DELAY      0.449                 22.906  2       
-i_KEYPAD_BUILDER/n780                                        NET DELAY           2.432                 25.338  2       
-i_KEYPAD_BUILDER/i907_4_lut/D->i_KEYPAD_BUILDER/i907_4_lut/Z
-                                          SLICE_R15C12A      C0_TO_F0_DELAY      0.476                 25.814  1       
-i_KEYPAD_BUILDER/n1092                                       NET DELAY           0.000                 25.814  1       
-i_KEYPAD_BUILDER/keypad__i6/D                                ENDPOINT            0.000                 25.814  1       
+i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK->i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q
+                                          SLICE_R17C7C       CLK_TO_Q0_DELAY     1.388                  6.887  9       
+i_SCANNER/i_SCAN_COUNTER/scan_counter[7]                     NET DELAY           3.265                 10.152  9       
+i_SCANNER/i1279_2_lut/B->i_SCANNER/i1279_2_lut/Z
+                                          SLICE_R18C9A       B0_TO_F0_DELAY      0.476                 10.628  1       
+i_SCANNER/n1444                                              NET DELAY           0.304                 10.932  1       
+i_SCANNER/i2_4_lut_adj_25/B->i_SCANNER/i2_4_lut_adj_25/Z
+                                          SLICE_R18C9A       C1_TO_F1_DELAY      0.449                 11.381  1       
+i_SCANNER/n2969                                              NET DELAY           2.168                 13.549  1       
+i_SCANNER/row_scan_0__I_0_4_lut/A->i_SCANNER/row_scan_0__I_0_4_lut/Z
+                                          SLICE_R18C9B       D1_TO_F1_DELAY      0.449                 13.998  4       
+i_SCANNER/row_scan[0]                                        NET DELAY           3.661                 17.659  4       
+i_SCANNER/row_scan_1__I_0_4_lut/B->i_SCANNER/row_scan_1__I_0_4_lut/Z
+                                          SLICE_R18C9B       A0_TO_F0_DELAY      0.449                 18.108  3       
+i_SCANNER/row_scan[1]                                        NET DELAY           3.595                 21.703  3       
+i_SCANNER/i1_4_lut/D->i_SCANNER/i1_4_lut/Z
+                                          SLICE_R18C9C       B0_TO_F0_DELAY      0.449                 22.152  4       
+i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.168                 24.320  4       
+i_KEYPAD_BUILDER/i1_2_lut_adj_19/A->i_KEYPAD_BUILDER/i1_2_lut_adj_19/Z
+                                          SLICE_R17C9C       D1_TO_F1_DELAY      0.449                 24.769  8       
+i_KEYPAD_BUILDER/n883                                        NET DELAY           3.873                 28.642  8       
+i_KEYPAD_BUILDER/i830_3_lut_4_lut/B->i_KEYPAD_BUILDER/i830_3_lut_4_lut/Z
+                                          SLICE_R23C9D       D1_TO_F1_DELAY      0.476                 29.118  1       
+i_KEYPAD_BUILDER/n996                                        NET DELAY           0.000                 29.118  1       
+i_KEYPAD_BUILDER/keypad_i0_i3/D                              ENDPOINT            0.000                 29.118  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                 47.165  57      
-{i_KEYPAD_BUILDER/keypad__i6/CK   i_KEYPAD_BUILDER/keypad__i7/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                 47.165  56      
+{i_KEYPAD_BUILDER/keypad_i0_i2/CK   i_KEYPAD_BUILDER/keypad_i0_i3/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 Required Time                                                                                          46.967  
-Arrival Time                                                                                        -(25.813)  
+Arrival Time                                                                                        -(29.117)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   21.153  
+Path Slack  (Passed)                                                                                   17.849  
 
 
 
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q  (SLICE_R11C12A)
-Path End         : i_KEYPAD_BUILDER/keypad__i7/D  (SLICE_R15C12A)
+Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q  (SLICE_R17C7C)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i0/D  (SLICE_R21C9A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 7
-Delay Ratio      : 79.5% (route), 20.5% (logic)
+Logic Level      : 8
+Delay Ratio      : 80.4% (route), 19.6% (logic)
 Clock Skew       : 0.000 ns 
 Setup Constraint : 41.666 ns 
-Path Slack       : 21.417 ns  (Passed)
+Path Slack       : 18.100 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                  5.499  57      
-{i_SCANNER/i_SCAN_COUNTER/counter_278__i16/CK   i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                  5.499  56      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i6/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK->i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q
-                                          SLICE_R11C12A      CLK_TO_Q1_DELAY     1.388                  6.887  5       
-i_SCANNER/i_SCAN_COUNTER/scan_counter[12]
-                                                             NET DELAY           3.212                 10.099  5       
-i_SCANNER/i1_2_lut_3_lut_adj_15/C->i_SCANNER/i1_2_lut_3_lut_adj_15/Z
-                                          SLICE_R13C11D      C0_TO_F0_DELAY      0.449                 10.548  2       
-i_SCANNER/n974                                               NET DELAY           2.551                 13.099  2       
-i_SCANNER/i1835_4_lut/C->i_SCANNER/i1835_4_lut/Z
-                                          SLICE_R13C10D      A1_TO_F1_DELAY      0.449                 13.548  1       
-i_SCANNER/n2016                                              NET DELAY           2.168                 15.716  1       
-i_SCANNER/i2_4_lut/C->i_SCANNER/i2_4_lut/Z
-                                          SLICE_R14C11B      D1_TO_F1_DELAY      0.449                 16.165  3       
-i_SCANNER/row_scan[2]                                        NET DELAY           2.763                 18.928  3       
-i_SCANNER/i1_4_lut_adj_11/C->i_SCANNER/i1_4_lut_adj_11/Z
-                                          SLICE_R14C10A      D1_TO_F1_DELAY      0.449                 19.377  6       
-i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           3.080                 22.457  6       
-i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_1/A->i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_1/Z
-                                          SLICE_R14C12C      B0_TO_F0_DELAY      0.449                 22.906  2       
-i_KEYPAD_BUILDER/n780                                        NET DELAY           2.168                 25.074  2       
-i_KEYPAD_BUILDER/i905_4_lut/D->i_KEYPAD_BUILDER/i905_4_lut/Z
-                                          SLICE_R15C12A      D1_TO_F1_DELAY      0.476                 25.550  1       
-i_KEYPAD_BUILDER/n1090                                       NET DELAY           0.000                 25.550  1       
-i_KEYPAD_BUILDER/keypad__i7/D                                ENDPOINT            0.000                 25.550  1       
+i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK->i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q
+                                          SLICE_R17C7C       CLK_TO_Q0_DELAY     1.388                  6.887  9       
+i_SCANNER/i_SCAN_COUNTER/scan_counter[7]                     NET DELAY           3.265                 10.152  9       
+i_SCANNER/i1279_2_lut/B->i_SCANNER/i1279_2_lut/Z
+                                          SLICE_R18C9A       B0_TO_F0_DELAY      0.476                 10.628  1       
+i_SCANNER/n1444                                              NET DELAY           0.304                 10.932  1       
+i_SCANNER/i2_4_lut_adj_25/B->i_SCANNER/i2_4_lut_adj_25/Z
+                                          SLICE_R18C9A       C1_TO_F1_DELAY      0.449                 11.381  1       
+i_SCANNER/n2969                                              NET DELAY           2.168                 13.549  1       
+i_SCANNER/row_scan_0__I_0_4_lut/A->i_SCANNER/row_scan_0__I_0_4_lut/Z
+                                          SLICE_R18C9B       D1_TO_F1_DELAY      0.449                 13.998  4       
+i_SCANNER/row_scan[0]                                        NET DELAY           3.661                 17.659  4       
+i_SCANNER/row_scan_1__I_0_4_lut/B->i_SCANNER/row_scan_1__I_0_4_lut/Z
+                                          SLICE_R18C9B       A0_TO_F0_DELAY      0.449                 18.108  3       
+i_SCANNER/row_scan[1]                                        NET DELAY           3.595                 21.703  3       
+i_SCANNER/i1_4_lut/D->i_SCANNER/i1_4_lut/Z
+                                          SLICE_R18C9C       B0_TO_F0_DELAY      0.449                 22.152  4       
+i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.168                 24.320  4       
+i_KEYPAD_BUILDER/i1_2_lut_adj_19/A->i_KEYPAD_BUILDER/i1_2_lut_adj_19/Z
+                                          SLICE_R17C9C       D1_TO_F1_DELAY      0.449                 24.769  8       
+i_KEYPAD_BUILDER/n883                                        NET DELAY           3.622                 28.391  8       
+i_KEYPAD_BUILDER/i817_3_lut_4_lut/B->i_KEYPAD_BUILDER/i817_3_lut_4_lut/Z
+                                          SLICE_R21C9A       C0_TO_F0_DELAY      0.476                 28.867  1       
+i_KEYPAD_BUILDER/n983                                        NET DELAY           0.000                 28.867  1       
+i_KEYPAD_BUILDER/keypad_i0_i0/D                              ENDPOINT            0.000                 28.867  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                 47.165  57      
-{i_KEYPAD_BUILDER/keypad__i6/CK   i_KEYPAD_BUILDER/keypad__i7/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                 47.165  56      
+{i_KEYPAD_BUILDER/keypad_i0_i0/CK   i_KEYPAD_BUILDER/keypad_i0_i1/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 Required Time                                                                                          46.967  
-Arrival Time                                                                                        -(25.549)  
+Arrival Time                                                                                        -(28.866)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   21.417  
+Path Slack  (Passed)                                                                                   18.100  
 
 
 
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q  (SLICE_R11C12A)
-Path End         : i_CONTROLLER/state_FSM_i1/D  (SLICE_R14C10D)
+Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q  (SLICE_R17C7C)
+Path End         : i_CONTROLLER/state_FSM_i1/D  (SLICE_R19C9D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 8
-Delay Ratio      : 77.0% (route), 23.0% (logic)
+Delay Ratio      : 80.1% (route), 19.9% (logic)
 Clock Skew       : 0.000 ns 
 Setup Constraint : 41.666 ns 
-Path Slack       : 21.549 ns  (Passed)
+Path Slack       : 18.431 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                  5.499  57      
-{i_SCANNER/i_SCAN_COUNTER/counter_278__i16/CK   i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                  5.499  56      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i6/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-i_SCANNER/i_SCAN_COUNTER/counter_278__i12/CK->i_SCANNER/i_SCAN_COUNTER/counter_278__i12/Q
-                                          SLICE_R11C12A      CLK_TO_Q1_DELAY     1.388                  6.887  5       
-i_SCANNER/i_SCAN_COUNTER/scan_counter[12]
-                                                             NET DELAY           3.212                 10.099  5       
-i_SCANNER/i1_2_lut_3_lut_adj_15/C->i_SCANNER/i1_2_lut_3_lut_adj_15/Z
-                                          SLICE_R13C11D      C0_TO_F0_DELAY      0.449                 10.548  2       
-i_SCANNER/n974                                               NET DELAY           2.551                 13.099  2       
-i_SCANNER/i1835_4_lut/C->i_SCANNER/i1835_4_lut/Z
-                                          SLICE_R13C10D      A1_TO_F1_DELAY      0.449                 13.548  1       
-i_SCANNER/n2016                                              NET DELAY           2.168                 15.716  1       
-i_SCANNER/i2_4_lut/C->i_SCANNER/i2_4_lut/Z
-                                          SLICE_R14C11B      D1_TO_F1_DELAY      0.449                 16.165  3       
-i_SCANNER/row_scan[2]                                        NET DELAY           2.763                 18.928  3       
-i_SCANNER/i1_4_lut_adj_11/C->i_SCANNER/i1_4_lut_adj_11/Z
-                                          SLICE_R14C10A      D1_TO_F1_DELAY      0.449                 19.377  6       
-i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.168                 21.545  6       
-i_KEYPAD_BUILDER/i1_2_lut_3_lut/A->i_KEYPAD_BUILDER/i1_2_lut_3_lut/Z
-                                          SLICE_R14C11C      D1_TO_F1_DELAY      0.476                 22.021  5       
-i_CONTROLLER/scan_done                                       NET DELAY           0.304                 22.325  5       
+i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK->i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q
+                                          SLICE_R17C7C       CLK_TO_Q0_DELAY     1.388                  6.887  9       
+i_SCANNER/i_SCAN_COUNTER/scan_counter[7]                     NET DELAY           3.265                 10.152  9       
+i_SCANNER/i1279_2_lut/B->i_SCANNER/i1279_2_lut/Z
+                                          SLICE_R18C9A       B0_TO_F0_DELAY      0.476                 10.628  1       
+i_SCANNER/n1444                                              NET DELAY           0.304                 10.932  1       
+i_SCANNER/i2_4_lut_adj_25/B->i_SCANNER/i2_4_lut_adj_25/Z
+                                          SLICE_R18C9A       C1_TO_F1_DELAY      0.449                 11.381  1       
+i_SCANNER/n2969                                              NET DELAY           2.168                 13.549  1       
+i_SCANNER/row_scan_0__I_0_4_lut/A->i_SCANNER/row_scan_0__I_0_4_lut/Z
+                                          SLICE_R18C9B       D1_TO_F1_DELAY      0.449                 13.998  4       
+i_SCANNER/row_scan[0]                                        NET DELAY           3.661                 17.659  4       
+i_SCANNER/row_scan_1__I_0_4_lut/B->i_SCANNER/row_scan_1__I_0_4_lut/Z
+                                          SLICE_R18C9B       A0_TO_F0_DELAY      0.449                 18.108  3       
+i_SCANNER/row_scan[1]                                        NET DELAY           3.595                 21.703  3       
+i_SCANNER/i1_4_lut/D->i_SCANNER/i1_4_lut/Z
+                                          SLICE_R18C9C       B0_TO_F0_DELAY      0.449                 22.152  4       
+i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           2.432                 24.584  4       
+i_KEYPAD_BUILDER/i415_2_lut_3_lut_4_lut/B->i_KEYPAD_BUILDER/i415_2_lut_3_lut_4_lut/Z
+                                          SLICE_R17C9C       C0_TO_F0_DELAY      0.449                 25.033  1       
+i_CONTROLLER/n579                                            NET DELAY           3.027                 28.060  1       
 i_CONTROLLER/i2_4_lut/D->i_CONTROLLER/i2_4_lut/Z
-                                          SLICE_R14C11D      C0_TO_F0_DELAY      0.449                 22.774  1       
-i_CONTROLLER/n6                                              NET DELAY           2.168                 24.942  1       
-i_CONTROLLER/i3_4_lut_4_lut/B->i_CONTROLLER/i3_4_lut_4_lut/Z
-                                          SLICE_R14C10D      D1_TO_F1_DELAY      0.476                 25.418  1       
-i_CONTROLLER/n3820                                           NET DELAY           0.000                 25.418  1       
-i_CONTROLLER/state_FSM_i1/D                                  ENDPOINT            0.000                 25.418  1       
+                                          SLICE_R19C9D       C1_TO_F1_DELAY      0.476                 28.536  1       
+i_CONTROLLER/n2951                                           NET DELAY           0.000                 28.536  1       
+i_CONTROLLER/state_FSM_i1/D                                  ENDPOINT            0.000                 28.536  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                 47.165  57      
-i_CONTROLLER/state_FSM_i1/CK                                 CLOCK PIN           0.000                 47.165  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                 47.165  56      
+{i_CONTROLLER/state_FSM_i2/CK   i_CONTROLLER/state_FSM_i1/CK}
+                                                             CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 Required Time                                                                                          46.967  
-Arrival Time                                                                                        -(25.417)  
+Arrival Time                                                                                        -(28.535)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   21.549  
+Path Slack  (Passed)                                                                                   18.431  
 
 
 
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_278__i14/Q  (SLICE_R11C12B)
-Path End         : i_KEYPAD_BUILDER/keypad__i15/D  (SLICE_R15C9D)
+Path Begin       : i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q  (SLICE_R17C7C)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i15/D  (SLICE_R22C8A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 7
-Delay Ratio      : 79.3% (route), 20.7% (logic)
+Logic Level      : 8
+Delay Ratio      : 78.6% (route), 21.4% (logic)
 Clock Skew       : 0.000 ns 
 Setup Constraint : 41.666 ns 
-Path Slack       : 21.577 ns  (Passed)
+Path Slack       : 19.884 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                  5.499  57      
-{i_SCANNER/i_SCAN_COUNTER/counter_278__i14/CK   i_SCANNER/i_SCAN_COUNTER/counter_278__i13/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                  5.499  56      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i6/CK}
                                                              CLOCK PIN           0.000                  5.499  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-i_SCANNER/i_SCAN_COUNTER/counter_278__i14/CK->i_SCANNER/i_SCAN_COUNTER/counter_278__i14/Q
-                                          SLICE_R11C12B      CLK_TO_Q0_DELAY     1.388                  6.887  9       
-i_SCANNER/i_SCAN_COUNTER/scan_counter[14]
-                                                             NET DELAY           2.075                  8.962  9       
-i_SCANNER/i2_3_lut_adj_7/B->i_SCANNER/i2_3_lut_adj_7/Z
-                                          SLICE_R11C12C      B0_TO_F0_DELAY      0.449                  9.411  1       
-i_SCANNER/n987                                               NET DELAY           3.595                 13.006  1       
-i_SCANNER/row_scan_0__I_0_4_lut/C->i_SCANNER/row_scan_0__I_0_4_lut/Z
-                                          SLICE_R13C10B      B0_TO_F0_DELAY      0.449                 13.455  4       
-i_SCANNER/row_scan[0]                                        NET DELAY           2.168                 15.623  4       
+i_SCANNER/i_SCAN_COUNTER/counter_284__i7/CK->i_SCANNER/i_SCAN_COUNTER/counter_284__i7/Q
+                                          SLICE_R17C7C       CLK_TO_Q0_DELAY     1.388                  6.887  9       
+i_SCANNER/i_SCAN_COUNTER/scan_counter[7]                     NET DELAY           3.265                 10.152  9       
+i_SCANNER/i1279_2_lut/B->i_SCANNER/i1279_2_lut/Z
+                                          SLICE_R18C9A       B0_TO_F0_DELAY      0.476                 10.628  1       
+i_SCANNER/n1444                                              NET DELAY           0.304                 10.932  1       
+i_SCANNER/i2_4_lut_adj_25/B->i_SCANNER/i2_4_lut_adj_25/Z
+                                          SLICE_R18C9A       C1_TO_F1_DELAY      0.449                 11.381  1       
+i_SCANNER/n2969                                              NET DELAY           2.168                 13.549  1       
+i_SCANNER/row_scan_0__I_0_4_lut/A->i_SCANNER/row_scan_0__I_0_4_lut/Z
+                                          SLICE_R18C9B       D1_TO_F1_DELAY      0.449                 13.998  4       
+i_SCANNER/row_scan[0]                                        NET DELAY           3.661                 17.659  4       
 i_SCANNER/row_scan_1__I_0_4_lut/B->i_SCANNER/row_scan_1__I_0_4_lut/Z
-                                          SLICE_R13C11B      D0_TO_F0_DELAY      0.449                 16.072  3       
-i_SCANNER/row_scan[1]                                        NET DELAY           2.485                 18.557  3       
-i_SCANNER/i1_4_lut_adj_10/C->i_SCANNER/i1_4_lut_adj_10/Z
-                                          SLICE_R14C11C      B0_TO_F0_DELAY      0.449                 19.006  6       
-i_KEYPAD_BUILDER/row_scan_idx[0]                             NET DELAY           3.027                 22.033  6       
-i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_2/C->i_KEYPAD_BUILDER/i1_2_lut_3_lut_adj_2/Z
-                                          SLICE_R14C9C       C1_TO_F1_DELAY      0.449                 22.482  4       
-i_KEYPAD_BUILDER/n792                                        NET DELAY           2.432                 24.914  4       
-i_KEYPAD_BUILDER/i889_4_lut/D->i_KEYPAD_BUILDER/i889_4_lut/Z
-                                          SLICE_R15C9D       C0_TO_F0_DELAY      0.476                 25.390  1       
-i_KEYPAD_BUILDER/n1074                                       NET DELAY           0.000                 25.390  1       
-i_KEYPAD_BUILDER/keypad__i15/D                               ENDPOINT            0.000                 25.390  1       
+                                          SLICE_R18C9B       A0_TO_F0_DELAY      0.449                 18.108  3       
+i_SCANNER/row_scan[1]                                        NET DELAY           3.595                 21.703  3       
+i_SCANNER/i1_4_lut/D->i_SCANNER/i1_4_lut/Z
+                                          SLICE_R18C9C       B0_TO_F0_DELAY      0.476                 22.179  4       
+i_KEYPAD_BUILDER/row_scan_idx[1]                             NET DELAY           0.304                 22.483  4       
+i_KEYPAD_BUILDER/i1_2_lut/A->i_KEYPAD_BUILDER/i1_2_lut/Z
+                                          SLICE_R18C9C       C1_TO_F1_DELAY      0.449                 22.932  8       
+i_KEYPAD_BUILDER/n939                                        NET DELAY           3.675                 26.607  8       
+i_KEYPAD_BUILDER/i818_3_lut_4_lut/B->i_KEYPAD_BUILDER/i818_3_lut_4_lut/Z
+                                          SLICE_R22C8A       B1_TO_F1_DELAY      0.476                 27.083  1       
+i_KEYPAD_BUILDER/n984                                        NET DELAY           0.000                 27.083  1       
+i_KEYPAD_BUILDER/keypad_i0_i15/D                             ENDPOINT            0.000                 27.083  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr      Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
                                                              CONSTRAINT          0.000                 41.666  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  57      
-i_CONTROLLER/int_osc                                         NET DELAY           5.499                 47.165  57      
-{i_KEYPAD_BUILDER/keypad__i15/CK   i_KEYPAD_BUILDER/keypad__i14/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                 41.666  56      
+i_DIGIT_SR/int_osc                                           NET DELAY           5.499                 47.165  56      
+{i_KEYPAD_BUILDER/keypad_i0_i14/CK   i_KEYPAD_BUILDER/keypad_i0_i15/CK}
                                                              CLOCK PIN           0.000                 47.165  1       
                                                              Uncertainty      -(0.000)                 47.165  
                                                              Setup time       -(0.198)                 46.967  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
 Required Time                                                                                          46.967  
-Arrival Time                                                                                        -(25.389)  
+Arrival Time                                                                                        -(27.082)  
 ----------------------------------------  -----------------  ---------------  --------  ---------------------  ------  
-Path Slack  (Passed)                                                                                   21.577  
+Path Slack  (Passed)                                                                                   19.884  
 
 
 
@@ -917,16 +942,18 @@ Path Slack  (Passed)                                                            
 -------------------------------------------------------
           Listing 10 End Points          |    Slack    
 -------------------------------------------------------
-i_SAVEDKEY_SR/saved_row__i3/D            |    1.743 ns 
-i_CONTROLLER/state_FSM_i3/D              |    1.743 ns 
+i_SAVEDKEY_SR/saved_row_i0_i3/D          |    1.743 ns 
 i_CONTROLLER/state_FSM_i4/D              |    1.743 ns 
-i_CONTROLLER/state_FSM_i5/D              |    1.743 ns 
-i_KEYPAD_BUILDER/keypad__i3/D            |    1.743 ns 
-i_KEYPAD_BUILDER/keypad__i13/D           |    1.743 ns 
-i_KEYPAD_BUILDER/keypad__i9/D            |    1.743 ns 
-i_KEYPAD_BUILDER/keypad__i6/D            |    1.743 ns 
-i_KEYPAD_BUILDER/keypad__i14/D           |    1.913 ns 
-i_KEYPAD_BUILDER/keypad__i8/D            |    1.913 ns 
+i_KEYPAD_BUILDER/keypad_i0_i12/D         |    1.743 ns 
+i_KEYPAD_BUILDER/keypad_i0_i8/D          |    1.743 ns 
+i_KEYPAD_BUILDER/keypad_i0_i7/D          |    1.743 ns 
+i_KEYPAD_BUILDER/keypad_i0_i5/D          |    1.743 ns 
+i_SAVEDKEY_SR/saved_col_i0_i1/D          |    1.743 ns 
+i_SYNC/q_i2/D                            |    1.822 ns 
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i15/SP   i_SCANNER/i_SCAN_COUNTER/counter_284__i14/SP}              
+                                         |    1.847 ns 
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i16/SP   i_SCANNER/i_SCAN_COUNTER/counter_284__i3/SP}              
+                                         |    1.847 ns 
 -------------------------------------------------------
                                          |             
 Hold # of endpoints with negative slack: |           0 
@@ -949,8 +976,8 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SAVEDKEY_SR/saved_row__i3/Q  (SLICE_R13C9A)
-Path End         : i_SAVEDKEY_SR/saved_row__i3/D  (SLICE_R13C9A)
+Path Begin       : i_SAVEDKEY_SR/saved_row_i0_i3/Q  (SLICE_R19C8D)
+Path End         : i_SAVEDKEY_SR/saved_row_i0_i3/D  (SLICE_R19C8D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -963,29 +990,30 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-i_SAVEDKEY_SR/saved_row__i3/CK                               CLOCK PIN        0.000                  3.084  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+i_SAVEDKEY_SR/saved_row_i0_i3/CK                             CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-i_SAVEDKEY_SR/saved_row__i3/CK->i_SAVEDKEY_SR/saved_row__i3/Q
-                                          SLICE_R13C9A       CLK_TO_Q1_DELAY  0.779                  3.863  2       
-i_SCANNER/saved_row[3]                                       NET DELAY        0.712                  4.575  2       
-i1_4_lut_adj_42/B->i1_4_lut_adj_42/Z      SLICE_R13C9A       D1_TO_F1_DELAY   0.252                  4.827  1       
-i_SAVEDKEY_SR/n1104                                          NET DELAY        0.000                  4.827  1       
-i_SAVEDKEY_SR/saved_row__i3/D                                ENDPOINT         0.000                  4.827  1       
+i_SAVEDKEY_SR/saved_row_i0_i3/CK->i_SAVEDKEY_SR/saved_row_i0_i3/Q
+                                          SLICE_R19C8D       CLK_TO_Q1_DELAY  0.779                  3.863  2       
+i_SAVEDKEY_SR/saved_row[3]                                   NET DELAY        0.712                  4.575  2       
+i_SAVEDKEY_SR/i833_3_lut_4_lut/A->i_SAVEDKEY_SR/i833_3_lut_4_lut/Z
+                                          SLICE_R19C8D       D1_TO_F1_DELAY   0.252                  4.827  1       
+i_SAVEDKEY_SR/n999                                           NET DELAY        0.000                  4.827  1       
+i_SAVEDKEY_SR/saved_row_i0_i3/D                              ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-i_SAVEDKEY_SR/saved_row__i3/CK                               CLOCK PIN        0.000                  3.084  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+i_SAVEDKEY_SR/saved_row_i0_i3/CK                             CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
@@ -999,8 +1027,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_CONTROLLER/state_FSM_i2/Q  (SLICE_R14C9A)
-Path End         : i_CONTROLLER/state_FSM_i3/D  (SLICE_R14C9D)
+Path Begin       : i_CONTROLLER/state_FSM_i3/Q  (SLICE_R19C8B)
+Path End         : i_CONTROLLER/state_FSM_i4/D  (SLICE_R19C8B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1013,29 +1041,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-i_CONTROLLER/state_FSM_i2/CK                                 CLOCK PIN        0.000                  3.084  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_CONTROLLER/state_FSM_i3/CK   i_CONTROLLER/state_FSM_i4/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-i_CONTROLLER/state_FSM_i2/CK->i_CONTROLLER/state_FSM_i2/Q
-                                          SLICE_R14C9A       CLK_TO_Q1_DELAY  0.779                  3.863  6       
-i_CONTROLLER/save_enable_N_180[1]                            NET DELAY        0.712                  4.575  6       
-i_CONTROLLER.SLICE_117/D0->i_CONTROLLER.SLICE_117/F0
-                                          SLICE_R14C9D       D0_TO_F0_DELAY   0.252                  4.827  1       
-save_enable$n0                                               NET DELAY        0.000                  4.827  1       
-i_CONTROLLER/state_FSM_i3/D                                  ENDPOINT         0.000                  4.827  1       
+i_CONTROLLER/state_FSM_i3/CK->i_CONTROLLER/state_FSM_i3/Q
+                                          SLICE_R19C8B       CLK_TO_Q0_DELAY  0.779                  3.863  1       
+i_CONTROLLER/save_enable_N_213[2]                            NET DELAY        0.712                  4.575  1       
+i_CONTROLLER.SLICE_105/D1->i_CONTROLLER.SLICE_105/F1
+                                          SLICE_R19C8B       D1_TO_F1_DELAY   0.252                  4.827  1       
+i_CONTROLLER.save_enable_N_213[2].sig_000.FeedThruLUT
+                                                             NET DELAY        0.000                  4.827  1       
+i_CONTROLLER/state_FSM_i4/D                                  ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
 {i_CONTROLLER/state_FSM_i3/CK   i_CONTROLLER/state_FSM_i4/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
@@ -1051,8 +1081,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_CONTROLLER/state_FSM_i3/Q  (SLICE_R14C9D)
-Path End         : i_CONTROLLER/state_FSM_i4/D  (SLICE_R14C9D)
+Path Begin       : i_KEYPAD_BUILDER/keypad_i0_i12/Q  (SLICE_R21C9D)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i12/D  (SLICE_R21C9D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1065,32 +1095,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_CONTROLLER/state_FSM_i3/CK   i_CONTROLLER/state_FSM_i4/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_KEYPAD_BUILDER/keypad_i0_i12/CK   i_KEYPAD_BUILDER/keypad_i0_i13/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-i_CONTROLLER/state_FSM_i3/CK->i_CONTROLLER/state_FSM_i3/Q
-                                          SLICE_R14C9D       CLK_TO_Q0_DELAY  0.779                  3.863  1       
-i_CONTROLLER/save_enable_N_180[2]                            NET DELAY        0.712                  4.575  1       
-i_CONTROLLER.SLICE_117/D1->i_CONTROLLER.SLICE_117/F1
-                                          SLICE_R14C9D       D1_TO_F1_DELAY   0.252                  4.827  1       
-i_CONTROLLER.save_enable_N_180[2].sig_008.FeedThruLUT
-                                                             NET DELAY        0.000                  4.827  1       
-i_CONTROLLER/state_FSM_i4/D                                  ENDPOINT         0.000                  4.827  1       
+i_KEYPAD_BUILDER/keypad_i0_i12/CK->i_KEYPAD_BUILDER/keypad_i0_i12/Q
+                                          SLICE_R21C9D       CLK_TO_Q0_DELAY  0.779                  3.863  11      
+i_CONTROLLER/keypad[12]                                      NET DELAY        0.712                  4.575  11      
+i_KEYPAD_BUILDER/i821_3_lut_4_lut/D->i_KEYPAD_BUILDER/i821_3_lut_4_lut/Z
+                                          SLICE_R21C9D       D0_TO_F0_DELAY   0.252                  4.827  1       
+i_KEYPAD_BUILDER/n987                                        NET DELAY        0.000                  4.827  1       
+i_KEYPAD_BUILDER/keypad_i0_i12/D                             ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_CONTROLLER/state_FSM_i3/CK   i_CONTROLLER/state_FSM_i4/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_KEYPAD_BUILDER/keypad_i0_i12/CK   i_KEYPAD_BUILDER/keypad_i0_i13/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1105,8 +1134,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_CONTROLLER/state_FSM_i4/Q  (SLICE_R14C9D)
-Path End         : i_CONTROLLER/state_FSM_i5/D  (SLICE_R14C8D)
+Path Begin       : i_KEYPAD_BUILDER/keypad_i0_i8/Q  (SLICE_R21C9C)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i8/D  (SLICE_R21C9C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1119,31 +1148,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_CONTROLLER/state_FSM_i3/CK   i_CONTROLLER/state_FSM_i4/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_KEYPAD_BUILDER/keypad_i0_i8/CK   i_KEYPAD_BUILDER/keypad_i0_i9/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-i_CONTROLLER/state_FSM_i4/CK->i_CONTROLLER/state_FSM_i4/Q
-                                          SLICE_R14C9D       CLK_TO_Q1_DELAY  0.779                  3.863  1       
-i_CONTROLLER/save_enable_N_180[3]                            NET DELAY        0.712                  4.575  1       
-i_CONTROLLER/i422_3_lut_4_lut/C->i_CONTROLLER/i422_3_lut_4_lut/Z
-                                          SLICE_R14C8D       D0_TO_F0_DELAY   0.252                  4.827  1       
-i_CONTROLLER/n606                                            NET DELAY        0.000                  4.827  1       
-i_CONTROLLER/state_FSM_i5/D                                  ENDPOINT         0.000                  4.827  1       
+i_KEYPAD_BUILDER/keypad_i0_i8/CK->i_KEYPAD_BUILDER/keypad_i0_i8/Q
+                                          SLICE_R21C9C       CLK_TO_Q0_DELAY  0.779                  3.863  11      
+i_CONTROLLER/keypad[8]                                       NET DELAY        0.712                  4.575  11      
+i_KEYPAD_BUILDER/i825_3_lut_4_lut/D->i_KEYPAD_BUILDER/i825_3_lut_4_lut/Z
+                                          SLICE_R21C9C       D0_TO_F0_DELAY   0.252                  4.827  1       
+i_KEYPAD_BUILDER/n991                                        NET DELAY        0.000                  4.827  1       
+i_KEYPAD_BUILDER/keypad_i0_i8/D                              ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_CONTROLLER/state_FSM_i5/CK   i_CONTROLLER/state_FSM_i6/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_KEYPAD_BUILDER/keypad_i0_i8/CK   i_KEYPAD_BUILDER/keypad_i0_i9/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1158,8 +1187,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_KEYPAD_BUILDER/keypad__i3/Q  (SLICE_R15C11B)
-Path End         : i_KEYPAD_BUILDER/keypad__i3/D  (SLICE_R15C11B)
+Path Begin       : i_KEYPAD_BUILDER/keypad_i0_i7/Q  (SLICE_R22C9A)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i7/D  (SLICE_R22C9A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1172,31 +1201,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_KEYPAD_BUILDER/keypad__i3/CK   i_KEYPAD_BUILDER/keypad__i2/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_KEYPAD_BUILDER/keypad_i0_i6/CK   i_KEYPAD_BUILDER/keypad_i0_i7/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-i_KEYPAD_BUILDER/keypad__i3/CK->i_KEYPAD_BUILDER/keypad__i3/Q
-                                          SLICE_R15C11B      CLK_TO_Q0_DELAY  0.779                  3.863  11      
-i_CONTROLLER/keypad[3]                                       NET DELAY        0.712                  4.575  11      
-i_KEYPAD_BUILDER/i913_4_lut/B->i_KEYPAD_BUILDER/i913_4_lut/Z
-                                          SLICE_R15C11B      D0_TO_F0_DELAY   0.252                  4.827  1       
-i_KEYPAD_BUILDER/n1098                                       NET DELAY        0.000                  4.827  1       
-i_KEYPAD_BUILDER/keypad__i3/D                                ENDPOINT         0.000                  4.827  1       
+i_KEYPAD_BUILDER/keypad_i0_i7/CK->i_KEYPAD_BUILDER/keypad_i0_i7/Q
+                                          SLICE_R22C9A       CLK_TO_Q1_DELAY  0.779                  3.863  10      
+i_CONTROLLER/keypad[7]                                       NET DELAY        0.712                  4.575  10      
+i_KEYPAD_BUILDER/i826_3_lut_4_lut/D->i_KEYPAD_BUILDER/i826_3_lut_4_lut/Z
+                                          SLICE_R22C9A       D1_TO_F1_DELAY   0.252                  4.827  1       
+i_KEYPAD_BUILDER/n992                                        NET DELAY        0.000                  4.827  1       
+i_KEYPAD_BUILDER/keypad_i0_i7/D                              ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_KEYPAD_BUILDER/keypad__i3/CK   i_KEYPAD_BUILDER/keypad__i2/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_KEYPAD_BUILDER/keypad_i0_i6/CK   i_KEYPAD_BUILDER/keypad_i0_i7/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1211,8 +1240,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_KEYPAD_BUILDER/keypad__i13/Q  (SLICE_R15C8B)
-Path End         : i_KEYPAD_BUILDER/keypad__i13/D  (SLICE_R15C8B)
+Path Begin       : i_KEYPAD_BUILDER/keypad_i0_i5/Q  (SLICE_R22C9B)
+Path End         : i_KEYPAD_BUILDER/keypad_i0_i5/D  (SLICE_R22C9B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1225,31 +1254,31 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_KEYPAD_BUILDER/keypad__i13/CK   i_KEYPAD_BUILDER/keypad__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_KEYPAD_BUILDER/keypad_i0_i4/CK   i_KEYPAD_BUILDER/keypad_i0_i5/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-i_KEYPAD_BUILDER/keypad__i13/CK->i_KEYPAD_BUILDER/keypad__i13/Q
-                                          SLICE_R15C8B       CLK_TO_Q0_DELAY  0.779                  3.863  11      
-i_CONTROLLER/keypad[13]                                      NET DELAY        0.712                  4.575  11      
-i_KEYPAD_BUILDER/i893_4_lut/B->i_KEYPAD_BUILDER/i893_4_lut/Z
-                                          SLICE_R15C8B       D0_TO_F0_DELAY   0.252                  4.827  1       
-i_KEYPAD_BUILDER/n1078                                       NET DELAY        0.000                  4.827  1       
-i_KEYPAD_BUILDER/keypad__i13/D                               ENDPOINT         0.000                  4.827  1       
+i_KEYPAD_BUILDER/keypad_i0_i5/CK->i_KEYPAD_BUILDER/keypad_i0_i5/Q
+                                          SLICE_R22C9B       CLK_TO_Q1_DELAY  0.779                  3.863  11      
+i_CONTROLLER/keypad[5]                                       NET DELAY        0.712                  4.575  11      
+i_KEYPAD_BUILDER/i828_3_lut_4_lut/D->i_KEYPAD_BUILDER/i828_3_lut_4_lut/Z
+                                          SLICE_R22C9B       D1_TO_F1_DELAY   0.252                  4.827  1       
+i_KEYPAD_BUILDER/n994                                        NET DELAY        0.000                  4.827  1       
+i_KEYPAD_BUILDER/keypad_i0_i5/D                              ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_KEYPAD_BUILDER/keypad__i13/CK   i_KEYPAD_BUILDER/keypad__i12/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_KEYPAD_BUILDER/keypad_i0_i4/CK   i_KEYPAD_BUILDER/keypad_i0_i5/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
@@ -1264,8 +1293,8 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SYNC/q_i1/Q  (SLICE_R16C7C)
-Path End         : i_KEYPAD_BUILDER/keypad__i9/D  (SLICE_R16C8D)
+Path Begin       : i_SAVEDKEY_SR/saved_col_i0_i1/Q  (SLICE_R21C8D)
+Path End         : i_SAVEDKEY_SR/saved_col_i0_i1/D  (SLICE_R21C8D)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
@@ -1278,30 +1307,30 @@ Path Slack       : 1.743 ns  (Passed)
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_SYNC/q_i1/CK   i_SYNC/q_i0/CK}                            CLOCK PIN        0.000                  3.084  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+i_SAVEDKEY_SR/saved_col_i0_i1/CK                             CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-i_SYNC/q_i1/CK->i_SYNC/q_i1/Q             SLICE_R16C7C       CLK_TO_Q0_DELAY  0.779                  3.863  5       
-i_CONTROLLER/col_sync[1]                                     NET DELAY        0.712                  4.575  5       
-i_KEYPAD_BUILDER/i901_4_lut/C->i_KEYPAD_BUILDER/i901_4_lut/Z
-                                          SLICE_R16C8D       D1_TO_F1_DELAY   0.252                  4.827  1       
-i_KEYPAD_BUILDER/n1086                                       NET DELAY        0.000                  4.827  1       
-i_KEYPAD_BUILDER/keypad__i9/D                                ENDPOINT         0.000                  4.827  1       
+i_SAVEDKEY_SR/saved_col_i0_i1/CK->i_SAVEDKEY_SR/saved_col_i0_i1/Q
+                                          SLICE_R21C8D       CLK_TO_Q0_DELAY  0.779                  3.863  3       
+i_CONTROLLER/saved_col[1]                                    NET DELAY        0.712                  4.575  3       
+i_SAVEDKEY_SR/i834_3_lut_4_lut/A->i_SAVEDKEY_SR/i834_3_lut_4_lut/Z
+                                          SLICE_R21C8D       D0_TO_F0_DELAY   0.252                  4.827  1       
+i_SAVEDKEY_SR/n1000                                          NET DELAY        0.000                  4.827  1       
+i_SAVEDKEY_SR/saved_col_i0_i1/D                              ENDPOINT         0.000                  4.827  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_KEYPAD_BUILDER/keypad__i8/CK   i_KEYPAD_BUILDER/keypad__i9/CK}
-                                                             CLOCK PIN        0.000                  3.084  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+i_SAVEDKEY_SR/saved_col_i0_i1/CK                             CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
@@ -1315,155 +1344,151 @@ Path Slack  (Passed)                                                            
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_KEYPAD_BUILDER/keypad__i6/Q  (SLICE_R15C12A)
-Path End         : i_KEYPAD_BUILDER/keypad__i6/D  (SLICE_R15C12A)
+Path Begin       : i_SYNC/n1_i2/DI0  (IOLOGIC_IOL_L22B)
+Path End         : i_SYNC/q_i2/D  (SLICE_R22C4A)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
 Logic Level      : 2
-Delay Ratio      : 40.8% (route), 59.2% (logic)
+Delay Ratio      : 59.0% (route), 41.0% (logic)
 Clock Skew       : 0.000 ns 
 Hold Constraint  : 0.000 ns 
-Path Slack       : 1.743 ns  (Passed)
+Path Slack       : 1.822 ns  (Passed)
 
 
 Source Clock Path
-Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_KEYPAD_BUILDER/keypad__i6/CK   i_KEYPAD_BUILDER/keypad__i7/CK}
-                                                             CLOCK PIN        0.000                  3.084  1       
+Name                                      Cell/Site Name     Delay Name          Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ------------------  -----  ---------------------  ------  
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY           3.084                  3.084  57      
+i_SYNC/n1_i2/INCLK                                           CLOCK PIN           0.000                  3.084  1       
 
 
 Data Path
-Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-i_KEYPAD_BUILDER/keypad__i6/CK->i_KEYPAD_BUILDER/keypad__i6/Q
-                                          SLICE_R15C12A      CLK_TO_Q0_DELAY  0.779                  3.863  11      
-i_CONTROLLER/keypad[6]                                       NET DELAY        0.712                  4.575  11      
-i_KEYPAD_BUILDER/i907_4_lut/B->i_KEYPAD_BUILDER/i907_4_lut/Z
-                                          SLICE_R15C12A      D0_TO_F0_DELAY   0.252                  4.827  1       
-i_KEYPAD_BUILDER/n1092                                       NET DELAY        0.000                  4.827  1       
-i_KEYPAD_BUILDER/keypad__i6/D                                ENDPOINT         0.000                  4.827  1       
+Name                                      Cell/Site Name     Delay Name          Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ------------------  -----  ---------------------  ------  
+i_SYNC/n1_i2/INCLK->i_SYNC/n1_i2/DI0      IOLOGIC_IOL_L22B   INCLK_TO_DI0_DELAY  0.495                  3.579  1       
+i_SYNC/n1[2]                                                 NET DELAY           1.075                  4.654  1       
+i_SYNC.SLICE_111/D1->i_SYNC.SLICE_111/F1  SLICE_R22C4A       D1_TO_F1_DELAY      0.252                  4.906  1       
+i_SYNC.n1[2].sig_002.FeedThruLUT                             NET DELAY           0.000                  4.906  1       
+i_SYNC/q_i2/D                                                ENDPOINT            0.000                  4.906  1       
 
 
 Destination Clock Path
-Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
-----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-                                                             CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_KEYPAD_BUILDER/keypad__i6/CK   i_KEYPAD_BUILDER/keypad__i7/CK}
-                                                             CLOCK PIN        0.000                  3.084  1       
-                                                             Uncertainty      0.000                  3.084  
-                                                             Hold time        0.000                  3.084  
-----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-Required Time                                                                                       -3.084  
-Arrival Time                                                                                         4.827  
-----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                 1.743  
+Name                                      Cell/Site Name     Delay Name          Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ------------------  -----  ---------------------  ------  
+                                                             CONSTRAINT          0.000                  0.000  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY       0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY           3.084                  3.084  57      
+{i_SYNC/q_i3/CK   i_SYNC/q_i2/CK}                            CLOCK PIN           0.000                  3.084  1       
+                                                             Uncertainty         0.000                  3.084  
+                                                             Hold time           0.000                  3.084  
+----------------------------------------  -----------------  ------------------  -----  ---------------------  ------  
+Required Time                                                                                          -3.084  
+Arrival Time                                                                                            4.906  
+----------------------------------------  -----------------  ------------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                    1.822  
 
 
 
 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SYNC/q_i2/Q  (SLICE_R15C8D)
-Path End         : i_KEYPAD_BUILDER/keypad__i14/D  (SLICE_R15C9D)
+Path Begin       : i_CONTROLLER/state_FSM_i1/Q  (SLICE_R19C9D)
+Path End         : {i_SCANNER/i_SCAN_COUNTER/counter_284__i15/SP   i_SCANNER/i_SCAN_COUNTER/counter_284__i14/SP}  (SLICE_R16C9B)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 2
-Delay Ratio      : 46.1% (route), 53.9% (logic)
+Logic Level      : 1
+Delay Ratio      : 57.8% (route), 42.2% (logic)
 Clock Skew       : 0.000 ns 
 Hold Constraint  : 0.000 ns 
-Path Slack       : 1.913 ns  (Passed)
+Path Slack       : 1.847 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_SYNC/q_i3/CK   i_SYNC/q_i2/CK}                            CLOCK PIN        0.000                  3.084  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_CONTROLLER/state_FSM_i2/CK   i_CONTROLLER/state_FSM_i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-i_SYNC/q_i2/CK->i_SYNC/q_i2/Q             SLICE_R15C8D       CLK_TO_Q1_DELAY  0.779                  3.863  5       
-i_CONTROLLER/col_sync[2]                                     NET DELAY        0.882                  4.745  5       
-i_KEYPAD_BUILDER/i891_4_lut/C->i_KEYPAD_BUILDER/i891_4_lut/Z
-                                          SLICE_R15C9D       C1_TO_F1_DELAY   0.252                  4.997  1       
-i_KEYPAD_BUILDER/n1076                                       NET DELAY        0.000                  4.997  1       
-i_KEYPAD_BUILDER/keypad__i14/D                               ENDPOINT         0.000                  4.997  1       
+i_CONTROLLER/state_FSM_i1/CK->i_CONTROLLER/state_FSM_i1/Q
+                                          SLICE_R19C9D       CLK_TO_Q1_DELAY  0.779                  3.863  16      
+i_CONTROLLER/scan_enable                                     NET DELAY        1.068                  4.931  16      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i15/SP   i_SCANNER/i_SCAN_COUNTER/counter_284__i14/SP}
+                                                             ENDPOINT         0.000                  4.931  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_KEYPAD_BUILDER/keypad__i15/CK   i_KEYPAD_BUILDER/keypad__i14/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i15/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i14/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 Required Time                                                                                       -3.084  
-Arrival Time                                                                                         4.997  
+Arrival Time                                                                                         4.931  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                 1.913  
+Path Slack  (Passed)                                                                                 1.847  
 
 
 
 
 ++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin       : i_SYNC/q_i0/Q  (SLICE_R16C7C)
-Path End         : i_KEYPAD_BUILDER/keypad__i8/D  (SLICE_R16C8D)
+Path Begin       : i_CONTROLLER/state_FSM_i1/Q  (SLICE_R19C9D)
+Path End         : {i_SCANNER/i_SCAN_COUNTER/counter_284__i16/SP   i_SCANNER/i_SCAN_COUNTER/counter_284__i3/SP}  (SLICE_R16C9C)
 Source Clock     : int_osc (R)
 Destination Clock: int_osc (R)
-Logic Level      : 2
-Delay Ratio      : 46.1% (route), 53.9% (logic)
+Logic Level      : 1
+Delay Ratio      : 57.8% (route), 42.2% (logic)
 Clock Skew       : 0.000 ns 
 Hold Constraint  : 0.000 ns 
-Path Slack       : 1.913 ns  (Passed)
+Path Slack       : 1.847 ns  (Passed)
 
 
 Source Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_SYNC/q_i1/CK   i_SYNC/q_i0/CK}                            CLOCK PIN        0.000                  3.084  1       
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_CONTROLLER/state_FSM_i2/CK   i_CONTROLLER/state_FSM_i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
 
 
 Data Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-i_SYNC/q_i0/CK->i_SYNC/q_i0/Q             SLICE_R16C7C       CLK_TO_Q1_DELAY  0.779                  3.863  5       
-i_CONTROLLER/col_sync[0]                                     NET DELAY        0.882                  4.745  5       
-i_KEYPAD_BUILDER/i903_4_lut/C->i_KEYPAD_BUILDER/i903_4_lut/Z
-                                          SLICE_R16C8D       C0_TO_F0_DELAY   0.252                  4.997  1       
-i_KEYPAD_BUILDER/n1088                                       NET DELAY        0.000                  4.997  1       
-i_KEYPAD_BUILDER/keypad__i8/D                                ENDPOINT         0.000                  4.997  1       
+i_CONTROLLER/state_FSM_i1/CK->i_CONTROLLER/state_FSM_i1/Q
+                                          SLICE_R19C9D       CLK_TO_Q1_DELAY  0.779                  3.863  16      
+i_CONTROLLER/scan_enable                                     NET DELAY        1.068                  4.931  16      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i16/SP   i_SCANNER/i_SCAN_COUNTER/counter_284__i3/SP}
+                                                             ENDPOINT         0.000                  4.931  1       
 
 
 Destination Clock Path
 Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
                                                              CONSTRAINT       0.000                  0.000  1       
-hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  58      
-i_CONTROLLER/int_osc                                         NET DELAY        3.084                  3.084  58      
-{i_KEYPAD_BUILDER/keypad__i8/CK   i_KEYPAD_BUILDER/keypad__i9/CK}
+hf_osc/CLKHF                              HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  57      
+i_DIGIT_SR/int_osc                                           NET DELAY        3.084                  3.084  57      
+{i_SCANNER/i_SCAN_COUNTER/counter_284__i16/CK   i_SCANNER/i_SCAN_COUNTER/counter_284__i3/CK}
                                                              CLOCK PIN        0.000                  3.084  1       
                                                              Uncertainty      0.000                  3.084  
                                                              Hold time        0.000                  3.084  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
 Required Time                                                                                       -3.084  
-Arrival Time                                                                                         4.997  
+Arrival Time                                                                                         4.931  
 ----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
-Path Slack  (Passed)                                                                                 1.913  
+Path Slack  (Passed)                                                                                 1.847  
 
 
 

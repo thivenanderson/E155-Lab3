@@ -33,7 +33,7 @@ typedef enum logic [2:0] {
 
 state_t state, next_state;
 //State transition timing
-	always_ff @(posedge clk) begin
+	always_ff @(posedge clk, negedge reset) begin
 		if (!reset)
 			state <= SCAN;
 		else
@@ -139,17 +139,6 @@ state_t state, next_state;
 
 		endcase
 	end
-//Saved key register
-	//always_ff @(posedge clk) begin
-		//if (!reset) begin
-			//saved_row <= 4'b0;
-			//saved_col <= 2'b0;
-		//end
-		//else if (state == CHECK && $onehot(keypad)) begin
-			//saved_row <= row_decoded;
-			//saved_col <= col_decoded;
-		//end
-	//end
 endmodule
 		
 				

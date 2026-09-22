@@ -48,7 +48,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Sep 21 16:21:13 2026
+Mon Sep 21 16:57:36 2026
 
 
 Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/impl_1/Lab3_impl_1_lattice.synproj -logfile Lab3_impl_1_lattice.srp -gui -msgset C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/promote.xml 
@@ -176,6 +176,7 @@ Verilog design file: ../source/impl_1/lab3_ta_digit_sr_tb.sv
 Verilog design file: ../source/impl_1/lab3_ta_keypad_builder_tb.sv
 Verilog design file: ../source/impl_1/lab3_ta_keypad_decoder_tb.sv
 Verilog design file: ../source/impl_1/lab3_ta_savedkey_sr.sv
+Verilog design file: ../source/impl_1/lab3_ta_savedkey_sr_tb.sv
 VHDL library: pmi
 VHDL design file: C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.vhd
 
@@ -201,6 +202,7 @@ Analyzing Verilog file ../source/impl_1/lab3_ta_digit_sr_tb.sv. VERI-1482
 Analyzing Verilog file ../source/impl_1/lab3_ta_keypad_builder_tb.sv. VERI-1482
 Analyzing Verilog file ../source/impl_1/lab3_ta_keypad_decoder_tb.sv. VERI-1482
 Analyzing Verilog file ../source/impl_1/lab3_ta_savedkey_sr.sv. VERI-1482
+Analyzing Verilog file ../source/impl_1/lab3_ta_savedkey_sr_tb.sv. VERI-1482
 Top module name (Verilog): lab3_ta
 INFO <35901018> - synthesis: ../source/impl_1/lab3_ta.sv(5): compiling module lab3_ta. VERI-1018
 INFO <35901018> - synthesis: C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
@@ -312,7 +314,7 @@ FD1P3XZ => 94
 HSOSC_CORE => 1
 IB => 6
 IOL_B => 4
-LUT4 => 247
+LUT4 => 240
 OB => 13
 ################### End Area Report ##################
 Number of odd-length carry chains : 1
@@ -329,16 +331,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : i_HEX_COUNTER/hex_counter_5__N_122, loads : 35
-  Net : db_done_N_177, loads : 26
-  Net : reset_c, loads : 23
+  Net : i_HEX_COUNTER/shift_enable_N_211, loads : 54
+  Net : db_done_N_209, loads : 26
   Net : i_CONTROLLER/scan_enable, loads : 23
-  Net : i_SCANNER/i_SCAN_COUNTER/n3163, loads : 23
   Net : i_HEX_COUNTER/n35, loads : 23
+  Net : i_SCANNER/i_SCAN_COUNTER/n3202, loads : 23
   Net : i_CONTROLLER/db_reset, loads : 21
+  Net : i_KEYPAD_BUILDER/n883, loads : 20
+  Net : i_KEYPAD_BUILDER/n939, loads : 20
   Net : enable_c, loads : 18
   Net : s[3], loads : 18
-  Net : s[2], loads : 18
 ################### End Clock Report ##################
 
 
@@ -354,9 +356,9 @@ Peak Memory Usage: 92 MB
 
 --------------------------------------------------------------
 Total CPU Time: 0 secs 
-Total REAL Time: 4 secs 
+Total REAL Time: 3 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: f4f89665e710d9254db93340bd07326895677c3a
+Checksum -- synthesis -- netlist: a70360c86f3ce4108fd8ab3678b2e4ee3e29f972
 
 
 

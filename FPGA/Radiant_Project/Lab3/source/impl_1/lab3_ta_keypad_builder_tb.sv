@@ -48,14 +48,15 @@ module lab3_ta_keypad_builder_tb();
         @(negedge clk);
         reset = 1;
 
-		//-------------------------------------------------
+		//
 		//We will store a unique column input in each row to tell if the correct nibble was sent
 		//to the correct part of 'keypad' 
 		//We will set all column inputs on negedge of clock to mimic asynchronous button presses
-        // ------------------------------------------------
+        
+		
         // Row 0
         // col_sync = 0111 -> stored value = 1000
-        // ------------------------------------------------
+        // 
         row_scan_idx = 2'd0;
         col_sync     = 4'b0111;
         scan_tick    = 1;
@@ -76,10 +77,10 @@ module lab3_ta_keypad_builder_tb();
         scan_tick = 0;
 
 
-        // ------------------------------------------------
+        // 
         // Row 1
         // col_sync = 1011 -> stored value = 0100
-        // ------------------------------------------------
+        // 
         @(negedge clk);
         row_scan_idx = 2'd1;
         col_sync     = 4'b1011;

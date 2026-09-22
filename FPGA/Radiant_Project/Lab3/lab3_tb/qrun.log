@@ -283,3 +283,64 @@ run -all
 # Errors: 0, Warnings: 0
 # End time: 16:35:40 on Sep 21,2026, Elapsed time: 0:02:01
 # Errors: 0, Warnings: 2
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# ** Note: (vsim-220) 'C:/lscc/radiant/2026.1/questasim/win64/../modelsim.ini' is used as the ini file.
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:32:57 on Sep 21,2026
+# Loading sv_std.std
+# Loading work.lab3_ta_controller_tb(fast)
+# Loading work.lab3_ta_controller(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Passed asynchronous reset -> SCAN.
+# Passed multi-key SCAN -> CHECK.
+# Passed multi-key rejection.
+# Passed valid-key CHECK/save_enable.
+# Passed CHECK -> SAVE.
+# Passed SAVE -> SETTLE.
+# Passed entry into WAIT.
+# Passed additional-key ignore during WAIT.
+# Passed WAIT -> PULSE.
+# Passed one-cycle shift pulse.
+# Passed held-key behavior at time 106.
+# Passed held-key behavior at time 116.
+# Passed held-key behavior at time 126.
+# Passed release -> SCAN.
+# Entered CHECK for async-reset test.
+# Passed asynchronous reset during operation.
+# Controller testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv(355)
+#    Time: 149 ns  Iteration: 0  Instance: /lab3_ta_controller_tb
+# Break in Module lab3_ta_controller_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv line 355
+add wave -position end  sim:/lab3_ta_controller_tb/dut/state
+add wave -position end  sim:/lab3_ta_controller_tb/dut/next_state
+restart -f
+# Loading work.lab3_ta_controller_tb(fast)
+# Loading work.lab3_ta_controller(fast)
+run -all
+# Passed asynchronous reset -> SCAN.
+# Passed multi-key SCAN -> CHECK.
+# Passed multi-key rejection.
+# Passed valid-key CHECK/save_enable.
+# Passed CHECK -> SAVE.
+# Passed SAVE -> SETTLE.
+# Passed entry into WAIT.
+# Passed additional-key ignore during WAIT.
+# Passed WAIT -> PULSE.
+# Passed one-cycle shift pulse.
+# Passed held-key behavior at time 106.
+# Passed held-key behavior at time 116.
+# Passed held-key behavior at time 126.
+# Passed release -> SCAN.
+# Entered CHECK for async-reset test.
+# Passed asynchronous reset during operation.
+# Controller testbench complete.
+# ** Note: $stop    : C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv(355)
+#    Time: 149 ns  Iteration: 0  Instance: /lab3_ta_controller_tb
+# Break in Module lab3_ta_controller_tb at C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/Lab3/source/impl_1/lab3_ta_controller_tb.sv line 355

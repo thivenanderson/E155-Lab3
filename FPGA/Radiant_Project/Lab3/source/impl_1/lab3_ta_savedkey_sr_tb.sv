@@ -49,7 +49,7 @@ module lab3_ta_savedkey_sr_tb();
         reset = 1;
 
 
-        // Load first keypress: 1
+        // Load first keypress: A
         col_decoded  = 2'b0;
 		row_decoded = 4'b1000;
         enable = 1;
@@ -63,7 +63,7 @@ module lab3_ta_savedkey_sr_tb();
             $error("FAILED first key load at time %0t.", $time);
 
 
-        // Load second key: 5
+        // Load second key: 6
         col_decoded  = 2'b01;
 		row_decoded = 4'b0100;
 

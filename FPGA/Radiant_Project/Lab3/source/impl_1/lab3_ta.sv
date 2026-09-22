@@ -108,8 +108,6 @@ module lab3_ta (
 		.keypad(keypad),
 		.col_sync(col_sync),
 		.db_done(db_done),
-		.row_decoded(row_decoded),
-		.col_decoded(col_decoded),
 		.saved_col(saved_col),
 		.scan_enable(scan_enable),
 		.scan_reset(scan_reset),

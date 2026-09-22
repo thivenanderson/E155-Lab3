@@ -5,16 +5,11 @@
 module lab3_ta_controller (
     input  logic        clk,
     input  logic        reset,
-
     input  logic        scan_done,
     input  logic [15:0] keypad,
     input  logic [3:0]  col_sync,
     input  logic        db_done,
-
-    input  logic [3:0]  row_decoded,
-    input  logic [1:0]  col_decoded,
 	input logic [1:0]  saved_col,
-
     output logic        scan_enable, scan_reset,
     output logic        db_reset, db_enable,
     output logic        shift_enable,

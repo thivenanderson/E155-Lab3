@@ -1,0 +1,228 @@
+synthesis:  version Radiant Software (64-bit) 2026.1.0.37.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2026 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Sep 22 15:31:06 2026
+
+
+Command Line:  C:\lscc\radiant\2026.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/ai_protoype/impl_1/ai_protoype_impl_1_lattice.synproj -logfile ai_protoype_impl_1_lattice.srp -gui -msgset C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/ai_protoype/promote.xml 
+
+Lattice Synthesis Engine launched.
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+
+###################### Device Information ######################
+----------------------------------------------------------------
+Lattice Family        | iCE40UP
+----------------------------------------------------------------
+Device                | iCE40UP5K
+----------------------------------------------------------------
+Package               | SG48
+----------------------------------------------------------------
+Performance Grade     | High-Performance_1.2V
+----------------------------------------------------------------
+################################################################
+
+####################### Device Resources #######################
+----------------------------------------------------------------
+Logic Cells           | 5280
+----------------------------------------------------------------
+RAM Blocks            | 30
+----------------------------------------------------------------
+DSP Blocks            | 8
+----------------------------------------------------------------
+PLLs                  | 1
+----------------------------------------------------------------
+I/O Pins              | 56
+----------------------------------------------------------------
+################################################################
+
+Resolving user-selected strategy settings...
+
+INFO <35001797> - synthesis: Use DCC Insertion disabled by default.
+
+###################### Strategy Settings #######################
+----------------------------------------------------------------
+Optimization Goal     | Area
+----------------------------------------------------------------
+Top-level Module Name | keypad_display_top
+----------------------------------------------------------------
+Target Frequency      | 200.000 MHz
+----------------------------------------------------------------
+Maximum Fanout        | 1000
+----------------------------------------------------------------
+Timing Path Count     | 3
+----------------------------------------------------------------
+RAM Read/Write Check  | False
+----------------------------------------------------------------
+BRAM Utilization      | 100.0%
+----------------------------------------------------------------
+DSP Usage             | True
+----------------------------------------------------------------
+DSP Utilization       | 100.0%
+----------------------------------------------------------------
+FSM Encoding Style    | Auto
+----------------------------------------------------------------
+Resolve Mixed Drivers | False
+----------------------------------------------------------------
+Fix Gated Clocks      | True
+----------------------------------------------------------------
+Mux Style             | Auto
+----------------------------------------------------------------
+Use Carry Chain       | True
+----------------------------------------------------------------
+Carry Chain Length    | Infinite
+----------------------------------------------------------------
+Loop Limit            | 1950
+----------------------------------------------------------------
+Use I/O Insertion     | True
+----------------------------------------------------------------
+Use I/O Registers     | True
+----------------------------------------------------------------
+Resource Sharing      | True
+----------------------------------------------------------------
+Propagate Constants   | True
+----------------------------------------------------------------
+Remove Duplicate Reg  | True
+----------------------------------------------------------------
+Force GSR             | False
+----------------------------------------------------------------
+ROM Style             | Auto
+----------------------------------------------------------------
+RAM Style             | Auto
+----------------------------------------------------------------
+Remove LOC Properties | False
+----------------------------------------------------------------
+Partition Flow        | False
+----------------------------------------------------------------
+Use DCC Insertion     | None
+----------------------------------------------------------------
+################################################################
+
+
+The -comp option is FALSE.
+The -syn option is FALSE.
+
+Output HDL filename: ai_protoype_impl_1.vm
+-sdc option: SDC file input is ai_protoype_impl_1_cpe.ldc.
+-path . (searchpath added)
+-path .. (searchpath added)
+-path ../source/impl_1 (searchpath added)
+-path C:/lscc/radiant/2026.1/ispfpga/ice40tp/data (searchpath added)
+Mixed language design
+Verilog design file: C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v
+Verilog design file: ../source/impl_1/keypad_display_top.sv
+VHDL library: pmi
+VHDL design file: C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.vhd
+
+Compiling design...
+
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\generic.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ispfpga\..\cae_library\simulation\verilog\iCE40UP\iCE40UP_sp.v. VERI-1482
+Analyzing Verilog file C:/lscc/radiant/2026.1/ip/pmi/pmi_iCE40UP.v. VERI-1482
+Analyzing Verilog file ../source/impl_1/keypad_display_top.sv. VERI-1482
+Top module name (Verilog): keypad_display_top
+INFO <35901018> - synthesis: ../source/impl_1/keypad_display_top.sv(353): compiling module keypad_display_top. VERI-1018
+INFO <35901018> - synthesis: C:/lscc/radiant/2026.1/ispfpga\..\cae_library\synthesis\verilog\iCE40UP.v(756): compiling module HSOSC(CLKHF_DIV=2'b01). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/keypad_display_top.sv(5): compiling module rate_tick(CLK_HZ=24000000). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/keypad_display_top.sv(5): compiling module rate_tick(CLK_HZ=24000000,TICK_HZ=1000). VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/keypad_display_top.sv(55): compiling module keypad_scanner_4x4. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/keypad_display_top.sv(301): compiling module dual7seg_mux. VERI-1018
+INFO <35901018> - synthesis: ../source/impl_1/keypad_display_top.sv(260): compiling module hex7seg. VERI-1018
+[Parameter Setting Section Start]
+
+	[Parameter Settings for Instance(s): hfosc_inst]
+	(Module: HSOSC)
+		CLKHF_DIV                 2'b01
+
+	[Parameter Settings for Instance(s): scan_rate]
+	(Module: rate_tick)
+		CLK_HZ                    24000000
+		TICK_HZ                   200
+		DIV                       120000
+		WIDTH                     17
+
+	[Parameter Settings for Instance(s): display_rate]
+	(Module: rate_tick)
+		CLK_HZ                    24000000
+		TICK_HZ                   1000
+		DIV                       24000
+		WIDTH                     15
+
+[Parameter Setting Section End]
+
+
+
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: reset_n
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: keypad_row_n[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: keypad_row_n[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: keypad_row_n[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: keypad_row_n[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: keypad_col_n[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: keypad_col_n[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: keypad_col_n[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: keypad_col_n[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg_n[6]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg_n[5]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg_n[4]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg_n[3]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg_n[2]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg_n[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: seg_n[0]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: digit_n[1]
+WARNING <35002062> - synthesis: Port rejected for I/O register mapping: digit_n[0]
+
+################### Begin Area Report (keypad_display_top)######################
+Number of register bits => 61 of 5280 (1 % )
+CCU2 => 17
+FD1P3XZ => 61
+HSOSC_CORE => 1
+IB => 5
+LUT4 => 72
+OB => 13
+################### End Area Report ##################
+Number of odd-length carry chains : 2
+Number of even-length carry chains : 0
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk, loads : 0
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : scan_rate/n78, loads : 24
+  Net : display_rate/n81, loads : 21
+  Net : keypad_scanner/n30, loads : 19
+  Net : reset_n_c, loads : 18
+  Net : keypad_scanner/col_idx[0], loads : 13
+  Net : keypad_scanner/col_idx[1], loads : 12
+  Net : n493, loads : 11
+  Net : scan_rate/n73[15], loads : 10
+  Net : scan_rate/n73[16], loads : 10
+  Net : scan_rate/n979, loads : 10
+################### End Clock Report ##################
+
+################### Begin Constraint Report ######################
+Constraint Summary:
+  Total number of constraints: 0
+  Total number of constraints dropped: 0
+###################  End Constraint Report  ######################
+
+Peak Memory Usage: 89 MB
+
+--------------------------------------------------------------
+Total CPU Time: 0 secs 
+Total REAL Time: 3 secs 
+--------------------------------------------------------------
+Checksum -- synthesis -- netlist: 28159a3748f489207df376bac1e065cbdca66db3

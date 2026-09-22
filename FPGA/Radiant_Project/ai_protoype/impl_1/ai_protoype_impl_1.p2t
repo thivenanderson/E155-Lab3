@@ -1,0 +1,9 @@
+-w
+-gui
+-msgset "C:/Users/thanderson/Documents/GitHub/E155-Lab3/FPGA/Radiant_Project/ai_protoype/promote.xml"
+-n 1
+-t 1
+-s 1
+-cores 1
+-hsp m
+-exp parPathBased=ON

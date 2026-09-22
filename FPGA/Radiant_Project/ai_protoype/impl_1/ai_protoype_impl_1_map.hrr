@@ -1,0 +1,60 @@
+---------------------------------------------------
+Report for cell keypad_display_top
+   Instance path: keypad_display_top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        115        100.0
+                               LUTGATE	         81        100.0
+                                LUTCCU	         34        100.0
+                                 IOBUF	         18        100.0
+                                PFUREG	         61        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                          dual7seg_mux	          1        11.3
+                    keypad_scanner_4x4	          1        28.7
+            rate_tick(CLK_HZ=24000000)	          1        22.6
+rate_tick(CLK_HZ=24000000,TICK_HZ=1000)	          1        20.0
+---------------------------------------------------
+Report for cell rate_tick(CLK_HZ=24000000)
+   Instance path: keypad_display_top/scan_rate
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         26        22.6
+                               LUTGATE	          8         9.9
+                                LUTCCU	         18        52.9
+                                PFUREG	         18        29.5
+---------------------------------------------------
+Report for cell dual7seg_mux
+   Instance path: keypad_display_top/display_mux
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         13        11.3
+                               LUTGATE	         13        16.0
+                                PFUREG	          1         1.6
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                               hex7seg	          1         6.1
+---------------------------------------------------
+Report for cell hex7seg
+   Instance path: keypad_display_top/display_mux/decoder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          7         6.1
+                               LUTGATE	          7         8.6
+---------------------------------------------------
+Report for cell keypad_scanner_4x4
+   Instance path: keypad_display_top/keypad_scanner
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         33        28.7
+                               LUTGATE	         33        40.7
+                                PFUREG	         18        29.5
+---------------------------------------------------
+Report for cell rate_tick(CLK_HZ=24000000,TICK_HZ=1000)
+   Instance path: keypad_display_top/display_rate
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         23        20.0
+                               LUTGATE	          7         8.6
+                                LUTCCU	         16        47.1
+                                PFUREG	         16        26.2

@@ -1,0 +1,62 @@
+----------------------------------------------------------------------
+Report for cell keypad_display_top.TECH
+Register bits:  61 of 5280 (1.155%)
+I/O cells:      18
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        17          100.0
+                            FD1P3XZ        61          100.0
+                         HSOSC_CORE         1          100.0
+                                 IB         5          100.0
+                               LUT4        72          100.0
+                                 OB        13          100.0
+SUB MODULES
+                       dual7seg_mux         1
+                            hex7seg         1
+                 keypad_scanner_4x4         1
+         rate_tick(CLK_HZ=24000000)         1
+rate_tick(CLK_HZ=24000000,TICK_HZ=1000)         1
+                              TOTAL       174
+----------------------------------------------------------------------
+Report for cell rate_tick(CLK_HZ=24000000).v1
+Instance Path : scan_rate
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         9           52.9
+                            FD1P3XZ        18           29.5
+                               LUT4         8           11.1
+                              TOTAL        35
+----------------------------------------------------------------------
+Report for cell dual7seg_mux.v1
+Instance Path : display_mux
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ         1            1.6
+                               LUT4        13           18.1
+SUB MODULES
+                            hex7seg         1
+                              TOTAL        15
+----------------------------------------------------------------------
+Report for cell hex7seg.v1
+Instance Path : display_mux.decoder
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4         7            9.7
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell keypad_scanner_4x4.v1
+Instance Path : keypad_scanner
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        18           29.5
+                               LUT4        36           50.0
+                              TOTAL        54
+----------------------------------------------------------------------
+Report for cell rate_tick(CLK_HZ=24000000,TICK_HZ=1000).v1
+Instance Path : display_rate
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         8           47.1
+                            FD1P3XZ        16           26.2
+                               LUT4         7            9.7
+                              TOTAL        31
